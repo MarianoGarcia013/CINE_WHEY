@@ -1,0 +1,12 @@
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\obj\Debug\net6.0\CineWheyBackend.csproj.AssemblyReference.cache
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\obj\Debug\net6.0\CineWheyBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\obj\Debug\net6.0\CineWheyBackend.AssemblyInfoInputs.cache
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\obj\Debug\net6.0\CineWheyBackend.AssemblyInfo.cs
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\obj\Debug\net6.0\CineWheyBackend.csproj.CoreCompileInputs.cache
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\bin\Debug\net6.0\CineWheyBackend.deps.json
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\bin\Debug\net6.0\CineWheyBackend.dll
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\bin\Debug\net6.0\CineWheyBackend.pdb
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\obj\Debug\net6.0\CineWheyBackend.dll
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\obj\Debug\net6.0\refint\CineWheyBackend.dll
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\obj\Debug\net6.0\CineWheyBackend.pdb
+C:\Users\maria\source\repos\CineWheyCentro\CinWheyBackend\obj\Debug\net6.0\ref\CineWheyBackend.dll
