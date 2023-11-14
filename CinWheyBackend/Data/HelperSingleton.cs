@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using CineWheyBackend.Models;
 
 namespace CineWheyBackend.Data
 {
@@ -110,5 +111,63 @@ namespace CineWheyBackend.Data
 
             return ok;
         }
+
+        public bool InsertarReserva(Reserva reserva) 
+        {
+            bool resultado = true;
+            SqlTransaction t = null;
+
+            try
+            {
+                cnn.Open();
+                t = cnn.BeginTransaction();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cnn;
+                cmd.Transaction = t;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SP_INSERTAR_RESERVA";
+                cmd.Parameters.AddWithValue("@fec_reserva", reserva.fec_reserva);
+                cmd.Parameters.AddWithValue("@id_cliente", reserva.cliente);
+
+                SqlParameter parametro = new SqlParameter();
+                parametro.ParameterName = "@reserva";
+                parametro.SqlDbType = SqlDbType.Int;
+                parametro.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(parametro);
+
+                cmd.ExecuteNonQuery();
+
+                int nroReserva = (int)parametro.Value;                
+                SqlCommand cmdDetalle;
+                int detReseva = 0;
+
+
+                foreach (DetalleReserva d in reserva.LstDetallesR)
+                {
+                    cmdDetalle = new SqlCommand("SP_INSERTAR_DETALLRESERVA", cnn, t);
+                    cmdDetalle.CommandType = CommandType.StoredProcedure;
+                    cmdDetalle.Parameters.AddWithValue("@id_dtl_reserva", detReseva);// Esto funciona con el conador? xq no es identity el id_detalleReserva
+                    cmdDetalle.Parameters.AddWithValue("@id_reserva", nroReserva); 
+                    cmdDetalle.Parameters.AddWithValue("@id_funcion", d.funcion.id_funcion);
+                    cmdDetalle.Parameters.AddWithValue("@cantidad", d.cantidad);
+                    cmdDetalle.ExecuteNonQuery();  
+                    detReseva ++;
+                }
+                t.Commit();
+            }
+            catch
+            {
+                if (t != null)
+                    t.Rollback();
+                resultado = false;
+            }
+            finally
+            {
+                if (cnn != null && cnn.State == ConnectionState.Open)
+                    cnn.Close();
+            }
+            return resultado;
+        }
     }
 }
+

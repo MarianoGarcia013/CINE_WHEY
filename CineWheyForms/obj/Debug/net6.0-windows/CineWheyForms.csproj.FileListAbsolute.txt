@@ -27,3 +27,5 @@ C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-window
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.pdb
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.genruntimeconfig.cache
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\ref\CineWheyForms.dll
+C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ResevasFormulario.resources
+C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.FuncionFormulario.resources

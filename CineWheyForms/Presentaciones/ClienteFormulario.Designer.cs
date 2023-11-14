@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,18 +51,26 @@
             this.ColApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAcciones = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.funcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevaReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.peliculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarPeliculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarPeliculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verTodasLasFuncionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Historic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(89, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CARGAR CLIENTE";
             // 
             // label2
             // 
@@ -201,7 +208,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(932, 679);
+            this.btnSalir.Location = new System.Drawing.Point(1146, 679);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(101, 58);
             this.btnSalir.TabIndex = 18;
@@ -211,7 +218,7 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(759, 679);
+            this.BtnCancelar.Location = new System.Drawing.Point(1011, 679);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(101, 58);
             this.BtnCancelar.TabIndex = 19;
@@ -264,11 +271,147 @@
             this.ColAcciones.Name = "ColAcciones";
             this.ColAcciones.Width = 150;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(293, 679);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 58);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Nuevo";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Location = new System.Drawing.Point(28, 55);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(268, 32);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "CARGAR CLIENTE";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.funcionesToolStripMenuItem,
+            this.peliculaToolStripMenuItem,
+            this.clienteToolStripMenuItem,
+            this.funcionesToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1276, 33);
+            this.menuStrip1.TabIndex = 24;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // funcionesToolStripMenuItem
+            // 
+            this.funcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevaReservaToolStripMenuItem,
+            this.eliminarReservaToolStripMenuItem,
+            this.historialReservasToolStripMenuItem});
+            this.funcionesToolStripMenuItem.Name = "funcionesToolStripMenuItem";
+            this.funcionesToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
+            this.funcionesToolStripMenuItem.Text = "Reserva";
+            // 
+            // nuevaReservaToolStripMenuItem
+            // 
+            this.nuevaReservaToolStripMenuItem.Name = "nuevaReservaToolStripMenuItem";
+            this.nuevaReservaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.nuevaReservaToolStripMenuItem.Text = "Nueva Reserva";
+            // 
+            // eliminarReservaToolStripMenuItem
+            // 
+            this.eliminarReservaToolStripMenuItem.Name = "eliminarReservaToolStripMenuItem";
+            this.eliminarReservaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eliminarReservaToolStripMenuItem.Text = "Eliminar Reserva";
+            // 
+            // historialReservasToolStripMenuItem
+            // 
+            this.historialReservasToolStripMenuItem.Name = "historialReservasToolStripMenuItem";
+            this.historialReservasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.historialReservasToolStripMenuItem.Text = "Historial Reservas";
+            // 
+            // peliculaToolStripMenuItem
+            // 
+            this.peliculaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarPeliculaToolStripMenuItem,
+            this.eliminarPeliculaToolStripMenuItem});
+            this.peliculaToolStripMenuItem.Name = "peliculaToolStripMenuItem";
+            this.peliculaToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
+            this.peliculaToolStripMenuItem.Text = "Pelicula";
+            // 
+            // agregarPeliculaToolStripMenuItem
+            // 
+            this.agregarPeliculaToolStripMenuItem.Name = "agregarPeliculaToolStripMenuItem";
+            this.agregarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarPeliculaToolStripMenuItem.Text = "Agregar Pelicula";
+            this.agregarPeliculaToolStripMenuItem.Click += new System.EventHandler(this.agregarPeliculaToolStripMenuItem_Click);
+            // 
+            // eliminarPeliculaToolStripMenuItem
+            // 
+            this.eliminarPeliculaToolStripMenuItem.Name = "eliminarPeliculaToolStripMenuItem";
+            this.eliminarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eliminarPeliculaToolStripMenuItem.Text = "Eliminar Pelicula";
+            // 
+            // clienteToolStripMenuItem
+            // 
+            this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarClienteToolStripMenuItem,
+            this.modificarClienteToolStripMenuItem});
+            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.clienteToolStripMenuItem.Text = "Cliente";
+            // 
+            // agregarClienteToolStripMenuItem
+            // 
+            this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
+            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
+            // 
+            // modificarClienteToolStripMenuItem
+            // 
+            this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
+            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.modificarClienteToolStripMenuItem.Text = "Modificar Cliente";
+            // 
+            // funcionesToolStripMenuItem1
+            // 
+            this.funcionesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarFuncionToolStripMenuItem,
+            this.eliminarFuncionToolStripMenuItem,
+            this.verTodasLasFuncionesToolStripMenuItem});
+            this.funcionesToolStripMenuItem1.Name = "funcionesToolStripMenuItem1";
+            this.funcionesToolStripMenuItem1.Size = new System.Drawing.Size(107, 29);
+            this.funcionesToolStripMenuItem1.Text = "Funciones";
+            // 
+            // agregarFuncionToolStripMenuItem
+            // 
+            this.agregarFuncionToolStripMenuItem.Name = "agregarFuncionToolStripMenuItem";
+            this.agregarFuncionToolStripMenuItem.Size = new System.Drawing.Size(299, 34);
+            this.agregarFuncionToolStripMenuItem.Text = "Agregar Funcion";
+            // 
+            // eliminarFuncionToolStripMenuItem
+            // 
+            this.eliminarFuncionToolStripMenuItem.Name = "eliminarFuncionToolStripMenuItem";
+            this.eliminarFuncionToolStripMenuItem.Size = new System.Drawing.Size(299, 34);
+            this.eliminarFuncionToolStripMenuItem.Text = "Eliminar Funcion";
+            // 
+            // verTodasLasFuncionesToolStripMenuItem
+            // 
+            this.verTodasLasFuncionesToolStripMenuItem.Name = "verTodasLasFuncionesToolStripMenuItem";
+            this.verTodasLasFuncionesToolStripMenuItem.Size = new System.Drawing.Size(299, 34);
+            this.verTodasLasFuncionesToolStripMenuItem.Text = "Ver todas las Funciones";
+            // 
             // ClienteFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1276, 763);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.btnSalir);
@@ -288,19 +431,18 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "ClienteFormulario";
             this.Text = "ClienteFormulario";
             this.Load += new System.EventHandler(this.ClienteFormulario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -324,5 +466,22 @@
         private DataGridViewTextBoxColumn ColApellido;
         private DataGridViewTextBoxColumn ColCorreo;
         private DataGridViewButtonColumn ColAcciones;
+        private Button button1;
+        private Label label9;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem funcionesToolStripMenuItem;
+        private ToolStripMenuItem nuevaReservaToolStripMenuItem;
+        private ToolStripMenuItem eliminarReservaToolStripMenuItem;
+        private ToolStripMenuItem historialReservasToolStripMenuItem;
+        private ToolStripMenuItem peliculaToolStripMenuItem;
+        private ToolStripMenuItem agregarPeliculaToolStripMenuItem;
+        private ToolStripMenuItem eliminarPeliculaToolStripMenuItem;
+        private ToolStripMenuItem clienteToolStripMenuItem;
+        private ToolStripMenuItem agregarClienteToolStripMenuItem;
+        private ToolStripMenuItem modificarClienteToolStripMenuItem;
+        private ToolStripMenuItem funcionesToolStripMenuItem1;
+        private ToolStripMenuItem agregarFuncionToolStripMenuItem;
+        private ToolStripMenuItem eliminarFuncionToolStripMenuItem;
+        private ToolStripMenuItem verTodasLasFuncionesToolStripMenuItem;
     }
 }

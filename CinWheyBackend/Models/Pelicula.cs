@@ -13,11 +13,11 @@ namespace CineWheyBackend.Models
         public int duracion { get; set; }
         public DateTime fecha_estreno { get; set; }
         public string director { get; set; }
-        public Genero genero { get; set; }
-        public Idioma idioma { get; set; }
+        public int genero { get; set; }
+        public int idioma { get; set; }
         public bool apta_todo_publico { get; set; }      
 
-        public Pelicula(int id_pelicula, string titulo, int duracion, DateTime fecha_estreno, string director, Genero genero, Idioma idioma, bool apta_todo_publico)
+        public Pelicula(int id_pelicula, string titulo, int duracion, DateTime fecha_estreno, string director, int genero, int idioma, bool apta_todo_publico)
         {
             this.id_pelicula = id_pelicula;
             this.titulo = titulo;

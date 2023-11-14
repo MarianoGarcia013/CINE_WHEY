@@ -73,21 +73,15 @@ namespace CineWheyBackend.Data.Implementacion
             DataTable dt = HelperSingleton.getInstance().ConsultarDB("SP_Peliculas");
             foreach (DataRow dr in dt.Rows)
             {
-                Pelicula p = new Pelicula();
-
-                Genero g = new Genero();
-                g.descripcion = (string)dr[4];
-
-                Idioma i = new Idioma();
-                i.descripcion = (string)dr[5];               
+                Pelicula p = new Pelicula();                             
 
 
                 p.id_pelicula = (int)dr[0];
                 p.titulo = (string)dr[1];
                 p.fecha_estreno = (DateTime)dr[2];
                 p.director = (string)dr[3];
-                p.genero = g;
-                p.idioma = i;
+                p.genero = (int)dr[4];
+                p.idioma = (int)dr[5];
                 p.apta_todo_publico = (bool)dr[6];
                 p.duracion = (int)dr[7];               
                 lPelicula.Add(p);
@@ -127,12 +121,28 @@ namespace CineWheyBackend.Data.Implementacion
 
         public bool PostFuncion(Funcion funcion)
         {
-            throw new NotImplementedException();
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@id_pelicula", funcion.pelicula));
+            list.Add(new SqlParameter("@id_sala", funcion.sala));
+            list.Add(new SqlParameter("@fecha", funcion.fecha));
+            list.Add(new SqlParameter("@precio", funcion.precio));
+            list.Add(new SqlParameter("@hora_inicio", funcion.hora_inicio));            
+
+            return HelperSingleton.getInstance().EjecutarSQLParam("SP_CrearFunciones", list);
         }
 
         public bool PostPelicula(Pelicula pelicula)
         {
-            throw new NotImplementedException();
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@titulo", pelicula.titulo));
+            list.Add(new SqlParameter("@duracion", pelicula.duracion));
+            list.Add(new SqlParameter("@fecha_estreno", pelicula.fecha_estreno));
+            list.Add(new SqlParameter("@director", pelicula.director));
+            list.Add(new SqlParameter("@id_genero", pelicula.genero));
+            list.Add(new SqlParameter("@id_idioma", pelicula.idioma));
+            list.Add(new SqlParameter("@apta_todo_publico", pelicula.apta_todo_publico));
+
+            return HelperSingleton.getInstance().EjecutarSQLParam("SP_CrearPelicula", list);
         }
 
         public bool PostRserva(Reserva reserva)

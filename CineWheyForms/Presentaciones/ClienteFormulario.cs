@@ -74,10 +74,16 @@ namespace CineWheyForms.Presentaciones
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Seguro que quiere salir del programa?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+            DialogResult result = MessageBox.Show("Salir de la carga de clientes?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                             MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
                 this.Close(); 
+        }
+
+        private void agregarPeliculaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           PeliculaFormulario peli = new PeliculaFormulario();
+            peli.Show();
         }
     }
 }
