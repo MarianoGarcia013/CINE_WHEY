@@ -40,18 +40,14 @@ namespace CineWheyBackend.Data.Implementacion
             DataTable dt = HelperSingleton.getInstance().ConsultarDB("SP_Funciones");
             foreach (DataRow dr in dt.Rows)
             {
-                Funcion fn = new Funcion();
-                Pelicula p = new Pelicula();
-                p.titulo = (string)dr[1];
-
-                Sala s = new Sala();
-                s.numero_sala = (int)dr[3];
+                Funcion fn = new Funcion();              
 
                 fn.id_funcion = (int)dr[0];
-                fn.pelicula = p;
-                fn.fecha = (DateTime)dr[2];
-                fn.precio = (double)dr[3];
-                fn.hora_inicio = (DateTime)dr[4];
+                fn.pelicula = (int)dr[1];
+                fn.sala= (int)dr[2];
+                fn.fecha = (DateTime)dr[3];
+                fn.precio = (double)dr[4];
+                fn.hora_inicio = (string)dr[5];
                 lFunciones.Add(fn);
             }
             return lFunciones;

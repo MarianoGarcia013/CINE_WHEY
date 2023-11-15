@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CineWheyBackend.Data;
+using CineWheyBackend.Models;
+using CineWheyBackend.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +15,32 @@ namespace CineWheyForms.Presentaciones
 {
     public partial class FuncionFormulario : Form
     {
+        HelperSingleton HP;
+        IDataApi DA;
+        List<Funcion> funcionList;
+        bool nuevo;
+        Funcion funcion = new Funcion();
         public FuncionFormulario()
         {
             InitializeComponent();
+            HP = new HelperSingleton();
+            funcionList = new List<Funcion>();
+            DA = new DataApi();
         }
 
         private void FuncionFormulario_Load(object sender, EventArgs e)
         {
+            cargarCombo( cboPelicula,"Peliucla");
+            cargarCombo(cboSala,"Sala");
+        }
 
+        public void cargarCombo(ComboBox combo, string nombreTabla)
+        {
+            DataTable tabla = HP.ConsultarDBCombo($"select * from {nombreTabla}");
+            combo.DataSource = tabla;
+            combo.ValueMember = tabla.Columns[0].ColumnName;
+            combo.DisplayMember = tabla.Columns[1].ColumnName;
+            combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
         private bool ValidarFuncion()
         {
@@ -58,6 +79,18 @@ namespace CineWheyForms.Presentaciones
             txtHoraInicio.Enabled = v;
             btnAgregarF.Enabled = !v;
             btnCancelar.Enabled = v;
+        }
+
+        private void btnAgregarF_Click(object sender, EventArgs e)
+        {
+            funcion.pelicula = (int)cboPelicula.SelectedValue;
+            funcion.sala= (int)cboSala.SelectedValue;
+            funcion.fecha= Convert.ToDateTime(dtpFecha.Value);
+            funcion.precio = Convert.ToDouble(txtPrecio.Text);
+            funcion.hora_inicio = txtHoraInicio.Text;
+            if (DA.InsertarFunciones(funcion))
+                MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
+
         }
     }
 }

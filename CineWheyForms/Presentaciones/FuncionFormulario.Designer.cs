@@ -74,6 +74,7 @@
             this.btnAgregarF.TabIndex = 24;
             this.btnAgregarF.Text = "&Agregar";
             this.btnAgregarF.UseVisualStyleBackColor = true;
+            this.btnAgregarF.Click += new System.EventHandler(this.btnAgregarF_Click);
             // 
             // txtHoraInicio
             // 
@@ -258,13 +259,13 @@
             // agregarClienteToolStripMenuItem
             // 
             this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
             this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
             // 
             // modificarClienteToolStripMenuItem
             // 
             this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
-            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
             this.modificarClienteToolStripMenuItem.Text = "Modificar Cliente";
             // 
             // FuncionFormulario

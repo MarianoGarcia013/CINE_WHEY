@@ -28,9 +28,15 @@ namespace CineWheyBackend.Negocio
             return DAO.PostCliente(c);
         }
 
+        public bool InsertarFunciones(Funcion funcion)
+        {
+            return DAO.PostFuncion(funcion);
+        }
+
         public bool InsertarPelicula(Pelicula pelicula)
         {
             return DAO.PostPelicula(pelicula);
         }
+        
     }
 }
