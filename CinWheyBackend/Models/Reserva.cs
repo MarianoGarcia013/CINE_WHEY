@@ -10,15 +10,15 @@ namespace CineWheyBackend.Models
     {
         public int id { get; set; }
         public DateTime fec_reserva { get; set; }
-        public Cliente cliente { get; set; }
+        public int cliente { get; set; }
 
         public List<DetalleReserva> LstDetallesR;
-        public Reserva(int id, DateTime fec_reserva, Cliente cliente)
-        {
-            this.id = id;
-            this.fec_reserva = fec_reserva;
-            this.cliente = cliente;
-        }
+        //public Reserva(int id, DateTime fec_reserva, int cliente)
+        //{
+        //    this.id = id;
+        //    this.fec_reserva = fec_reserva;
+        //    this.cliente = cliente;
+        //}
 
         public Reserva()
         {
@@ -30,9 +30,10 @@ namespace CineWheyBackend.Models
             LstDetallesR.Add(dtllReserva);
         }
 
-        public void RemoveDtlleReserva(DetalleReserva dtllReserva)
+        public void RemoveDtlleReserva(int indice)
         {
-            LstDetallesR.Remove(dtllReserva);
+           
+            LstDetallesR.Remove(indice);
         }
     }
 }

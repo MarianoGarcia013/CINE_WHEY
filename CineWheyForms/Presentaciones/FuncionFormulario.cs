@@ -30,8 +30,8 @@ namespace CineWheyForms.Presentaciones
 
         private void FuncionFormulario_Load(object sender, EventArgs e)
         {
-            cargarCombo( cboPelicula,"Peliucla");
-            cargarCombo(cboSala,"Sala");
+            cargarCombo( cboPelicula,"Pelicula");
+            cargarCombo(cboSala,"Salas");
         }
 
         public void cargarCombo(ComboBox combo, string nombreTabla)
@@ -42,6 +42,7 @@ namespace CineWheyForms.Presentaciones
             combo.DisplayMember = tabla.Columns[1].ColumnName;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
         private bool ValidarFuncion()
         {
             bool Ok = true;
@@ -77,12 +78,13 @@ namespace CineWheyForms.Presentaciones
             txtPrecio.Enabled = v;
             dtpFecha.Enabled = v;
             txtHoraInicio.Enabled = v;
-            btnAgregarF.Enabled = !v;
+            btnAgregarF.Enabled = v;
             btnCancelar.Enabled = v;
         }
 
         private void btnAgregarF_Click(object sender, EventArgs e)
         {
+
             funcion.pelicula = (int)cboPelicula.SelectedValue;
             funcion.sala= (int)cboSala.SelectedValue;
             funcion.fecha= Convert.ToDateTime(dtpFecha.Value);
@@ -90,6 +92,7 @@ namespace CineWheyForms.Presentaciones
             funcion.hora_inicio = txtHoraInicio.Text;
             if (DA.InsertarFunciones(funcion))
                 MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
+                
 
         }
     }

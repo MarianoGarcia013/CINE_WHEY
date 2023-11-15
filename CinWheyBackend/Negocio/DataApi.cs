@@ -37,6 +37,10 @@ namespace CineWheyBackend.Negocio
         {
             return DAO.PostPelicula(pelicula);
         }
-        
+
+        public bool InsertarReserva(Reserva reserva)
+        {
+            return DAO.PostRserva(reserva);
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace CineWheyBackend.Negocio
         public List<Cliente> ConsultarClientes();
         bool InsertarPelicula(Pelicula pelicula);
         bool InsertarFunciones(Funcion funcion);
+        bool InsertarReserva(Reserva reserva);
     }
 }

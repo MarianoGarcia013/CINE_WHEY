@@ -36,7 +36,7 @@ namespace CineWheyForms.Presentaciones
 
         private void nuevaReservaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ResevasFormulario reserva = new ResevasFormulario();
+            ReservaFormulario reserva = new ReservaFormulario();
             reserva.Show();
         }
 

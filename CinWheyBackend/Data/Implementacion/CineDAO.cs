@@ -143,7 +143,7 @@ namespace CineWheyBackend.Data.Implementacion
 
         public bool PostRserva(Reserva reserva)
         {
-            throw new NotImplementedException();
+            return HelperSingleton.getInstance().InsertarReserva(reserva);
         }
 
         public bool UpdateCliente(Cliente cliente)

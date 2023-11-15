@@ -16,9 +16,9 @@ namespace CineWheyBackend.Models
         public string hora_inicio { get; set; }
 
 
-        public Funcion(int id_funcion, int pelicula, int sala, double precio, DateTime fecha, string hora_inicio)
+        public Funcion(int pelicula, int sala, double precio, DateTime fecha, string hora_inicio)
         {
-            this.id_funcion = id_funcion;
+            //this.id_funcion = id_funcion;
             this.pelicula = pelicula;
             this.sala = sala;
             this.precio = precio;
