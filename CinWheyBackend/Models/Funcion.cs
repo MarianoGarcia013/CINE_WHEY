@@ -14,20 +14,39 @@ namespace CineWheyBackend.Models
         public double precio { get; set; }
         public DateTime fecha { get; set; }
         public string hora_inicio { get; set; }
+        public string descripcion { get; set; }
 
 
-        public Funcion(int pelicula, int sala, double precio, DateTime fecha, string hora_inicio)
+        public Funcion(int id_funcion,int pelicula, int sala, double precio, DateTime fecha, string hora_inicio)
         {
-            //this.id_funcion = id_funcion;
+            this.id_funcion = id_funcion;
             this.pelicula = pelicula;
             this.sala = sala;
             this.precio = precio;
             this.fecha = fecha;
             this.hora_inicio = hora_inicio;
+            //this.descripcion = descripcion;
+        }
+
+        public Funcion(int id_funcion)
+        {
+            id_funcion= 0;
+            pelicula= 0;
+            sala= 0;
+            precio= 0;
+            fecha= DateTime.MinValue;
+            hora_inicio = string.Empty;
+            descripcion = string.Empty;
         }
 
         public Funcion()
         {
         }
+
+        //public int idFuncion
+        //{ 
+        // get { return id_funcion; } 
+        // set { id_funcion = value; }
+        //}
     }
 }

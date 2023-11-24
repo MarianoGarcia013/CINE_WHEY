@@ -10,7 +10,7 @@ namespace CineWheyBackend.Models
     {
         public int id { get; set; }
         public DateTime fec_reserva { get; set; }
-        public int cliente { get; set; }
+        public Cliente cliente { get; set; }
 
         public List<DetalleReserva> LstDetallesR;
         //public Reserva(int id, DateTime fec_reserva, int cliente)
@@ -33,7 +33,7 @@ namespace CineWheyBackend.Models
         public void RemoveDtlleReserva(int indice)
         {
            
-            LstDetallesR.Remove(indice);
+           LstDetallesR.RemoveAt(indice);
         }
     }
 }

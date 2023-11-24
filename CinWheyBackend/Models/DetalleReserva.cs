@@ -13,7 +13,7 @@ namespace CineWheyBackend.Models
         public int cantidad { get; set; }
 
 
-        public DetalleReserva(Funcion funcion, int catidad, DateTime fecha_reservada, int cantidad)
+        public DetalleReserva(Funcion funcion, int catidad)
         {
             
             this.funcion = funcion;

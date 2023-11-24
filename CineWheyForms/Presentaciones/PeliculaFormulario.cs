@@ -58,7 +58,40 @@ namespace CineWheyForms.Presentaciones
             combo.ValueMember = tabla.Columns[0].ColumnName;
             combo.DisplayMember = tabla.Columns[1].ColumnName;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
-        }       
+        }
+        public void cargarLista(ListBox lista, string nombreTabla)
+        {
+            PeliculaList.Clear();
+            lstBoxPelicula.Items.Clear();
+
+            DataTable tabla = HP.ConsultarDB("Select * from Pelicula");
+            foreach (DataRow fila in tabla.Rows)
+            {
+                Pelicula pelicula = new Pelicula();
+                pelicula.titulo = (string)(fila["titulo"]); // ?
+                pelicula.director = (string)(fila["director"]); // ? 
+                pelicula.duracion = Convert.ToInt32(fila["duracion"]);
+                pelicula.fecha_estreno = Convert.ToDateTime(fila["fecha_estreno"]);
+                pelicula.genero = Convert.ToInt32(fila["genero"]);
+                pelicula.idioma = Convert.ToInt32(fila["idioma"]);
+                //   pelicula.apta_todo_publico = ??
+
+                PeliculaList.Add(pelicula);
+                lstBoxPelicula.Items.Add(pelicula);
+            }
+        }
+        private void cargarCampos(int i)
+        {
+            txtTitulo.Text = PeliculaList[i].titulo.ToString();
+            txtDirector.Text = PeliculaList[i].director.ToString();
+            txtDuracion.Text = PeliculaList[i].duracion.ToString();
+            //   dtpFechaEstreno.Value = PeliculaList[i].fecha_estreno.;
+            cboGenero.SelectedValue = PeliculaList[i].genero;
+            cboIdioma.SelectedValue = PeliculaList[i].idioma;
+            rbtSi.Checked = PeliculaList[i].apta_todo_publico == true; // ??
+            rbtNo.Checked = PeliculaList[i].apta_todo_publico == true; // ??
+
+        }
 
         private bool ValidarPelicula()
         {
@@ -124,11 +157,52 @@ namespace CineWheyForms.Presentaciones
             if (result == DialogResult.Yes)
                 this.Close();
         }
+        private void limpiar()
+        {
+            txtTitulo.Text = string.Empty;
+            txtDirector.Text = string.Empty;
+            txtDuracion.Text = string.Empty;
+            dtpFechaEstreno.Value = DateTime.Now;
+            cboGenero.SelectedIndex = -1;
+            cboIdioma.SelectedIndex = -1;
+            rbtSi.Checked = false;
+            rbtNo.Checked = false;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Habilitar(true);
             nuevo = true;
+            txtTitulo.Focus();
+            limpiar();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                     MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            nuevo = false;
+            lstBoxPelicula.Enabled = true;
+            Habilitar(true);
+        }
+
+        private void lstBoxPelicula_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargarCampos(lstBoxPelicula.SelectedIndex);
+        }
+
+        private void btnNueva_Click(object sender, EventArgs e)
+        {
+            Habilitar(true);
+            nuevo = true;
+            txtTitulo.Focus();
+            limpiar();
         }
     }
 }

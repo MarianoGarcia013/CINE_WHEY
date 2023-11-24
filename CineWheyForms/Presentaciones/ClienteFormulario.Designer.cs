@@ -51,7 +51,7 @@
             this.ColApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAcciones = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.funcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -271,14 +271,14 @@
             this.ColAcciones.Name = "ColAcciones";
             this.ColAcciones.Width = 150;
             // 
-            // button1
+            // btnActualizar
             // 
-            this.button1.Location = new System.Drawing.Point(293, 679);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 58);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnActualizar.Location = new System.Drawing.Point(293, 679);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(101, 58);
+            this.btnActualizar.TabIndex = 21;
+            this.btnActualizar.Text = "&Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -318,19 +318,19 @@
             // nuevaReservaToolStripMenuItem
             // 
             this.nuevaReservaToolStripMenuItem.Name = "nuevaReservaToolStripMenuItem";
-            this.nuevaReservaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.nuevaReservaToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
             this.nuevaReservaToolStripMenuItem.Text = "Nueva Reserva";
             // 
             // eliminarReservaToolStripMenuItem
             // 
             this.eliminarReservaToolStripMenuItem.Name = "eliminarReservaToolStripMenuItem";
-            this.eliminarReservaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eliminarReservaToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
             this.eliminarReservaToolStripMenuItem.Text = "Eliminar Reserva";
             // 
             // historialReservasToolStripMenuItem
             // 
             this.historialReservasToolStripMenuItem.Name = "historialReservasToolStripMenuItem";
-            this.historialReservasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.historialReservasToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
             this.historialReservasToolStripMenuItem.Text = "Historial Reservas";
             // 
             // peliculaToolStripMenuItem
@@ -345,14 +345,14 @@
             // agregarPeliculaToolStripMenuItem
             // 
             this.agregarPeliculaToolStripMenuItem.Name = "agregarPeliculaToolStripMenuItem";
-            this.agregarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
             this.agregarPeliculaToolStripMenuItem.Text = "Agregar Pelicula";
             this.agregarPeliculaToolStripMenuItem.Click += new System.EventHandler(this.agregarPeliculaToolStripMenuItem_Click);
             // 
             // eliminarPeliculaToolStripMenuItem
             // 
             this.eliminarPeliculaToolStripMenuItem.Name = "eliminarPeliculaToolStripMenuItem";
-            this.eliminarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eliminarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
             this.eliminarPeliculaToolStripMenuItem.Text = "Eliminar Pelicula";
             // 
             // clienteToolStripMenuItem
@@ -367,13 +367,13 @@
             // agregarClienteToolStripMenuItem
             // 
             this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
             this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
             // 
             // modificarClienteToolStripMenuItem
             // 
             this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
-            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
             this.modificarClienteToolStripMenuItem.Text = "Modificar Cliente";
             // 
             // funcionesToolStripMenuItem1
@@ -411,7 +411,7 @@
             this.ClientSize = new System.Drawing.Size(1276, 763);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.btnSalir);
@@ -466,7 +466,7 @@
         private DataGridViewTextBoxColumn ColApellido;
         private DataGridViewTextBoxColumn ColCorreo;
         private DataGridViewButtonColumn ColAcciones;
-        private Button button1;
+        private Button btnActualizar;
         private Label label9;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem funcionesToolStripMenuItem;

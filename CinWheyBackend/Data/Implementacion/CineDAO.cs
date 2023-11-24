@@ -5,13 +5,49 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CineWheyBackend.Data.Implementacion
 {
     public class CineDAO : ICineDAO
-    {      
+    {
+        public bool DeletePelicula(int id)
+        {
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@id_pelicula", id));
+            return HelperSingleton.getInstance().EjecutarSQLParam("SP_DeletePelicula", list);
+        }
+
+        public List<Cliente> GetClientePorId(int id)
+        {
+            DataTable dt = HelperSingleton.getInstance().querySQL($"SELECT id_cliente FROM Clientes where id_cliente = {id}", null);
+            List<Cliente> resultado = new List<Cliente>();
+            foreach (DataRow fila in dt.Rows)
+            {
+                Cliente c = new Cliente();
+
+                c.IdCliente = (int)fila[0];
+                //c.nombre = (string)fila[1];
+                //c.apellido = (string)fila[2];
+                //c.email = (string)fila[3];
+                //c.telefono = (string)fila[4];
+                //c.fec_nac = (DateTime)fila[5];
+                //c.direccion = (string)fila[6];
+                //c.ciudad = (int)fila[7];
+                resultado.Add(c);
+            }
+            return resultado;
+        }
+
+        //public DataTable GetClienteporID(int id)
+        //{
+        //    List<Parametros> lst = new List<Parametros>();
+        //    lst.Add(new Parametros("@id_cliente", id));
+
+        //    return HelperSingleton.getInstance().EjecutarSQLParam("SP_ClientesporId", lst);
+        //}
 
         public List<Cliente> GetClientes()
         {
@@ -21,7 +57,7 @@ namespace CineWheyBackend.Data.Implementacion
             {
                 Cliente c = new Cliente();                
 
-                c.id_cliente = (int)dr[0];
+                c.IdCliente = (int)dr[0];
                 c.nombre = (string)dr[1];
                 c.apellido = (string)dr[2];
                 c.email = (string)dr[3];
@@ -52,21 +88,32 @@ namespace CineWheyBackend.Data.Implementacion
             }
             return lFunciones;
         }
-
-        public DataTable Getgenero()
+        
+        public List<Pelicula> GetPeliculaPorGenero(int genero)
         {
-            throw new NotImplementedException();
-        }
+            DataTable dt = HelperSingleton.getInstance().querySQL($"SELECT * FROM Pelicula WHERE id_genero = {genero}", null);
+            List<Pelicula> resultado = new List<Pelicula>();
 
-        public DataTable Getidioma()
-        {
-            throw new NotImplementedException();
+            foreach (DataRow dr in dt.Rows) 
+            {
+                Pelicula p = new Pelicula();
+                p.id_pelicula= (int)dr[0];
+                p.titulo = (string)dr[1];
+                p.fecha_estreno = Convert.ToDateTime(dr[2]);
+                p.director = (string)dr[3];
+                p.genero = (int)dr[4];
+                p.idioma = (int)dr[5];
+                p.apta_todo_publico = (bool)dr[6];
+                resultado.Add(p);
+            }
+            return resultado;
+
         }
 
         public List<Pelicula> GetPeliculas()
         {
             List<Pelicula> lPelicula = new List<Pelicula>();
-            DataTable dt = HelperSingleton.getInstance().ConsultarDB("SP_Peliculas");
+            DataTable dt = HelperSingleton.getInstance().ConsultarDB("select * from Pelicula");
             foreach (DataRow dr in dt.Rows)
             {
                 Pelicula p = new Pelicula();                             
@@ -150,5 +197,23 @@ namespace CineWheyBackend.Data.Implementacion
         {
             throw new NotImplementedException();
         }
+
+        public bool UpdatePeliculas(Pelicula pelicula)
+        {
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@id_pelicula", pelicula.id_pelicula));
+            list.Add(new SqlParameter("@titulo", pelicula.titulo));
+            list.Add(new SqlParameter("@fecha_estreno", pelicula.fecha_estreno));
+            list.Add(new SqlParameter("@director", pelicula.director));
+            list.Add(new SqlParameter("@id_genero", pelicula.genero));
+            list.Add(new SqlParameter("@id_idioma", pelicula.idioma));
+            list.Add(new SqlParameter("@apta_todos", pelicula.apta_todo_publico));
+            list.Add(new SqlParameter("@duracion", pelicula.duracion));
+
+
+
+            return HelperSingleton.getInstance().EjecutarSQLParam("SP_UpdatePeliculas", list);
+        }
+
     }
 }

@@ -53,20 +53,21 @@ namespace CineWheyForms.Presentaciones
         private void btnAGREGAR_Click(object sender, EventArgs e)
         {
             DataRowView item = (DataRowView)cboFuncion.SelectedItem;            
-            int pelicula = Convert.ToInt32(item.Row.ItemArray[0]);
-            int sala = Convert.ToInt32(item.Row.ItemArray[1]);
-            double precio = Convert.ToDouble(item.Row.ItemArray[2]);
+            int id_funcion = Convert.ToInt32(item.Row.ItemArray[0]);
+            int pelicula = Convert.ToInt32(item.Row.ItemArray[1]);
+            int sala = Convert.ToInt32(item.Row.ItemArray[2]);
             DateTime fecha = Convert.ToDateTime(item.Row.ItemArray[3]);
-            string hora = Convert.ToString(item.Row.ItemArray[4]);
-            Funcion funcion = new Funcion(pelicula, sala, precio, fecha, hora);
+            double precio = Convert.ToDouble(item.Row.ItemArray[4]);
+            string hora_inicio = Convert.ToString(item.Row.ItemArray[5]);
+            Funcion funcion = new Funcion(id_funcion, pelicula, sala, precio, fecha, hora_inicio);
 
             int cliente = Convert.ToInt32(cboCliente.SelectedValue);
-            DateTime fecha_reservada = Convert.ToDateTime(dtpFecha.Value);
+            //DateTime fecha_reservada = Convert.ToDateTime(dtpFecha.Value);
             int cantidad = Convert.ToInt32(nudCantidad.Value);
-            DetalleReserva detalleReserva = new DetalleReserva(funcion, cliente, fecha_reservada, cantidad);
+            DetalleReserva detalleReserva = new DetalleReserva(funcion, cantidad);
 
             reserva.AddDtlleReserva(detalleReserva);
-            dataGridView1.Rows.Add(new object[] { cliente, funcion, fecha, cantidad });
+            dataGridView1.Rows.Add(new object[] { cliente, funcion.pelicula, funcion.fecha, cantidad });
 
         }
 
@@ -82,7 +83,14 @@ namespace CineWheyForms.Presentaciones
         private void GrabarReserva()
         {
             reserva.fec_reserva = dtpFecha.Value;
-            reserva.cliente = (int)cboCliente.SelectedValue;
+            Cliente cliente = new Cliente();
+            cliente.IdCliente = Convert.ToInt32(cboCliente.SelectedValue);
+            //reserva.cliente.id_cliente = Convert.ToInt32(DA.GetClientePorId(id));
+            reserva.cliente = cliente;
+
+
+
+
             if (DA.InsertarReserva(reserva))
             {
                 MessageBox.Show("La Reserva fue cargada con exito", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

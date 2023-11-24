@@ -3,6 +3,7 @@ using CineWheyBackend.Data.Interfaz;
 using CineWheyBackend.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,30 @@ namespace CineWheyBackend.Negocio
         public bool InsertarReserva(Reserva reserva)
         {
             return DAO.PostRserva(reserva);
+        }
+        public List<Cliente> GetClientePorId(int id)
+        {
+            return DAO.GetClientePorId(id);
+        }
+
+        public List<Pelicula> ConsultarPeliculas()
+        {
+           return DAO.GetPeliculas();
+        }       
+
+        public bool UpdatePelcicula(Pelicula pelicula)
+        {
+            return DAO.UpdatePeliculas(pelicula);
+        }
+
+        public bool DeletePeliucla(int id)
+        {
+           return DAO.DeletePelicula(id);
+        }
+
+        public List<Pelicula> GetPeliculaPorGenero(int genero)
+        {
+           return DAO.GetPeliculaPorGenero(genero);
         }
     }
 }

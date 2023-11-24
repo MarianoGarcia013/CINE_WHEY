@@ -74,20 +74,20 @@
             // nuevaReservaToolStripMenuItem
             // 
             this.nuevaReservaToolStripMenuItem.Name = "nuevaReservaToolStripMenuItem";
-            this.nuevaReservaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.nuevaReservaToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
             this.nuevaReservaToolStripMenuItem.Text = "Nueva Reserva";
             this.nuevaReservaToolStripMenuItem.Click += new System.EventHandler(this.nuevaReservaToolStripMenuItem_Click);
             // 
             // eliminarReservaToolStripMenuItem
             // 
             this.eliminarReservaToolStripMenuItem.Name = "eliminarReservaToolStripMenuItem";
-            this.eliminarReservaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eliminarReservaToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
             this.eliminarReservaToolStripMenuItem.Text = "Eliminar Reserva";
             // 
             // historialReservasToolStripMenuItem
             // 
             this.historialReservasToolStripMenuItem.Name = "historialReservasToolStripMenuItem";
-            this.historialReservasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.historialReservasToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
             this.historialReservasToolStripMenuItem.Text = "Historial Reservas";
             // 
             // peliculaToolStripMenuItem
@@ -102,14 +102,14 @@
             // agregarPeliculaToolStripMenuItem
             // 
             this.agregarPeliculaToolStripMenuItem.Name = "agregarPeliculaToolStripMenuItem";
-            this.agregarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
             this.agregarPeliculaToolStripMenuItem.Text = "Agregar Pelicula";
             this.agregarPeliculaToolStripMenuItem.Click += new System.EventHandler(this.agregarPeliculaToolStripMenuItem_Click);
             // 
             // eliminarPeliculaToolStripMenuItem
             // 
             this.eliminarPeliculaToolStripMenuItem.Name = "eliminarPeliculaToolStripMenuItem";
-            this.eliminarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.eliminarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
             this.eliminarPeliculaToolStripMenuItem.Text = "Eliminar Pelicula";
             // 
             // clienteToolStripMenuItem
@@ -124,14 +124,14 @@
             // agregarClienteToolStripMenuItem
             // 
             this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
             this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
             this.agregarClienteToolStripMenuItem.Click += new System.EventHandler(this.agregarClienteToolStripMenuItem_Click);
             // 
             // modificarClienteToolStripMenuItem
             // 
             this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
-            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
             this.modificarClienteToolStripMenuItem.Text = "Modificar Cliente";
             // 
             // funcionesToolStripMenuItem1

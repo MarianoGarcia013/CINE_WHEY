@@ -29,3 +29,4 @@ C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-window
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\ref\CineWheyForms.dll
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.FuncionFormulario.resources
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ReservaFormulario.resources
+C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.LoginFormulario.resources

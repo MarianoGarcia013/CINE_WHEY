@@ -8,7 +8,7 @@ namespace CineWheyBackend.Models
 {
     public class Cliente
     {
-        public int id_cliente { get; set; }
+        private int idCliente { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string email { get; set; }
@@ -19,7 +19,7 @@ namespace CineWheyBackend.Models
 
         public Cliente(int id_cliente, string nombre, string apellido, string email, string telefono, DateTime fec_nac, string direccion, int ciudad)
         {
-            this.id_cliente = id_cliente;
+            this.idCliente = id_cliente;
             this.nombre = nombre;
             this.apellido = apellido;
             this.email = email;
@@ -31,6 +31,13 @@ namespace CineWheyBackend.Models
 
         public Cliente()
         {
+            idCliente = 0;
+        }
+
+        public int IdCliente
+        {
+            get { return idCliente; }
+            set { idCliente = value; }
         }
 
         public override string ToString()

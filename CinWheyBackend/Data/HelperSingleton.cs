@@ -34,15 +34,65 @@ namespace CineWheyBackend.Data
             cmd.Connection = cnn;
         }
 
-        public DataTable ConsultarDB(string SP)
+        //public DataTable ConsultarDB(string SP)
+        //{
+        //    DataTable dt = new DataTable();
+        //    Conectar();
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    dt.Load(cmd.ExecuteReader());
+        //    cnn.Close();
+        //    return dt;
+        //}
+
+        public DataTable ConsultarDB(string consultaSQL)
         {
             DataTable dt = new DataTable();
             Conectar();
-            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = consultaSQL;
             dt.Load(cmd.ExecuteReader());
             cnn.Close();
             return dt;
         }
+        public DataTable querySQL(string SQL, List<Parametros> value)
+        {
+            DataTable dt = new DataTable();
+            cnn.Open();
+            SqlCommand cmd = new SqlCommand(SQL, cnn);
+            cmd.CommandType = CommandType.Text;
+            if (value != null)
+            {
+                foreach (Parametros param in value)
+                {
+                    cmd.Parameters.AddWithValue(param.key, param.value);
+                }
+            }
+
+            dt.Load(cmd.ExecuteReader());
+
+            cnn.Close();
+
+            return dt;
+        }
+
+        public bool ValidarCredenciales(string usuario, string contrasena)
+        {
+            cnn.Open();
+
+            string query = "SELECT COUNT(*) FROM Usuarios WHERE Nombre_usuario = @Usuario AND Contraseña_usuario = @Contraseña";
+
+            using (SqlCommand command = new SqlCommand(query, cnn))
+            {
+                command.Parameters.AddWithValue("@Usuario", usuario);
+                command.Parameters.AddWithValue("@Contraseña", contrasena);
+
+                int resultado = (int)command.ExecuteScalar();
+
+                cnn.Close();
+                return resultado > 0;
+            }
+            
+        }
+            
 
         public DataTable ConsultarDBCombo(string consultaSQL)
         {
@@ -127,11 +177,9 @@ namespace CineWheyBackend.Data
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "SP_INSERTAR_RESERVA";
                 cmd.Parameters.AddWithValue("@fec_reserva", reserva.fec_reserva);
-                cmd.Parameters.AddWithValue("@id_cliente", reserva.cliente);
+                cmd.Parameters.AddWithValue("@id_cliente", reserva.cliente.IdCliente);
 
-                SqlParameter parametro = new SqlParameter();
-                parametro.ParameterName = "@reserva";
-                parametro.SqlDbType = SqlDbType.Int;
+                SqlParameter parametro = new SqlParameter("@reserva", DbType.Int32);             
                 parametro.Direction = ParameterDirection.Output;
                 cmd.Parameters.Add(parametro);
 
@@ -139,7 +187,7 @@ namespace CineWheyBackend.Data
 
                 int nroReserva = (int)parametro.Value;                
                 SqlCommand cmdDetalle;
-                int detReseva = 0;
+                int detReseva = 1;
 
 
                 foreach (DetalleReserva d in reserva.LstDetallesR)
@@ -147,7 +195,7 @@ namespace CineWheyBackend.Data
                     cmdDetalle = new SqlCommand("SP_INSERTAR_DETALLRESERVA", cnn, t);
                     cmdDetalle.CommandType = CommandType.StoredProcedure;
                     cmdDetalle.Parameters.AddWithValue("@id_dtl_reserva", detReseva);// Esto funciona con el conador? xq no es identity el id_detalleReserva
-                    cmdDetalle.Parameters.AddWithValue("@id_reserva", nroReserva); 
+                    cmdDetalle.Parameters.AddWithValue("@id_reserva", nroReserva);
                     cmdDetalle.Parameters.AddWithValue("@id_funcion", d.funcion.id_funcion);
                     cmdDetalle.Parameters.AddWithValue("@cantidad", d.cantidad);
                     cmdDetalle.ExecuteNonQuery();  

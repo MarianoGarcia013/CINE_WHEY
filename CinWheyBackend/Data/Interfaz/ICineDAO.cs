@@ -15,16 +15,22 @@ namespace CineWheyBackend.Data.Interfaz
         List<Funcion> GetFunciones();
         List<Reserva> GetReservas();
         List<Reserva> GetReservaxfecha(DateTime desde, DateTime hasta);
+        
+        List<Cliente> GetClientePorId(int id);
 
-        DataTable Getidioma();
-        DataTable Getgenero();       
-
+       
         bool PostCliente(Cliente cliente);
         bool PostRserva(Reserva reserva);
         bool PostFactura(Factura factura);
         bool PostFuncion(Funcion funcion);
         bool PostPelicula(Pelicula pelicula);
         bool UpdateCliente(Cliente cliente);
+
+        bool UpdatePeliculas(Pelicula pelicula);
+
+        bool DeletePelicula(int id);
+
+        List<Pelicula> GetPeliculaPorGenero(int genero);
 
         // Delete pelicula
     }
