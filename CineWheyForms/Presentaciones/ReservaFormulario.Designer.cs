@@ -35,11 +35,6 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cboFuncion = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFuncion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAccion = new System.Windows.Forms.DataGridViewButtonColumn();
             this.cboCliente = new System.Windows.Forms.ComboBox();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -61,6 +56,11 @@
             this.eliminarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodasLasFuncionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label9 = new System.Windows.Forms.Label();
+            this.ColCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFuncion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAccion = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -125,6 +125,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeight = 34;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -136,51 +138,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(31, 259);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 26;
             this.dataGridView1.Size = new System.Drawing.Size(1031, 355);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // ColCliente
-            // 
-            this.ColCliente.HeaderText = "Cliente";
-            this.ColCliente.MinimumWidth = 8;
-            this.ColCliente.Name = "ColCliente";
-            this.ColCliente.ReadOnly = true;
-            this.ColCliente.Width = 200;
-            // 
-            // ColFuncion
-            // 
-            this.ColFuncion.HeaderText = "Funcion";
-            this.ColFuncion.MinimumWidth = 8;
-            this.ColFuncion.Name = "ColFuncion";
-            this.ColFuncion.ReadOnly = true;
-            this.ColFuncion.Width = 180;
-            // 
-            // ColFecha
-            // 
-            this.ColFecha.HeaderText = "Fecha";
-            this.ColFecha.MinimumWidth = 8;
-            this.ColFecha.Name = "ColFecha";
-            this.ColFecha.ReadOnly = true;
-            this.ColFecha.Width = 150;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.MinimumWidth = 8;
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
-            this.colCantidad.Width = 150;
-            // 
-            // colAccion
-            // 
-            this.colAccion.HeaderText = "Accion";
-            this.colAccion.MinimumWidth = 8;
-            this.colAccion.Name = "colAccion";
-            this.colAccion.Text = "Quitar";
-            this.colAccion.Width = 150;
             // 
             // cboCliente
             // 
@@ -355,6 +318,48 @@
             this.label9.TabIndex = 24;
             this.label9.Text = "REGISTRAR RESERVAS";
             // 
+            // ColCliente
+            // 
+            this.ColCliente.HeaderText = "Cliente";
+            this.ColCliente.MinimumWidth = 8;
+            this.ColCliente.Name = "ColCliente";
+            this.ColCliente.ReadOnly = true;
+            this.ColCliente.Width = 200;
+            // 
+            // ColFuncion
+            // 
+            this.ColFuncion.HeaderText = "Funcion";
+            this.ColFuncion.MinimumWidth = 8;
+            this.ColFuncion.Name = "ColFuncion";
+            this.ColFuncion.ReadOnly = true;
+            this.ColFuncion.Width = 180;
+            // 
+            // ColFecha
+            // 
+            this.ColFecha.HeaderText = "Fecha";
+            this.ColFecha.MinimumWidth = 8;
+            this.ColFecha.Name = "ColFecha";
+            this.ColFecha.ReadOnly = true;
+            this.ColFecha.Width = 150;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.MinimumWidth = 8;
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
+            this.colCantidad.Width = 150;
+            // 
+            // colAccion
+            // 
+            this.colAccion.HeaderText = "Accion";
+            this.colAccion.MinimumWidth = 8;
+            this.colAccion.Name = "colAccion";
+            this.colAccion.ReadOnly = true;
+            this.colAccion.Text = "Quitar";
+            this.colAccion.UseColumnTextForButtonValue = true;
+            this.colAccion.Width = 150;
+            // 
             // ReservaFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -395,11 +400,6 @@
         private DateTimePicker dtpFecha;
         private ComboBox cboFuncion;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ColCliente;
-        private DataGridViewTextBoxColumn ColFuncion;
-        private DataGridViewTextBoxColumn ColFecha;
-        private DataGridViewTextBoxColumn colCantidad;
-        private DataGridViewButtonColumn colAccion;
         private ComboBox cboCliente;
         private Label lblCantidad;
         private Label lblFecha;
@@ -421,5 +421,10 @@
         private ToolStripMenuItem eliminarFuncionToolStripMenuItem;
         private ToolStripMenuItem verTodasLasFuncionesToolStripMenuItem;
         private Label label9;
+        private DataGridViewTextBoxColumn ColCliente;
+        private DataGridViewTextBoxColumn ColFuncion;
+        private DataGridViewTextBoxColumn ColFecha;
+        private DataGridViewTextBoxColumn colCantidad;
+        private DataGridViewButtonColumn colAccion;
     }
 }

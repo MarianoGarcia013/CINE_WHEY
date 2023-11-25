@@ -197,8 +197,9 @@
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(107, 38);
             this.btnAgregar.TabIndex = 116;
-            this.btnAgregar.Text = "&Agregar";
+            this.btnAgregar.Text = "&Guardar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // lstBoxPelicula
             // 

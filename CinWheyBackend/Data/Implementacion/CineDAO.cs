@@ -203,7 +203,7 @@ namespace CineWheyBackend.Data.Implementacion
             List<SqlParameter> list = new List<SqlParameter>();
             list.Add(new SqlParameter("@id_pelicula", pelicula.id_pelicula));
             list.Add(new SqlParameter("@titulo", pelicula.titulo));
-            list.Add(new SqlParameter("@fecha_estreno", pelicula.fecha_estreno));
+            //list.Add(new SqlParameter("@fecha_estreno", pelicula.fecha_estreno));
             list.Add(new SqlParameter("@director", pelicula.director));
             list.Add(new SqlParameter("@id_genero", pelicula.genero));
             list.Add(new SqlParameter("@id_idioma", pelicula.idioma));
@@ -212,7 +212,7 @@ namespace CineWheyBackend.Data.Implementacion
 
 
 
-            return HelperSingleton.getInstance().EjecutarSQLParam("SP_UpdatePeliculas", list);
+            return HelperSingleton.getInstance().EjecutarSQLParam("SP_UpdatePelicula", list);
         }
 
     }

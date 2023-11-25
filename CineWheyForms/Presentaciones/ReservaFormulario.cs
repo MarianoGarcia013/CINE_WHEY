@@ -62,18 +62,18 @@ namespace CineWheyForms.Presentaciones
             Funcion funcion = new Funcion(id_funcion, pelicula, sala, precio, fecha, hora_inicio);
 
             int cliente = Convert.ToInt32(cboCliente.SelectedValue);
-            //DateTime fecha_reservada = Convert.ToDateTime(dtpFecha.Value);
+            DateTime fecha_reservada = Convert.ToDateTime(dtpFecha.Value);
             int cantidad = Convert.ToInt32(nudCantidad.Value);
             DetalleReserva detalleReserva = new DetalleReserva(funcion, cantidad);
 
             reserva.AddDtlleReserva(detalleReserva);
-            dataGridView1.Rows.Add(new object[] { cliente, funcion.pelicula, funcion.fecha, cantidad });
+            dataGridView1.Rows.Add(new object[] { cliente, funcion.pelicula, fecha_reservada, cantidad });
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dataGridView1.CurrentCell.ColumnIndex == 5)
+            if(dataGridView1.CurrentCell.ColumnIndex == 4)
             {
                 reserva.RemoveDtlleReserva(dataGridView1.CurrentCell.RowIndex);
                 dataGridView1.Rows.RemoveAt(dataGridView1.CurrentCell.RowIndex);

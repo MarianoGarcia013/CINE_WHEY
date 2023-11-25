@@ -31,11 +31,12 @@ namespace CineWheyForms.Presentaciones
 
         private void PeliculaFormulario_Load(object sender, EventArgs e)
         {
+            cargarLista();
             Habilitar(false);
             cargarCombo(cboIdioma, "idiomas");
             cargarCombo(cboGenero, "generos");
-          
-            nuevo = false;
+            btnNueva.Focus();          
+            
         }
 
         private void Habilitar(bool v)
@@ -45,7 +46,8 @@ namespace CineWheyForms.Presentaciones
             txtDuracion.Enabled = v;
             dtpFechaEstreno.Enabled = v;
             cboGenero.Enabled = v;
-            cboIdioma.Enabled = v;
+            cboIdioma.Enabled = v;            
+            btnNueva.Enabled = !v;   
             btnAgregar.Enabled = v;
             btnCancelar.Enabled = v;
 
@@ -59,7 +61,7 @@ namespace CineWheyForms.Presentaciones
             combo.DisplayMember = tabla.Columns[1].ColumnName;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-        public void cargarLista(ListBox lista, string nombreTabla)
+        public void cargarLista()
         {
             PeliculaList.Clear();
             lstBoxPelicula.Items.Clear();
@@ -67,14 +69,13 @@ namespace CineWheyForms.Presentaciones
             DataTable tabla = HP.ConsultarDB("Select * from Pelicula");
             foreach (DataRow fila in tabla.Rows)
             {
-                Pelicula pelicula = new Pelicula();
-                pelicula.titulo = (string)(fila["titulo"]); // ?
-                pelicula.director = (string)(fila["director"]); // ? 
-                pelicula.duracion = Convert.ToInt32(fila["duracion"]);
-                pelicula.fecha_estreno = Convert.ToDateTime(fila["fecha_estreno"]);
-                pelicula.genero = Convert.ToInt32(fila["genero"]);
-                pelicula.idioma = Convert.ToInt32(fila["idioma"]);
-                //   pelicula.apta_todo_publico = ??
+                Pelicula pelicula = new Pelicula();                
+                pelicula.titulo = fila[1].ToString();
+                pelicula.fecha_estreno = Convert.ToDateTime(fila[2].ToString());
+                pelicula.director = fila[3].ToString();  
+                pelicula.genero = Convert.ToInt32(fila[4].ToString());
+                pelicula.idioma = Convert.ToInt32(fila[5].ToString());                
+                pelicula.duracion = Convert.ToInt32(fila[7].ToString());
 
                 PeliculaList.Add(pelicula);
                 lstBoxPelicula.Items.Add(pelicula);
@@ -82,14 +83,19 @@ namespace CineWheyForms.Presentaciones
         }
         private void cargarCampos(int i)
         {
-            txtTitulo.Text = PeliculaList[i].titulo.ToString();
-            txtDirector.Text = PeliculaList[i].director.ToString();
-            txtDuracion.Text = PeliculaList[i].duracion.ToString();
-            //   dtpFechaEstreno.Value = PeliculaList[i].fecha_estreno.;
-            cboGenero.SelectedValue = PeliculaList[i].genero;
-            cboIdioma.SelectedValue = PeliculaList[i].idioma;
-            rbtSi.Checked = PeliculaList[i].apta_todo_publico == true; // ??
-            rbtNo.Checked = PeliculaList[i].apta_todo_publico == true; // ??
+            if(lstBoxPelicula.SelectedIndex !=-1) 
+            {
+                txtTitulo.Text = PeliculaList[i].titulo.ToString();
+                txtDirector.Text = PeliculaList[i].director.ToString();
+                txtDuracion.Text = PeliculaList[i].duracion.ToString();
+                dtpFechaEstreno.Text = PeliculaList[i].fecha_estreno.ToString();
+                cboGenero.SelectedValue = PeliculaList[i].genero;
+                cboIdioma.SelectedValue = PeliculaList[i].idioma;
+                //rbtSi.Checked = PeliculaList[i].apta_todo_publico == true; // ??
+                //rbtNo.Checked = PeliculaList[i].apta_todo_publico == true; // ??
+            }
+            
+           
 
         }
 
@@ -127,27 +133,8 @@ namespace CineWheyForms.Presentaciones
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-           
-            
-                pelicula.titulo = txtTitulo.Text;
-                pelicula.duracion = Convert.ToInt32(txtDuracion.Text);
-                pelicula.fecha_estreno = Convert.ToDateTime(dtpFechaEstreno.Value);
-                pelicula.director = txtDirector.Text;
-                pelicula.genero = (int)cboGenero.SelectedValue;
-                pelicula.idioma = (int)cboIdioma.SelectedValue;
-                if (rbtSi.Checked)
-                    pelicula.apta_todo_publico = true;
-                else
-                    pelicula.apta_todo_publico = false;
-
-            if (DA.InsertarPelicula(pelicula))
-            {
-                MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
-            }
-            else
-            {
-                MessageBox.Show("Error al insertar la película", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                
+                
         }            
         
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -175,6 +162,7 @@ namespace CineWheyForms.Presentaciones
             nuevo = true;
             txtTitulo.Focus();
             limpiar();
+            txtTitulo.Focus();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -199,10 +187,53 @@ namespace CineWheyForms.Presentaciones
 
         private void btnNueva_Click(object sender, EventArgs e)
         {
-            Habilitar(true);
             nuevo = true;
+            lstBoxPelicula.Enabled = false;
             txtTitulo.Focus();
+            Habilitar(true);
             limpiar();
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            if (nuevo)
+            {
+                pelicula.titulo = txtTitulo.Text;
+                pelicula.duracion = Convert.ToInt32(txtDuracion.Text);
+                pelicula.fecha_estreno = Convert.ToDateTime(dtpFechaEstreno.Value);
+                pelicula.director = txtDirector.Text;
+                pelicula.genero = (int)cboGenero.SelectedValue;
+                pelicula.idioma = (int)cboIdioma.SelectedValue;
+                if (rbtSi.Checked)
+                    pelicula.apta_todo_publico = true;
+                else
+                    pelicula.apta_todo_publico = false;
+
+                if (DA.InsertarPelicula(pelicula))
+                {
+                    MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
+                    cargarLista();
+                }
+            }
+            else
+            {
+                pelicula.titulo = txtTitulo.Text;
+                pelicula.duracion = Convert.ToInt32(txtDuracion.Text);
+                pelicula.director = txtDirector.Text;
+                //pelicula.fecha_estreno = Convert.ToDateTime(dtpFechaEstreno.Value);
+                pelicula.genero = (int)cboGenero.SelectedValue;
+                pelicula.idioma = (int)cboIdioma.SelectedValue;
+                if (rbtSi.Checked)
+                    pelicula.apta_todo_publico = true;
+                else
+                    pelicula.apta_todo_publico = false;
+                if (DA.UpdatePelcicula(pelicula))
+                {
+                    MessageBox.Show("La Pelicula fue modificada con exito!", "CONTROL", MessageBoxButtons.OK);
+                    cargarLista();
+                }
+                    
+            }            
         }
     }
 }

@@ -32,5 +32,10 @@ namespace CineWheyBackend.Models
         public Pelicula()
         {
         }
+
+        public override string ToString()
+        {
+            return titulo + ", " + director;
+        }
     }
 }

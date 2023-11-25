@@ -28,6 +28,7 @@ namespace CineWheyForms.Presentaciones
             HP = new HelperSingleton();
             clienteList = new List<Cliente>();
             DA = new DataApi();
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -62,8 +63,10 @@ namespace CineWheyForms.Presentaciones
                 cliente.ciudad = (int)cboCIudad.SelectedValue;
 
                 if (DA.InsertarCliente(cliente))
+                {
                     MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
-                dgvCliente.Rows.Add(new object[] { cliente.nombre, cliente.apellido, cliente.email });
+                    dgvCliente.Rows.Add(new object[] { cliente.nombre, cliente.apellido, cliente.email });
+                }                
             }
         }
 
@@ -84,6 +87,11 @@ namespace CineWheyForms.Presentaciones
         {
            PeliculaFormulario peli = new PeliculaFormulario();
             peli.Show();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
