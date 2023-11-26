@@ -17,6 +17,7 @@ namespace CineWheyForms.Presentaciones
 {
     public partial class LoginFormulario : Form
     {
+        private bool isMaximized = false;
         public LoginFormulario()
         {
             InitializeComponent();
@@ -84,6 +85,16 @@ namespace CineWheyForms.Presentaciones
 
         private void LoginFormulario_Load(object sender, EventArgs e)
         {
+            if (WindowState == FormWindowState.Maximized && !isMaximized)
+            {
+                CenterToScreen();
+                isMaximized = true;
+            }
+            else if (WindowState == FormWindowState.Normal && isMaximized)
+            {
+                // El formulario acaba de ser restaurado (no maximizado)
+                isMaximized = false;
+            }
 
         }
 
@@ -99,6 +110,17 @@ namespace CineWheyForms.Presentaciones
         private void checkContra_CheckedChanged(object sender, EventArgs e)
         {
             txtContraseña.UseSystemPasswordChar = !checkContra.Checked;
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            CrearUsuarioFormulario crearNuevo = new CrearUsuarioFormulario();
+            crearNuevo.ShowDialog();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -59,11 +59,14 @@
             this.cboPelicula = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.funcionesToolStripMenuItem,
@@ -147,94 +150,112 @@
             // 
             // btnNueva
             // 
-            this.btnNueva.Location = new System.Drawing.Point(19, 535);
+            this.btnNueva.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNueva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnNueva.Location = new System.Drawing.Point(28, 532);
             this.btnNueva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNueva.Name = "btnNueva";
-            this.btnNueva.Size = new System.Drawing.Size(107, 38);
+            this.btnNueva.Size = new System.Drawing.Size(107, 52);
             this.btnNueva.TabIndex = 62;
             this.btnNueva.Text = "&Nueva";
-            this.btnNueva.UseVisualStyleBackColor = true;
+            this.btnNueva.UseVisualStyleBackColor = false;
             this.btnNueva.Click += new System.EventHandler(this.btnNueva_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(599, 535);
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalir.Location = new System.Drawing.Point(608, 532);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(107, 38);
+            this.btnSalir.Size = new System.Drawing.Size(107, 52);
             this.btnSalir.TabIndex = 61;
             this.btnSalir.Text = "&Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // lblFuncion
             // 
+            this.lblFuncion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFuncion.AutoSize = true;
-            this.lblFuncion.Location = new System.Drawing.Point(33, 97);
+            this.lblFuncion.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFuncion.Location = new System.Drawing.Point(37, 85);
             this.lblFuncion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFuncion.Name = "lblFuncion";
-            this.lblFuncion.Size = new System.Drawing.Size(93, 25);
+            this.lblFuncion.Size = new System.Drawing.Size(144, 32);
             this.lblFuncion.TabIndex = 60;
-            this.lblFuncion.Text = "FUNCION:";
+            this.lblFuncion.Text = "FUNCIÓN";
             // 
             // lstBoxFunciones
             // 
+            this.lstBoxFunciones.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lstBoxFunciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lstBoxFunciones.FormattingEnabled = true;
             this.lstBoxFunciones.ItemHeight = 25;
-            this.lstBoxFunciones.Location = new System.Drawing.Point(726, 92);
+            this.lstBoxFunciones.Location = new System.Drawing.Point(752, 94);
             this.lstBoxFunciones.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstBoxFunciones.Name = "lstBoxFunciones";
-            this.lstBoxFunciones.Size = new System.Drawing.Size(574, 479);
+            this.lstBoxFunciones.Size = new System.Drawing.Size(594, 479);
             this.lstBoxFunciones.TabIndex = 59;
             this.lstBoxFunciones.SelectedIndexChanged += new System.EventHandler(this.lstBoxFunciones_SelectedIndexChanged);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(366, 535);
+            this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBorrar.Location = new System.Drawing.Point(375, 532);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(107, 38);
+            this.btnBorrar.Size = new System.Drawing.Size(107, 52);
             this.btnBorrar.TabIndex = 58;
             this.btnBorrar.Text = "&Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(250, 535);
+            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnActualizar.Location = new System.Drawing.Point(259, 532);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(107, 38);
+            this.btnActualizar.Size = new System.Drawing.Size(107, 52);
             this.btnActualizar.TabIndex = 57;
             this.btnActualizar.Text = "&Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(482, 535);
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelar.Location = new System.Drawing.Point(491, 532);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(107, 38);
+            this.btnCancelar.Size = new System.Drawing.Size(107, 52);
             this.btnCancelar.TabIndex = 54;
             this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAgregarF
             // 
-            this.btnAgregarF.Location = new System.Drawing.Point(135, 535);
+            this.btnAgregarF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregarF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAgregarF.Location = new System.Drawing.Point(144, 532);
             this.btnAgregarF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregarF.Name = "btnAgregarF";
-            this.btnAgregarF.Size = new System.Drawing.Size(107, 38);
+            this.btnAgregarF.Size = new System.Drawing.Size(107, 52);
             this.btnAgregarF.TabIndex = 52;
-            this.btnAgregarF.Text = "&Agregar";
-            this.btnAgregarF.UseVisualStyleBackColor = true;
+            this.btnAgregarF.Text = "&Guardar";
+            this.btnAgregarF.UseVisualStyleBackColor = false;
             this.btnAgregarF.Click += new System.EventHandler(this.btnAgregarF_Click_1);
             // 
             // txtHoraInicio
             // 
+            this.txtHoraInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtHoraInicio.BackColor = System.Drawing.Color.White;
-            this.txtHoraInicio.Location = new System.Drawing.Point(217, 466);
+            this.txtHoraInicio.Location = new System.Drawing.Point(254, 457);
             this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.Size = new System.Drawing.Size(191, 31);
@@ -242,7 +263,8 @@
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(217, 337);
+            this.dtpFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFecha.Location = new System.Drawing.Point(254, 328);
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(370, 31);
@@ -250,9 +272,10 @@
             // 
             // txtPrecio
             // 
+            this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrecio.BackColor = System.Drawing.Color.White;
             this.txtPrecio.ForeColor = System.Drawing.Color.Black;
-            this.txtPrecio.Location = new System.Drawing.Point(217, 262);
+            this.txtPrecio.Location = new System.Drawing.Point(254, 253);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(181, 31);
@@ -260,8 +283,9 @@
             // 
             // lblHora_Inicio
             // 
+            this.lblHora_Inicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHora_Inicio.AutoSize = true;
-            this.lblHora_Inicio.Location = new System.Drawing.Point(33, 472);
+            this.lblHora_Inicio.Location = new System.Drawing.Point(71, 461);
             this.lblHora_Inicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHora_Inicio.Name = "lblHora_Inicio";
             this.lblHora_Inicio.Size = new System.Drawing.Size(156, 25);
@@ -270,8 +294,9 @@
             // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(109, 347);
+            this.lblFecha.Location = new System.Drawing.Point(148, 332);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(70, 25);
@@ -280,8 +305,9 @@
             // 
             // lblPrecio
             // 
+            this.lblPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(106, 267);
+            this.lblPrecio.Location = new System.Drawing.Point(143, 258);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(76, 25);
@@ -290,8 +316,9 @@
             // 
             // lblSala
             // 
+            this.lblSala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSala.AutoSize = true;
-            this.lblSala.Location = new System.Drawing.Point(122, 210);
+            this.lblSala.Location = new System.Drawing.Point(159, 201);
             this.lblSala.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSala.Name = "lblSala";
             this.lblSala.Size = new System.Drawing.Size(59, 25);
@@ -300,8 +327,9 @@
             // 
             // lblPelicula
             // 
+            this.lblPelicula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPelicula.AutoSize = true;
-            this.lblPelicula.Location = new System.Drawing.Point(89, 157);
+            this.lblPelicula.Location = new System.Drawing.Point(126, 148);
             this.lblPelicula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPelicula.Name = "lblPelicula";
             this.lblPelicula.Size = new System.Drawing.Size(92, 25);
@@ -310,10 +338,11 @@
             // 
             // cboSala
             // 
+            this.cboSala.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboSala.BackColor = System.Drawing.Color.White;
             this.cboSala.ForeColor = System.Drawing.Color.Black;
             this.cboSala.FormattingEnabled = true;
-            this.cboSala.Location = new System.Drawing.Point(217, 205);
+            this.cboSala.Location = new System.Drawing.Point(254, 196);
             this.cboSala.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboSala.Name = "cboSala";
             this.cboSala.Size = new System.Drawing.Size(281, 33);
@@ -321,10 +350,11 @@
             // 
             // cboPelicula
             // 
+            this.cboPelicula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboPelicula.BackColor = System.Drawing.Color.White;
             this.cboPelicula.ForeColor = System.Drawing.Color.Black;
             this.cboPelicula.FormattingEnabled = true;
-            this.cboPelicula.Location = new System.Drawing.Point(217, 152);
+            this.cboPelicula.Location = new System.Drawing.Point(254, 143);
             this.cboPelicula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboPelicula.Name = "cboPelicula";
             this.cboPelicula.Size = new System.Drawing.Size(373, 33);
@@ -332,28 +362,55 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 409);
+            this.label1.Location = new System.Drawing.Point(89, 400);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 25);
             this.label1.TabIndex = 63;
-            this.label1.Text = "DESCRIPCION:";
+            this.label1.Text = "DESCRIPCIÓN:";
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
-            this.txtDescripcion.Location = new System.Drawing.Point(217, 409);
+            this.txtDescripcion.Location = new System.Drawing.Point(254, 400);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(370, 31);
             this.txtDescripcion.TabIndex = 64;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(254, 94);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 25);
+            this.label2.TabIndex = 65;
+            this.label2.Text = "CODIGO:";
+            // 
+            // txtId
+            // 
+            this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtId.BackColor = System.Drawing.Color.White;
+            this.txtId.ForeColor = System.Drawing.Color.Black;
+            this.txtId.Location = new System.Drawing.Point(347, 88);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(88, 31);
+            this.txtId.TabIndex = 66;
+            // 
             // FuncionFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1398, 665);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnNueva);
@@ -375,8 +432,9 @@
             this.Controls.Add(this.cboSala);
             this.Controls.Add(this.cboPelicula);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "FuncionFormulario";
-            this.Text = "FuncionFormulario";
+            this.Text = "CargarFuncion";
             this.Load += new System.EventHandler(this.FuncionFormulario_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -417,5 +475,7 @@
         private ComboBox cboPelicula;
         private Label label1;
         private TextBox txtDescripcion;
+        private Label label2;
+        private TextBox txtId;
     }
 }

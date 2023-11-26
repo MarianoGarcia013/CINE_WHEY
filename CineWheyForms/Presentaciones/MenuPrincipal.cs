@@ -45,5 +45,22 @@ namespace CineWheyForms.Presentaciones
             FuncionFormulario funcion = new FuncionFormulario();
             funcion.Show();
         }
+
+        private void historialReservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void consultarPorFechasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReservasFechasForm fechas = new ReservasFechasForm();
+            fechas.Show();
+        }
+
+        private void consultarPorGeneroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReservasPorGenero genero = new ReservasPorGenero();
+            genero.Show();  
+        }
     }
 }

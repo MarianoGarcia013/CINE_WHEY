@@ -51,7 +51,6 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.dtpFechaEstreno = new System.Windows.Forms.DateTimePicker();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnNueva = new System.Windows.Forms.Button();
             this.cboIdioma = new System.Windows.Forms.ComboBox();
             this.cboGenero = new System.Windows.Forms.ComboBox();
             this.rbtNo = new System.Windows.Forms.RadioButton();
@@ -67,11 +66,15 @@
             this.lblDuracion = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnNueva = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.funcionesToolStripMenuItem,
@@ -79,7 +82,7 @@
             this.clienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1354, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1377, 33);
             this.menuStrip1.TabIndex = 70;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -191,33 +194,37 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAgregar.Location = new System.Drawing.Point(172, 641);
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAgregar.Location = new System.Drawing.Point(253, 606);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(107, 38);
+            this.btnAgregar.Size = new System.Drawing.Size(107, 46);
             this.btnAgregar.TabIndex = 116;
-            this.btnAgregar.Text = "&Agregar";
+            this.btnAgregar.Text = "&Guardar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // lstBoxPelicula
             // 
+            this.lstBoxPelicula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lstBoxPelicula.FormattingEnabled = true;
             this.lstBoxPelicula.ItemHeight = 25;
             this.lstBoxPelicula.Location = new System.Drawing.Point(778, 148);
             this.lstBoxPelicula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstBoxPelicula.Name = "lstBoxPelicula";
-            this.lstBoxPelicula.Size = new System.Drawing.Size(520, 529);
+            this.lstBoxPelicula.Size = new System.Drawing.Size(549, 504);
             this.lstBoxPelicula.TabIndex = 115;
             this.lstBoxPelicula.SelectedIndexChanged += new System.EventHandler(this.lstBoxPelicula_SelectedIndexChanged);
             // 
             // btnActualizar
             // 
-            this.btnActualizar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnActualizar.Location = new System.Drawing.Point(292, 641);
+            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnActualizar.Location = new System.Drawing.Point(373, 606);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(107, 38);
+            this.btnActualizar.Size = new System.Drawing.Size(107, 46);
             this.btnActualizar.TabIndex = 114;
             this.btnActualizar.Text = "&Actualizar";
             this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -226,11 +233,12 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSalir.Location = new System.Drawing.Point(640, 641);
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalir.Location = new System.Drawing.Point(619, 666);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(107, 38);
+            this.btnSalir.Size = new System.Drawing.Size(107, 46);
             this.btnSalir.TabIndex = 113;
             this.btnSalir.Text = "&Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -238,18 +246,21 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBorrar.Location = new System.Drawing.Point(409, 641);
+            this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnBorrar.Location = new System.Drawing.Point(490, 606);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(107, 38);
+            this.btnBorrar.Size = new System.Drawing.Size(107, 46);
             this.btnBorrar.TabIndex = 112;
             this.btnBorrar.Text = "&Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // dtpFechaEstreno
             // 
-            this.dtpFechaEstreno.Location = new System.Drawing.Point(192, 346);
+            this.dtpFechaEstreno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFechaEstreno.Location = new System.Drawing.Point(253, 332);
             this.dtpFechaEstreno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpFechaEstreno.Name = "dtpFechaEstreno";
             this.dtpFechaEstreno.Size = new System.Drawing.Size(330, 31);
@@ -257,32 +268,23 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(525, 641);
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCancelar.Location = new System.Drawing.Point(495, 666);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(107, 38);
+            this.btnCancelar.Size = new System.Drawing.Size(107, 46);
             this.btnCancelar.TabIndex = 104;
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btnNueva
-            // 
-            this.btnNueva.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNueva.Location = new System.Drawing.Point(56, 641);
-            this.btnNueva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNueva.Name = "btnNueva";
-            this.btnNueva.Size = new System.Drawing.Size(107, 38);
-            this.btnNueva.TabIndex = 103;
-            this.btnNueva.Text = "&Nueva";
-            this.btnNueva.UseVisualStyleBackColor = false;
-            this.btnNueva.Click += new System.EventHandler(this.btnNueva_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // cboIdioma
             // 
+            this.cboIdioma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboIdioma.BackColor = System.Drawing.Color.White;
             this.cboIdioma.FormattingEnabled = true;
-            this.cboIdioma.Location = new System.Drawing.Point(192, 489);
+            this.cboIdioma.Location = new System.Drawing.Point(252, 450);
             this.cboIdioma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboIdioma.Name = "cboIdioma";
             this.cboIdioma.Size = new System.Drawing.Size(194, 33);
@@ -290,9 +292,10 @@
             // 
             // cboGenero
             // 
+            this.cboGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboGenero.BackColor = System.Drawing.Color.White;
             this.cboGenero.FormattingEnabled = true;
-            this.cboGenero.Location = new System.Drawing.Point(192, 428);
+            this.cboGenero.Location = new System.Drawing.Point(252, 389);
             this.cboGenero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(215, 33);
@@ -300,9 +303,10 @@
             // 
             // rbtNo
             // 
+            this.rbtNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbtNo.AutoSize = true;
-            this.rbtNo.BackColor = System.Drawing.SystemColors.Control;
-            this.rbtNo.Location = new System.Drawing.Point(348, 568);
+            this.rbtNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rbtNo.Location = new System.Drawing.Point(357, 516);
             this.rbtNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbtNo.Name = "rbtNo";
             this.rbtNo.Size = new System.Drawing.Size(64, 29);
@@ -313,9 +317,10 @@
             // 
             // rbtSi
             // 
+            this.rbtSi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbtSi.AutoSize = true;
-            this.rbtSi.BackColor = System.Drawing.SystemColors.Control;
-            this.rbtSi.Location = new System.Drawing.Point(269, 568);
+            this.rbtSi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rbtSi.Location = new System.Drawing.Point(278, 516);
             this.rbtSi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbtSi.Name = "rbtSi";
             this.rbtSi.Size = new System.Drawing.Size(52, 29);
@@ -326,8 +331,9 @@
             // 
             // txtDuracion
             // 
+            this.txtDuracion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDuracion.BackColor = System.Drawing.Color.White;
-            this.txtDuracion.Location = new System.Drawing.Point(192, 281);
+            this.txtDuracion.Location = new System.Drawing.Point(253, 277);
             this.txtDuracion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(141, 31);
@@ -335,8 +341,9 @@
             // 
             // txtDirector
             // 
+            this.txtDirector.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDirector.BackColor = System.Drawing.Color.White;
-            this.txtDirector.Location = new System.Drawing.Point(192, 224);
+            this.txtDirector.Location = new System.Drawing.Point(253, 220);
             this.txtDirector.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDirector.Name = "txtDirector";
             this.txtDirector.Size = new System.Drawing.Size(473, 31);
@@ -344,9 +351,10 @@
             // 
             // txtTitulo
             // 
+            this.txtTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTitulo.BackColor = System.Drawing.Color.White;
             this.txtTitulo.ForeColor = System.Drawing.Color.Black;
-            this.txtTitulo.Location = new System.Drawing.Point(192, 176);
+            this.txtTitulo.Location = new System.Drawing.Point(253, 172);
             this.txtTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(473, 31);
@@ -354,90 +362,136 @@
             // 
             // lblAptoTodoPublico
             // 
+            this.lblAptoTodoPublico.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAptoTodoPublico.AutoSize = true;
-            this.lblAptoTodoPublico.Location = new System.Drawing.Point(56, 571);
+            this.lblAptoTodoPublico.Location = new System.Drawing.Point(188, 518);
             this.lblAptoTodoPublico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAptoTodoPublico.Name = "lblAptoTodoPublico";
-            this.lblAptoTodoPublico.Size = new System.Drawing.Size(187, 25);
+            this.lblAptoTodoPublico.Size = new System.Drawing.Size(46, 25);
             this.lblAptoTodoPublico.TabIndex = 111;
-            this.lblAptoTodoPublico.Text = "Apto p/ Todo Público:";
+            this.lblAptoTodoPublico.Text = "ATP:";
             // 
             // lblIdioma
             // 
+            this.lblIdioma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdioma.AutoSize = true;
-            this.lblIdioma.Location = new System.Drawing.Point(93, 494);
+            this.lblIdioma.Location = new System.Drawing.Point(155, 455);
             this.lblIdioma.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIdioma.Name = "lblIdioma";
-            this.lblIdioma.Size = new System.Drawing.Size(72, 25);
+            this.lblIdioma.Size = new System.Drawing.Size(81, 25);
             this.lblIdioma.TabIndex = 110;
-            this.lblIdioma.Text = "Idioma:";
+            this.lblIdioma.Text = "IDIOMA:";
             // 
             // lblGenero
             // 
+            this.lblGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGenero.AutoSize = true;
-            this.lblGenero.Location = new System.Drawing.Point(93, 433);
+            this.lblGenero.Location = new System.Drawing.Point(153, 394);
             this.lblGenero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(73, 25);
+            this.lblGenero.Size = new System.Drawing.Size(84, 25);
             this.lblGenero.TabIndex = 109;
-            this.lblGenero.Text = "Genero:";
+            this.lblGenero.Text = "GÉNERO:";
             // 
             // lblDirector
             // 
+            this.lblDirector.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDirector.AutoSize = true;
-            this.lblDirector.Location = new System.Drawing.Point(89, 229);
+            this.lblDirector.Location = new System.Drawing.Point(141, 223);
             this.lblDirector.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDirector.Name = "lblDirector";
-            this.lblDirector.Size = new System.Drawing.Size(79, 25);
+            this.lblDirector.Size = new System.Drawing.Size(98, 25);
             this.lblDirector.TabIndex = 108;
-            this.lblDirector.Text = "Director:";
+            this.lblDirector.Text = "DIRECTOR:";
             // 
             // lblFechaEstreno
             // 
+            this.lblFechaEstreno.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFechaEstreno.AutoSize = true;
-            this.lblFechaEstreno.Location = new System.Drawing.Point(22, 356);
+            this.lblFechaEstreno.Location = new System.Drawing.Point(62, 335);
             this.lblFechaEstreno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaEstreno.Name = "lblFechaEstreno";
-            this.lblFechaEstreno.Size = new System.Drawing.Size(150, 25);
+            this.lblFechaEstreno.Size = new System.Drawing.Size(177, 25);
             this.lblFechaEstreno.TabIndex = 107;
-            this.lblFechaEstreno.Text = "Fecha de Estreno:";
+            this.lblFechaEstreno.Text = "FECHA DE ESTRENO:";
             // 
             // lblDuracion
             // 
+            this.lblDuracion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDuracion.AutoSize = true;
-            this.lblDuracion.Location = new System.Drawing.Point(80, 286);
+            this.lblDuracion.Location = new System.Drawing.Point(132, 280);
             this.lblDuracion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDuracion.Name = "lblDuracion";
-            this.lblDuracion.Size = new System.Drawing.Size(87, 25);
+            this.lblDuracion.Size = new System.Drawing.Size(107, 25);
             this.lblDuracion.TabIndex = 106;
-            this.lblDuracion.Text = "Duración:";
+            this.lblDuracion.Text = "DURACIÓN:";
             // 
             // lblTitulo
             // 
+            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(105, 181);
+            this.lblTitulo.Location = new System.Drawing.Point(167, 175);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(60, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(72, 25);
             this.lblTitulo.TabIndex = 105;
-            this.lblTitulo.Text = "Titulo:";
+            this.lblTitulo.Text = "TÍTULO:";
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(38, 104);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(56, 73);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(304, 32);
             this.label6.TabIndex = 94;
             this.label6.Text = "CARGAR PELICULAS";
             // 
+            // btnNueva
+            // 
+            this.btnNueva.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNueva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnNueva.Location = new System.Drawing.Point(132, 606);
+            this.btnNueva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNueva.Name = "btnNueva";
+            this.btnNueva.Size = new System.Drawing.Size(107, 46);
+            this.btnNueva.TabIndex = 117;
+            this.btnNueva.Text = "&Nueva";
+            this.btnNueva.UseVisualStyleBackColor = false;
+            this.btnNueva.Click += new System.EventHandler(this.btnNueva_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(155, 127);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 25);
+            this.label1.TabIndex = 118;
+            this.label1.Text = "CODIGO:";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCodigo.BackColor = System.Drawing.Color.White;
+            this.txtCodigo.Location = new System.Drawing.Point(253, 124);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(107, 31);
+            this.txtCodigo.TabIndex = 119;
+            // 
             // PeliculaFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1354, 743);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1377, 743);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnNueva);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lstBoxPelicula);
             this.Controls.Add(this.btnActualizar);
@@ -445,7 +499,6 @@
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.dtpFechaEstreno);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnNueva);
             this.Controls.Add(this.cboIdioma);
             this.Controls.Add(this.cboGenero);
             this.Controls.Add(this.rbtNo);
@@ -462,7 +515,9 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "PeliculaFormulario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PeliculaFormulario";
             this.Load += new System.EventHandler(this.PeliculaFormulario_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -496,7 +551,6 @@
         private Button btnBorrar;
         private DateTimePicker dtpFechaEstreno;
         private Button btnCancelar;
-        private Button btnNueva;
         private ComboBox cboIdioma;
         private ComboBox cboGenero;
         private RadioButton rbtNo;
@@ -512,5 +566,8 @@
         private Label lblDuracion;
         private Label lblTitulo;
         private Label label6;
+        private Button btnNueva;
+        private Label label1;
+        private TextBox txtCodigo;
     }
 }

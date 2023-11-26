@@ -67,5 +67,15 @@ namespace CineWheyBackend.Negocio
         {
            return DAO.GetPeliculaPorGenero(genero);
         }
+
+        public bool PostUsuario(Usuario usuario)
+        {
+            return DAO.PostUsuario(usuario);
+        }
+
+        public bool UpdateFuncion(Funcion funcion)
+        {
+            return DAO.UpdateFunciones(funcion);
+        }
     }
 }

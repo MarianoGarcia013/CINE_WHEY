@@ -50,7 +50,7 @@
             this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAcciones = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -68,6 +68,8 @@
             this.agregarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodasLasFuncionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -75,169 +77,188 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 126);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(137, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 25);
+            this.label2.Size = new System.Drawing.Size(94, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "NOMBRE: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 210);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(161, 338);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 25);
+            this.label3.Size = new System.Drawing.Size(65, 25);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Correo Electronico";
+            this.label3.Text = "E-Mail:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(517, 132);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(132, 225);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 25);
+            this.label4.Size = new System.Drawing.Size(95, 25);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Apellido";
+            this.label4.Text = "APELLIDO:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(517, 216);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(127, 281);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 25);
+            this.label5.Size = new System.Drawing.Size(101, 25);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Telefono";
+            this.label5.Text = "TELÉFONO:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(191, 126);
+            this.txtNombre.Location = new System.Drawing.Point(239, 175);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(290, 31);
+            this.txtNombre.Size = new System.Drawing.Size(339, 31);
             this.txtNombre.TabIndex = 5;
             this.txtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(605, 123);
+            this.txtApellido.Location = new System.Drawing.Point(239, 222);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(268, 31);
+            this.txtApellido.Size = new System.Drawing.Size(339, 31);
             this.txtApellido.TabIndex = 6;
             // 
             // dtpFechaNacim
             // 
-            this.dtpFechaNacim.Location = new System.Drawing.Point(191, 315);
+            this.dtpFechaNacim.Location = new System.Drawing.Point(239, 398);
             this.dtpFechaNacim.Name = "dtpFechaNacim";
-            this.dtpFechaNacim.Size = new System.Drawing.Size(290, 31);
+            this.dtpFechaNacim.Size = new System.Drawing.Size(349, 31);
             this.dtpFechaNacim.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 320);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(20, 400);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 25);
+            this.label6.Size = new System.Drawing.Size(208, 25);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Fecha de nacimiento";
+            this.label6.Text = "FECHA DE NACIMIENTO:";
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(191, 210);
+            this.txtCorreo.Location = new System.Drawing.Point(239, 336);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(290, 31);
+            this.txtCorreo.Size = new System.Drawing.Size(339, 31);
             this.txtCorreo.TabIndex = 9;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(605, 219);
+            this.txtTelefono.Location = new System.Drawing.Point(238, 278);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(268, 31);
+            this.txtTelefono.Size = new System.Drawing.Size(340, 31);
             this.txtTelefono.TabIndex = 10;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(66, 404);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(122, 470);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 25);
+            this.label7.Size = new System.Drawing.Size(108, 25);
             this.label7.TabIndex = 11;
-            this.label7.Text = "Direccion";
+            this.label7.Text = "DIRECCIÓN:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(99, 479);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(144, 535);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 25);
+            this.label8.Size = new System.Drawing.Size(82, 25);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Ciudad";
+            this.label8.Text = "CIUDAD:";
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(181, 398);
+            this.txtDireccion.Location = new System.Drawing.Point(239, 467);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(300, 31);
+            this.txtDireccion.Size = new System.Drawing.Size(349, 31);
             this.txtDireccion.TabIndex = 13;
             // 
             // cboCIudad
             // 
             this.cboCIudad.FormattingEnabled = true;
-            this.cboCIudad.Location = new System.Drawing.Point(181, 476);
+            this.cboCIudad.Location = new System.Drawing.Point(239, 532);
             this.cboCIudad.Name = "cboCIudad";
-            this.cboCIudad.Size = new System.Drawing.Size(300, 33);
+            this.cboCIudad.Size = new System.Drawing.Size(349, 33);
             this.cboCIudad.TabIndex = 14;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(39, 679);
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(622, 670);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(101, 58);
             this.btnNuevo.TabIndex = 16;
             this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(163, 679);
+            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCargar.ForeColor = System.Drawing.Color.White;
+            this.btnCargar.Location = new System.Drawing.Point(746, 670);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(101, 58);
             this.btnCargar.TabIndex = 17;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Text = "&Guardar";
+            this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(1146, 679);
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(1545, 670);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(101, 58);
             this.btnSalir.TabIndex = 18;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Location = new System.Drawing.Point(1011, 679);
+            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Location = new System.Drawing.Point(1410, 670);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(101, 58);
             this.BtnCancelar.TabIndex = 19;
             this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.UseVisualStyleBackColor = false;
             // 
             // dgvCliente
             // 
+            this.dgvCliente.AllowUserToAddRows = false;
+            this.dgvCliente.AllowUserToDeleteRows = false;
+            this.dgvCliente.BackgroundColor = System.Drawing.Color.Gray;
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNombre,
             this.ColApellido,
             this.ColCorreo,
-            this.ColAcciones});
-            this.dgvCliente.Location = new System.Drawing.Point(517, 278);
+            this.ColNacimiento});
+            this.dgvCliente.Location = new System.Drawing.Point(622, 102);
             this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.ReadOnly = true;
             this.dgvCliente.RowHeadersWidth = 62;
             this.dgvCliente.RowTemplate.Height = 33;
-            this.dgvCliente.Size = new System.Drawing.Size(730, 359);
+            this.dgvCliente.Size = new System.Drawing.Size(1023, 537);
             this.dgvCliente.TabIndex = 20;
             // 
             // ColNombre
@@ -246,7 +267,7 @@
             this.ColNombre.MinimumWidth = 8;
             this.ColNombre.Name = "ColNombre";
             this.ColNombre.ReadOnly = true;
-            this.ColNombre.Width = 200;
+            this.ColNombre.Width = 250;
             // 
             // ColApellido
             // 
@@ -254,7 +275,7 @@
             this.ColApellido.MinimumWidth = 8;
             this.ColApellido.Name = "ColApellido";
             this.ColApellido.ReadOnly = true;
-            this.ColApellido.Width = 200;
+            this.ColApellido.Width = 250;
             // 
             // ColCorreo
             // 
@@ -262,30 +283,36 @@
             this.ColCorreo.MinimumWidth = 8;
             this.ColCorreo.Name = "ColCorreo";
             this.ColCorreo.ReadOnly = true;
-            this.ColCorreo.Width = 150;
+            this.ColCorreo.Width = 270;
             // 
-            // ColAcciones
+            // ColNacimiento
             // 
-            this.ColAcciones.HeaderText = "Accion";
-            this.ColAcciones.MinimumWidth = 8;
-            this.ColAcciones.Name = "ColAcciones";
-            this.ColAcciones.Width = 150;
+            this.ColNacimiento.HeaderText = "Fecha de Nacimiento";
+            this.ColNacimiento.MinimumWidth = 8;
+            this.ColNacimiento.Name = "ColNacimiento";
+            this.ColNacimiento.ReadOnly = true;
+            this.ColNacimiento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColNacimiento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColNacimiento.Width = 200;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(293, 679);
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(876, 670);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(101, 58);
             this.btnActualizar.TabIndex = 21;
             this.btnActualizar.Text = "&Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(28, 55);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(31, 79);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(268, 32);
             this.label9.TabIndex = 23;
@@ -301,7 +328,7 @@
             this.funcionesToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1276, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1669, 33);
             this.menuStrip1.TabIndex = 24;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -404,11 +431,35 @@
             this.verTodasLasFuncionesToolStripMenuItem.Size = new System.Drawing.Size(299, 34);
             this.verTodasLasFuncionesToolStripMenuItem.Text = "Ver todas las Funciones";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(487, 581);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 58);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Cargar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(629, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 25);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "TODOS LOS CLIENTES";
+            // 
             // ClienteFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1276, 763);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1669, 765);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnActualizar);
@@ -431,6 +482,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ClienteFormulario";
             this.Text = "ClienteFormulario";
             this.Load += new System.EventHandler(this.ClienteFormulario_Load);
@@ -462,10 +514,6 @@
         private Button btnSalir;
         private Button BtnCancelar;
         private DataGridView dgvCliente;
-        private DataGridViewTextBoxColumn ColNombre;
-        private DataGridViewTextBoxColumn ColApellido;
-        private DataGridViewTextBoxColumn ColCorreo;
-        private DataGridViewButtonColumn ColAcciones;
         private Button btnActualizar;
         private Label label9;
         private MenuStrip menuStrip1;
@@ -483,5 +531,11 @@
         private ToolStripMenuItem agregarFuncionToolStripMenuItem;
         private ToolStripMenuItem eliminarFuncionToolStripMenuItem;
         private ToolStripMenuItem verTodasLasFuncionesToolStripMenuItem;
+        private Button button1;
+        private Label label1;
+        private DataGridViewTextBoxColumn ColNombre;
+        private DataGridViewTextBoxColumn ColApellido;
+        private DataGridViewTextBoxColumn ColCorreo;
+        private DataGridViewTextBoxColumn ColNacimiento;
     }
 }

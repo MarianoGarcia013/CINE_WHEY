@@ -28,6 +28,7 @@ namespace CineWheyForms.Presentaciones
             HP = new HelperSingleton();
             clienteList = new List<Cliente>();
             DA = new DataApi();
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace CineWheyForms.Presentaciones
         private void ClienteFormulario_Load(object sender, EventArgs e)
         {
             cargarCombo(cboCIudad);
+            cargarGrilla();
         }
 
         public void cargarCombo(ComboBox combo)
@@ -47,7 +49,23 @@ namespace CineWheyForms.Presentaciones
             combo.ValueMember = tabla.Columns[0].ColumnName;
             combo.DisplayMember = tabla.Columns[2].ColumnName;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
-        }       
+        }
+        
+        public void cargarGrilla()
+        {
+            DataTable tabla = HP.ConsultarDBCombo("select nombre, apellido, email, fec_nac from Clientes");
+            dgvCliente.Rows.Clear();
+            foreach (DataRow fila in tabla.Rows)
+            {
+                dgvCliente.Rows.Add(new object[]
+                {
+                    fila[0].ToString(),
+                    fila[1].ToString(),
+                    fila[2].ToString(),
+                    Convert.ToDateTime(fila[3].ToString())                
+                });
+            }
+        }
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
@@ -62,8 +80,10 @@ namespace CineWheyForms.Presentaciones
                 cliente.ciudad = (int)cboCIudad.SelectedValue;
 
                 if (DA.InsertarCliente(cliente))
+                {
                     MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
-                dgvCliente.Rows.Add(new object[] { cliente.nombre, cliente.apellido, cliente.email });
+                    dgvCliente.Rows.Add(new object[] { cliente.nombre, cliente.apellido, cliente.email });
+                }                
             }
         }
 
@@ -84,6 +104,11 @@ namespace CineWheyForms.Presentaciones
         {
            PeliculaFormulario peli = new PeliculaFormulario();
             peli.Show();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
