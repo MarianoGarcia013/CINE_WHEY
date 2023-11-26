@@ -117,6 +117,23 @@ namespace CineWheyBackend.Data
             cnn.Close();
             return dt;
         }
+        public DataTable Consultar(string nombreSP, List<Parametros> lstParametros)
+        {
+            cnn.Open();
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = cnn;
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.CommandText = nombreSP;
+            comando.Parameters.Clear();
+            foreach (Parametros p in lstParametros)
+            {
+                comando.Parameters.AddWithValue(p.key, p.value);
+            }
+            DataTable tabla = new DataTable();
+            tabla.Load(comando.ExecuteReader());
+            cnn.Close();
+            return tabla;
+        }
 
         public bool EjecutarSQLParam(string strSql, List<SqlParameter> values)
         {
@@ -162,6 +179,23 @@ namespace CineWheyBackend.Data
             return ok;
         }
 
+        public List<Reserva> ObtenerReservasPorFecha(DateTime fechaDesde, DateTime fechaHasta) // Falta terminar
+        {
+            List<Reserva> reservas = new List<Reserva>();
+            string sp = "SP_ReservasPorFecha";
+            List<Parametros> list = new List<Parametros>();
+            list.Add(new Parametros("@fecha_desde", fechaDesde));
+            list.Add(new Parametros("@fecha_hasta", fechaHasta));
+            DataTable dt = ConsultarDBP(sp, list);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Reserva reserva = new Reserva();
+
+            }
+            return reservas;
+        }
+
         public bool InsertarReserva(Reserva reserva) 
         {
             bool resultado = true;
@@ -196,7 +230,7 @@ namespace CineWheyBackend.Data
                     cmdDetalle.CommandType = CommandType.StoredProcedure;
                     cmdDetalle.Parameters.AddWithValue("@id_dtl_reserva", detReseva);// Esto funciona con el conador? xq no es identity el id_detalleReserva
                     cmdDetalle.Parameters.AddWithValue("@id_reserva", nroReserva);
-                    cmdDetalle.Parameters.AddWithValue("@id_funcion", d.funcion.id_funcion);
+                    cmdDetalle.Parameters.AddWithValue("@id_funcion",d.funcion.id_funcion);
                     cmdDetalle.Parameters.AddWithValue("@cantidad", d.cantidad);
                     cmdDetalle.ExecuteNonQuery();  
                     detReseva ++;

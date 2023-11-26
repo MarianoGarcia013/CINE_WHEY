@@ -46,7 +46,7 @@ namespace CineWheyForms.Presentaciones
             tabla = HP.ConsultarDBCombo($"select * from {nombreTabla} ORDER BY 2");
             combo.DataSource = tabla;
             combo.ValueMember = tabla.Columns[0].ColumnName;
-            combo.DisplayMember = $"{tabla.Columns[2].ColumnName}, {tabla.Columns[5].ColumnName}";     
+            combo.DisplayMember = tabla.Columns[0].ColumnName;     
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
@@ -59,7 +59,10 @@ namespace CineWheyForms.Presentaciones
             DateTime fecha = Convert.ToDateTime(item.Row.ItemArray[3]);
             double precio = Convert.ToDouble(item.Row.ItemArray[4]);
             string hora_inicio = Convert.ToString(item.Row.ItemArray[5]);
+           
             Funcion funcion = new Funcion(id_funcion, pelicula, sala, precio, fecha, hora_inicio);
+           
+            
 
             int cliente = Convert.ToInt32(cboCliente.SelectedValue);
             DateTime fecha_reservada = Convert.ToDateTime(dtpFecha.Value);
@@ -67,7 +70,8 @@ namespace CineWheyForms.Presentaciones
             DetalleReserva detalleReserva = new DetalleReserva(funcion, cantidad);
 
             reserva.AddDtlleReserva(detalleReserva);
-            dataGridView1.Rows.Add(new object[] { cliente, funcion.pelicula, fecha_reservada, cantidad });
+            
+            dataGridView1.Rows.Add(new object[] { cliente, funcion.id_funcion, fecha_reservada, cantidad });
 
         }
 
@@ -89,8 +93,6 @@ namespace CineWheyForms.Presentaciones
             reserva.cliente = cliente;
 
 
-
-
             if (DA.InsertarReserva(reserva))
             {
                 MessageBox.Show("La Reserva fue cargada con exito", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -105,6 +107,59 @@ namespace CineWheyForms.Presentaciones
         private void btnCargar_Click(object sender, EventArgs e)
         {
             GrabarReserva();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                  MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void nudCantidad_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboFuncion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCantidad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFuncion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

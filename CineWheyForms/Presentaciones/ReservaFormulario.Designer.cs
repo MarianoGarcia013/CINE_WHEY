@@ -35,6 +35,11 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cboFuncion = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFuncion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAccion = new System.Windows.Forms.DataGridViewButtonColumn();
             this.cboCliente = new System.Windows.Forms.ComboBox();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -56,11 +61,6 @@
             this.eliminarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodasLasFuncionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label9 = new System.Windows.Forms.Label();
-            this.ColCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFuncion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAccion = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -68,65 +68,82 @@
             // 
             // btnAGREGAR
             // 
-            this.btnAGREGAR.Location = new System.Drawing.Point(902, 195);
+            this.btnAGREGAR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAGREGAR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnAGREGAR.ForeColor = System.Drawing.Color.White;
+            this.btnAGREGAR.Location = new System.Drawing.Point(966, 202);
             this.btnAGREGAR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAGREGAR.Name = "btnAGREGAR";
-            this.btnAGREGAR.Size = new System.Drawing.Size(107, 36);
+            this.btnAGREGAR.Size = new System.Drawing.Size(249, 47);
             this.btnAGREGAR.TabIndex = 15;
             this.btnAGREGAR.Text = "AGREGAR";
-            this.btnAGREGAR.UseVisualStyleBackColor = true;
+            this.btnAGREGAR.UseVisualStyleBackColor = false;
             this.btnAGREGAR.Click += new System.EventHandler(this.btnAGREGAR_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(942, 624);
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(1121, 680);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(107, 36);
+            this.btnSalir.Size = new System.Drawing.Size(108, 42);
             this.btnSalir.TabIndex = 19;
             this.btnSalir.Text = "&Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(787, 624);
+            this.btnCargar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCargar.ForeColor = System.Drawing.Color.White;
+            this.btnCargar.Location = new System.Drawing.Point(966, 680);
             this.btnCargar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(107, 36);
+            this.btnCargar.Size = new System.Drawing.Size(108, 42);
             this.btnCargar.TabIndex = 18;
             this.btnCargar.Text = "&Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // nudCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(634, 195);
+            this.nudCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudCantidad.Location = new System.Drawing.Point(721, 211);
             this.nudCantidad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(237, 31);
             this.nudCantidad.TabIndex = 13;
+            this.nudCantidad.ValueChanged += new System.EventHandler(this.nudCantidad_ValueChanged);
             // 
             // dtpFecha
             // 
-            this.dtpFecha.Location = new System.Drawing.Point(632, 133);
+            this.dtpFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFecha.Location = new System.Drawing.Point(723, 161);
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(374, 31);
+            this.dtpFecha.Size = new System.Drawing.Size(489, 31);
             this.dtpFecha.TabIndex = 11;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // cboFuncion
             // 
+            this.cboFuncion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboFuncion.FormattingEnabled = true;
-            this.cboFuncion.Location = new System.Drawing.Point(131, 191);
+            this.cboFuncion.Location = new System.Drawing.Point(155, 207);
             this.cboFuncion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboFuncion.Name = "cboFuncion";
-            this.cboFuncion.Size = new System.Drawing.Size(374, 33);
+            this.cboFuncion.Size = new System.Drawing.Size(406, 33);
             this.cboFuncion.TabIndex = 9;
+            this.cboFuncion.SelectedIndexChanged += new System.EventHandler(this.cboFuncion_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeight = 34;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -141,62 +158,119 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(1031, 355);
+            this.dataGridView1.Size = new System.Drawing.Size(1198, 397);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // ColCliente
+            // 
+            this.ColCliente.HeaderText = "Cliente";
+            this.ColCliente.MinimumWidth = 8;
+            this.ColCliente.Name = "ColCliente";
+            this.ColCliente.ReadOnly = true;
+            this.ColCliente.Width = 200;
+            // 
+            // ColFuncion
+            // 
+            this.ColFuncion.HeaderText = "Funcion";
+            this.ColFuncion.MinimumWidth = 8;
+            this.ColFuncion.Name = "ColFuncion";
+            this.ColFuncion.ReadOnly = true;
+            this.ColFuncion.Width = 180;
+            // 
+            // ColFecha
+            // 
+            this.ColFecha.HeaderText = "Fecha";
+            this.ColFecha.MinimumWidth = 8;
+            this.ColFecha.Name = "ColFecha";
+            this.ColFecha.ReadOnly = true;
+            this.ColFecha.Width = 150;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.HeaderText = "Cantidad";
+            this.colCantidad.MinimumWidth = 8;
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.ReadOnly = true;
+            this.colCantidad.Width = 150;
+            // 
+            // colAccion
+            // 
+            this.colAccion.HeaderText = "Accion";
+            this.colAccion.MinimumWidth = 8;
+            this.colAccion.Name = "colAccion";
+            this.colAccion.ReadOnly = true;
+            this.colAccion.Text = "Quitar";
+            this.colAccion.UseColumnTextForButtonValue = true;
+            this.colAccion.Width = 150;
+            // 
             // cboCliente
             // 
+            this.cboCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboCliente.FormattingEnabled = true;
-            this.cboCliente.Location = new System.Drawing.Point(131, 138);
+            this.cboCliente.Location = new System.Drawing.Point(155, 159);
             this.cboCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboCliente.Name = "cboCliente";
-            this.cboCliente.Size = new System.Drawing.Size(374, 33);
+            this.cboCliente.Size = new System.Drawing.Size(406, 33);
             this.cboCliente.TabIndex = 8;
+            this.cboCliente.SelectedIndexChanged += new System.EventHandler(this.cboCliente_SelectedIndexChanged);
             // 
             // lblCantidad
             // 
+            this.lblCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(541, 202);
+            this.lblCantidad.ForeColor = System.Drawing.Color.White;
+            this.lblCantidad.Location = new System.Drawing.Point(602, 212);
             this.lblCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(87, 25);
+            this.lblCantidad.Size = new System.Drawing.Size(104, 25);
             this.lblCantidad.TabIndex = 16;
-            this.lblCantidad.Text = "Cantidad:";
+            this.lblCantidad.Text = "CANTIDAD:";
             this.lblCantidad.UseWaitCursor = true;
+            this.lblCantidad.Click += new System.EventHandler(this.lblCantidad_Click);
             // 
             // lblFecha
             // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(560, 138);
+            this.lblFecha.ForeColor = System.Drawing.Color.White;
+            this.lblFecha.Location = new System.Drawing.Point(635, 161);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(61, 25);
+            this.lblFecha.Size = new System.Drawing.Size(70, 25);
             this.lblFecha.TabIndex = 14;
-            this.lblFecha.Text = "Fecha:";
+            this.lblFecha.Text = "FECHA:";
+            this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
             // lblFuncion
             // 
+            this.lblFuncion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFuncion.AutoSize = true;
-            this.lblFuncion.Location = new System.Drawing.Point(31, 195);
+            this.lblFuncion.ForeColor = System.Drawing.Color.White;
+            this.lblFuncion.Location = new System.Drawing.Point(31, 210);
             this.lblFuncion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFuncion.Name = "lblFuncion";
-            this.lblFuncion.Size = new System.Drawing.Size(78, 25);
+            this.lblFuncion.Size = new System.Drawing.Size(93, 25);
             this.lblFuncion.TabIndex = 12;
-            this.lblFuncion.Text = "Funcion:";
+            this.lblFuncion.Text = "FUNCIÓN:";
+            this.lblFuncion.Click += new System.EventHandler(this.lblFuncion_Click);
             // 
             // lblCliente
             // 
+            this.lblCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(41, 138);
+            this.lblCliente.ForeColor = System.Drawing.Color.White;
+            this.lblCliente.Location = new System.Drawing.Point(44, 161);
             this.lblCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(69, 25);
+            this.lblCliente.Size = new System.Drawing.Size(80, 25);
             this.lblCliente.TabIndex = 10;
-            this.lblCliente.Text = "Cliente:";
+            this.lblCliente.Text = "CLIENTE:";
+            this.lblCliente.Click += new System.EventHandler(this.lblCliente_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.funcionesToolStripMenuItem,
@@ -205,7 +279,7 @@
             this.funcionesToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1101, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1264, 33);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -309,62 +383,23 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(31, 56);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(31, 78);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(331, 32);
             this.label9.TabIndex = 24;
             this.label9.Text = "REGISTRAR RESERVAS";
-            // 
-            // ColCliente
-            // 
-            this.ColCliente.HeaderText = "Cliente";
-            this.ColCliente.MinimumWidth = 8;
-            this.ColCliente.Name = "ColCliente";
-            this.ColCliente.ReadOnly = true;
-            this.ColCliente.Width = 200;
-            // 
-            // ColFuncion
-            // 
-            this.ColFuncion.HeaderText = "Funcion";
-            this.ColFuncion.MinimumWidth = 8;
-            this.ColFuncion.Name = "ColFuncion";
-            this.ColFuncion.ReadOnly = true;
-            this.ColFuncion.Width = 180;
-            // 
-            // ColFecha
-            // 
-            this.ColFecha.HeaderText = "Fecha";
-            this.ColFecha.MinimumWidth = 8;
-            this.ColFecha.Name = "ColFecha";
-            this.ColFecha.ReadOnly = true;
-            this.ColFecha.Width = 150;
-            // 
-            // colCantidad
-            // 
-            this.colCantidad.HeaderText = "Cantidad";
-            this.colCantidad.MinimumWidth = 8;
-            this.colCantidad.Name = "colCantidad";
-            this.colCantidad.ReadOnly = true;
-            this.colCantidad.Width = 150;
-            // 
-            // colAccion
-            // 
-            this.colAccion.HeaderText = "Accion";
-            this.colAccion.MinimumWidth = 8;
-            this.colAccion.Name = "colAccion";
-            this.colAccion.ReadOnly = true;
-            this.colAccion.Text = "Quitar";
-            this.colAccion.UseColumnTextForButtonValue = true;
-            this.colAccion.Width = 150;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // ReservaFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 675);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(1264, 752);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnAGREGAR);
@@ -379,6 +414,7 @@
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblFuncion);
             this.Controls.Add(this.lblCliente);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "ReservaFormulario";
             this.Text = "ReservaFormulario";
             this.Load += new System.EventHandler(this.ReservaFormulario_Load);

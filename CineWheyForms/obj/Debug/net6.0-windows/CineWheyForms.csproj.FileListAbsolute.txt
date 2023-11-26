@@ -1,5 +1,4 @@
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.csproj.AssemblyReference.cache
-C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.FormularioPrueba1.resources
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ClienteFormulario.resources
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.MenuPrincipal.resources
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.PeliculaFormulario.resources
@@ -30,3 +29,6 @@ C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-window
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.FuncionFormulario.resources
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ReservaFormulario.resources
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.LoginFormulario.resources
+C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ReservasFechasForm.resources
+C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ReservasPorGenero.resources
+C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.CrearUsuarioFormulario.resources

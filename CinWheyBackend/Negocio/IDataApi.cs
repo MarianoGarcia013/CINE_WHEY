@@ -22,5 +22,8 @@ namespace CineWheyBackend.Negocio
         bool DeletePeliucla(int id);
 
         List<Pelicula> GetPeliculaPorGenero(int genero);
+        
+        bool PostUsuario(Usuario usuario);
+        bool UpdateFuncion(Funcion funcion);
     }
 }

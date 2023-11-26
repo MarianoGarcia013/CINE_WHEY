@@ -40,15 +40,7 @@ namespace CineWheyBackend.Data.Implementacion
             }
             return resultado;
         }
-
-        //public DataTable GetClienteporID(int id)
-        //{
-        //    List<Parametros> lst = new List<Parametros>();
-        //    lst.Add(new Parametros("@id_cliente", id));
-
-        //    return HelperSingleton.getInstance().EjecutarSQLParam("SP_ClientesporId", lst);
-        //}
-
+  
         public List<Cliente> GetClientes()
         {
             List<Cliente> lClient = new List<Cliente>();
@@ -210,10 +202,29 @@ namespace CineWheyBackend.Data.Implementacion
             list.Add(new SqlParameter("@apta_todos", pelicula.apta_todo_publico));
             list.Add(new SqlParameter("@duracion", pelicula.duracion));
 
-
-
             return HelperSingleton.getInstance().EjecutarSQLParam("SP_UpdatePelicula", list);
         }
 
+        public bool PostUsuario(Usuario usuario) 
+        {
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@nombre", usuario.nombre_usuario));
+            list.Add(new SqlParameter("@contraseña", usuario.contrasñea_usuario));
+
+            return HelperSingleton.getInstance().EjecutarSQLParam("SP_CrearUsuario", list);
+        }
+
+        public bool UpdateFunciones(Funcion funcion)
+        {
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@id_funcion", funcion.id_funcion));
+            list.Add(new SqlParameter("@id_pelicula", funcion.pelicula));
+            list.Add(new SqlParameter("@id_sala", funcion.sala));            
+            list.Add(new SqlParameter("@precio", funcion.precio));           
+            list.Add(new SqlParameter("@hora_inicio", funcion.hora_inicio));
+            list.Add(new SqlParameter("@descripcion", funcion.descripcion));
+
+            return HelperSingleton.getInstance().EjecutarSQLParam("SP_UpdateFunciones", list);
+        }
     }
 }

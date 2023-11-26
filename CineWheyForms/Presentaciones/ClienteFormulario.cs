@@ -39,6 +39,7 @@ namespace CineWheyForms.Presentaciones
         private void ClienteFormulario_Load(object sender, EventArgs e)
         {
             cargarCombo(cboCIudad);
+            cargarGrilla();
         }
 
         public void cargarCombo(ComboBox combo)
@@ -48,7 +49,23 @@ namespace CineWheyForms.Presentaciones
             combo.ValueMember = tabla.Columns[0].ColumnName;
             combo.DisplayMember = tabla.Columns[2].ColumnName;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
-        }       
+        }
+        
+        public void cargarGrilla()
+        {
+            DataTable tabla = HP.ConsultarDBCombo("select nombre, apellido, email, fec_nac from Clientes");
+            dgvCliente.Rows.Clear();
+            foreach (DataRow fila in tabla.Rows)
+            {
+                dgvCliente.Rows.Add(new object[]
+                {
+                    fila[0].ToString(),
+                    fila[1].ToString(),
+                    fila[2].ToString(),
+                    Convert.ToDateTime(fila[3].ToString())                
+                });
+            }
+        }
 
         private void btnCargar_Click(object sender, EventArgs e)
         {

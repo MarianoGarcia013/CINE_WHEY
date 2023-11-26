@@ -33,6 +33,7 @@ namespace CineWheyForms.Presentaciones
             Habilitar(false);
             cargarCombo( cboPelicula,"Pelicula");
             cargarCombo(cboSala,"Salas");
+            CargarLista();
         }
 
         public void cargarCombo(ComboBox combo, string nombreTabla)
@@ -53,11 +54,13 @@ namespace CineWheyForms.Presentaciones
             foreach (DataRow fila in tabla.Rows)
             {
                 Funcion func = new Funcion();
-                func.pelicula = Convert.ToInt32(fila["pelicula"]);
-                func.sala = Convert.ToInt32(fila["salas"]);
-                func.precio = Convert.ToDouble(fila["precio"]);
-                func.fecha = Convert.ToDateTime(fila["fecha"]);
-                func.hora_inicio = (string)(fila["hora_inicio"]); // ?
+                func.id_funcion = Convert.ToInt32(fila[0]);
+                func.pelicula = Convert.ToInt32(fila[1]);
+                func.sala = Convert.ToInt32(fila[2]);
+                func.fecha = Convert.ToDateTime(fila[3]);
+                func.precio = Convert.ToDouble(fila[4]);                
+                func.hora_inicio = fila[5].ToString();
+                func.descripcion = fila[6].ToString();
 
                 funcionList.Add(func);
                 lstBoxFunciones.Items.Add(func);
@@ -66,11 +69,13 @@ namespace CineWheyForms.Presentaciones
 
         private void cargarCampos(int i)
         {
+            txtId.Text = funcionList[i].id_funcion.ToString();
             cboPelicula.SelectedValue = funcionList[i].pelicula;
             cboSala.SelectedValue = funcionList[i].sala;
             txtPrecio.Text = funcionList[i].precio.ToString();
             dtpFecha.Value = funcionList[i].fecha;
             txtHoraInicio.Text = funcionList[i].hora_inicio.ToString();
+            txtDescripcion.Text = funcionList[i].descripcion.ToString();
         }
 
         private bool ValidarFuncion()
@@ -92,7 +97,7 @@ namespace CineWheyForms.Presentaciones
                 MessageBox.Show("Debe cargar un precio valido", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 Ok = false;
             }
-            if (string.IsNullOrEmpty(txtHoraInicio.Text))// || !int.TryParse(txtHoraInicio.Text, out _))
+            if (string.IsNullOrEmpty(txtHoraInicio.Text))
             {
                 MessageBox.Show("Debe agregar una hora de inicio valida", "Control", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 Ok = false;
@@ -119,21 +124,7 @@ namespace CineWheyForms.Presentaciones
             dtpFecha.Value = DateTime.Now;
             txtHoraInicio.Text = string.Empty;
         }
-
-        private void btnAgregarF_Click(object sender, EventArgs e)
-        {
-            if (ValidarFuncion())
-            {
-                funcion.pelicula = (int)cboPelicula.SelectedValue;
-                funcion.sala = (int)cboSala.SelectedValue;
-                funcion.fecha = Convert.ToDateTime(dtpFecha.Value);
-                funcion.precio = Convert.ToDouble(txtPrecio.Text);
-                funcion.hora_inicio = txtHoraInicio.Text;
-                if (DA.InsertarFunciones(funcion))
-                    MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
-
-            }
-        }
+       
 
         private void btnNueva_Click(object sender, EventArgs e)
         {
@@ -150,6 +141,7 @@ namespace CineWheyForms.Presentaciones
                 limpiar();
             nuevo = true;
             Habilitar(false);
+            limpiar();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -174,17 +166,39 @@ namespace CineWheyForms.Presentaciones
 
         private void btnAgregarF_Click_1(object sender, EventArgs e)
         {
-            if (ValidarFuncion())
+            if(nuevo)
             {
+                if (ValidarFuncion())
+                {
+                    funcion.pelicula = (int)cboPelicula.SelectedValue;
+                    funcion.sala = (int)cboSala.SelectedValue;
+                    funcion.fecha = Convert.ToDateTime(dtpFecha.Value);
+                    funcion.precio = Convert.ToDouble(txtPrecio.Text);
+                    funcion.hora_inicio = txtHoraInicio.Text;
+                }
+                    if (DA.InsertarFunciones(funcion))
+                        MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
+                    CargarLista();                
+            }
+            else
+            {
+                funcion.id_funcion = Convert.ToInt32(txtId.Text);
                 funcion.pelicula = (int)cboPelicula.SelectedValue;
                 funcion.sala = (int)cboSala.SelectedValue;
-                funcion.fecha = Convert.ToDateTime(dtpFecha.Value);
+                //funcion.fecha = Convert.ToDateTime(dtpFecha.Value);
                 funcion.precio = Convert.ToDouble(txtPrecio.Text);
                 funcion.hora_inicio = txtHoraInicio.Text;
-                if (DA.InsertarFunciones(funcion))
-                    MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
+                funcion.descripcion = txtDescripcion.Text;
 
+                if(DA.UpdateFuncion(funcion))
+                    MessageBox.Show("La funcion fue modificada con exito!", "CONTROL", MessageBoxButtons.OK);
+                CargarLista();
             }
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -39,14 +39,14 @@ namespace CineWheyBackend.Models
             descripcion = string.Empty;
         }
 
+        public override string ToString()
+        {
+            return descripcion + ',' + precio;
+        }
+
         public Funcion()
         {
         }
-
-        //public int idFuncion
-        //{ 
-        // get { return id_funcion; } 
-        // set { id_funcion = value; }
-        //}
+       
     }
 }

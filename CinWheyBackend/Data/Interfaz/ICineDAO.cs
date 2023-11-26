@@ -27,11 +27,12 @@ namespace CineWheyBackend.Data.Interfaz
         bool UpdateCliente(Cliente cliente);
 
         bool UpdatePeliculas(Pelicula pelicula);
+        bool UpdateFunciones(Funcion funcion);
 
         bool DeletePelicula(int id);
 
         List<Pelicula> GetPeliculaPorGenero(int genero);
 
-        // Delete pelicula
+        bool PostUsuario(Usuario usuario);
     }
 }
