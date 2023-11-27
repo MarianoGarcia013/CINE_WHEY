@@ -187,7 +187,17 @@ namespace CineWheyBackend.Data.Implementacion
 
         public bool UpdateCliente(Cliente cliente)
         {
-            throw new NotImplementedException();
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@id_cliente", cliente.IdCliente));
+            list.Add(new SqlParameter("@nombre", cliente.nombre));
+            list.Add(new SqlParameter("@apellido", cliente.apellido));
+            list.Add(new SqlParameter("@email", cliente.email));
+            list.Add(new SqlParameter("@telefono", cliente.telefono));
+            list.Add(new SqlParameter("@direccion", cliente.direccion));
+            list.Add(new SqlParameter("@ciudad", cliente.ciudad));
+
+            return HelperSingleton.getInstance().EjecutarSQLParam("SP_UpdateCliente", list);
+
         }
 
         public bool UpdatePeliculas(Pelicula pelicula)
@@ -225,6 +235,13 @@ namespace CineWheyBackend.Data.Implementacion
             list.Add(new SqlParameter("@descripcion", funcion.descripcion));
 
             return HelperSingleton.getInstance().EjecutarSQLParam("SP_UpdateFunciones", list);
+        }
+
+        public bool DeleteFuncion(int id)
+        {
+            List<SqlParameter> list = new List<SqlParameter>();
+            list.Add(new SqlParameter("@id_funcion", id));
+            return HelperSingleton.getInstance().EjecutarSQLParam("SP_DeleteFuncion", list);
         }
     }
 }

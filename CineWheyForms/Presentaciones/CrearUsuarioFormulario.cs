@@ -83,7 +83,7 @@ namespace CineWheyForms.Presentaciones
         {
             if(ValidarDatos())
             {
-                U.nombre_usuario = txtNombre.Text;
+                U.nombre_usuario = txtUsuario.Text;
                 U.contrasñea_usuario = Convert.ToInt32(txtContras.Text);
 
                 if (DA.PostUsuario(U))

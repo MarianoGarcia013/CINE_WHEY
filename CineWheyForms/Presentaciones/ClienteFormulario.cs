@@ -53,18 +53,35 @@ namespace CineWheyForms.Presentaciones
         
         public void cargarGrilla()
         {
-            DataTable tabla = HP.ConsultarDBCombo("select nombre, apellido, email, fec_nac from Clientes");
+            DataTable tabla = HP.ConsultarDBCombo("select * from Clientes");
+            clienteList.Clear();
             dgvCliente.Rows.Clear();
             foreach (DataRow fila in tabla.Rows)
             {
-                dgvCliente.Rows.Add(new object[]
-                {
-                    fila[0].ToString(),
-                    fila[1].ToString(),
-                    fila[2].ToString(),
-                    Convert.ToDateTime(fila[3].ToString())                
-                });
-            }
+                int id_cliente = Convert.ToInt32(fila[0].ToString());
+                string nombre = fila[1].ToString();
+                string apellido = fila[2].ToString();
+                string email = fila[3].ToString();
+                string telefono = fila[4].ToString();
+                DateTime fec_nac = Convert.ToDateTime(fila[5].ToString());
+                string direccion = fila[6].ToString();
+                int ciudad = Convert.ToInt32((fila[7].ToString()));
+
+                clienteList.Add(new Cliente(id_cliente, nombre, apellido, email, telefono, fec_nac, direccion, ciudad));
+
+                dgvCliente.Rows.Add(new object[] {nombre, apellido, email, fec_nac});
+            }        
+        }
+
+        private void CargarCampos(int i)
+        {
+            txtCodigo.Text = clienteList[i].IdCliente.ToString();
+            txtNombre.Text = clienteList[i].nombre.ToString();
+            txtApellido.Text = clienteList[i].apellido.ToString();
+            txtCodigo.Text = clienteList[i].email.ToString();
+            dtpFechaNacim.Value = clienteList[i].fec_nac;
+            txtDireccion.Text = clienteList[i].direccion.ToString();
+            cboCIudad.SelectedValue = clienteList[i].ciudad;
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
@@ -107,6 +124,25 @@ namespace CineWheyForms.Presentaciones
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+      
+
+        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (dgvCliente.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvCliente.SelectedRows[0];
+                int rowIndex = selectedRow.Index;
+
+                // Llama a tu método para cargar los campos basados en el índice de la fila seleccionada
+                CargarCampos(rowIndex);
+            }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
 
         }

@@ -34,5 +34,7 @@ namespace CineWheyBackend.Data.Interfaz
         List<Pelicula> GetPeliculaPorGenero(int genero);
 
         bool PostUsuario(Usuario usuario);
+        
+        bool DeleteFuncion(int id);
     }
 }

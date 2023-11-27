@@ -41,7 +41,8 @@ namespace CineWheyBackend.Models
 
         public override string ToString()
         {
-            return descripcion + ',' + precio;
+            string mostrar = $"Fecha: {fecha}, Hora: {hora_inicio}, Precio: ${precio}";
+            return mostrar;
         }
 
         public Funcion()

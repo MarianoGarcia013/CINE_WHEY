@@ -70,6 +70,8 @@
             this.verTodasLasFuncionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -241,6 +243,7 @@
             this.BtnCancelar.TabIndex = 19;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // dgvCliente
             // 
@@ -260,6 +263,7 @@
             this.dgvCliente.RowTemplate.Height = 33;
             this.dgvCliente.Size = new System.Drawing.Size(1023, 537);
             this.dgvCliente.TabIndex = 20;
+            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
             // ColNombre
             // 
@@ -452,12 +456,31 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "TODOS LOS CLIENTES";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(137, 125);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 25);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "CODIGO:";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(239, 119);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(90, 31);
+            this.txtCodigo.TabIndex = 28;
+            // 
             // ClienteFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1669, 765);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
@@ -537,5 +560,7 @@
         private DataGridViewTextBoxColumn ColApellido;
         private DataGridViewTextBoxColumn ColCorreo;
         private DataGridViewTextBoxColumn ColNacimiento;
+        private Label label10;
+        private TextBox txtCodigo;
     }
 }

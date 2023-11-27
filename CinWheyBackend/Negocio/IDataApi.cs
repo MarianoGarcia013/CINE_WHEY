@@ -25,5 +25,7 @@ namespace CineWheyBackend.Negocio
         
         bool PostUsuario(Usuario usuario);
         bool UpdateFuncion(Funcion funcion);
+        bool UpdateCliente(Cliente cliente);
+        bool DeleteFuncion(int id);
     }
 }

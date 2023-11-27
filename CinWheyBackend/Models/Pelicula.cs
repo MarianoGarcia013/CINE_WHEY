@@ -35,7 +35,8 @@ namespace CineWheyBackend.Models
 
         public override string ToString()
         {
-            return titulo + ", " + director;
+            string mostrar = $"Titulo: {titulo}, Director: {director}, Duracion: {duracion}";
+            return mostrar;
         }
     }
 }
