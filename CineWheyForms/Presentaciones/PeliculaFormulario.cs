@@ -75,7 +75,7 @@ namespace CineWheyForms.Presentaciones
                 pelicula.fecha_estreno = Convert.ToDateTime(fila[2].ToString());
                 pelicula.director = fila[3].ToString();  
                 pelicula.genero = Convert.ToInt32(fila[4].ToString());
-                pelicula.idioma = Convert.ToInt32(fila[5].ToString());                
+                pelicula.idioma = Convert.ToInt32(fila[5].ToString());                  
                 pelicula.duracion = Convert.ToInt32(fila[7].ToString());
 
                 PeliculaList.Add(pelicula);
@@ -87,9 +87,8 @@ namespace CineWheyForms.Presentaciones
             
                 txtCodigo.Text = PeliculaList[i].id_pelicula.ToString();
                 txtTitulo.Text = PeliculaList[i].titulo.ToString();
-                txtDirector.Text = PeliculaList[i].director.ToString();
-                txtDuracion.Text = PeliculaList[i].duracion.ToString();
                 dtpFechaEstreno.Text = PeliculaList[i].fecha_estreno.ToString();
+                txtDirector.Text = PeliculaList[i].director.ToString();               
                 cboGenero.SelectedValue = PeliculaList[i].genero;
                 cboIdioma.SelectedValue = PeliculaList[i].idioma;
                 txtDuracion.Text = PeliculaList[i].duracion.ToString();

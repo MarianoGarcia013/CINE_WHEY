@@ -77,5 +77,15 @@ namespace CineWheyBackend.Negocio
         {
             return DAO.UpdateFunciones(funcion);
         }
+
+        public bool UpdateCliente(Cliente cliente)
+        {
+            return DAO.UpdateCliente(cliente);
+        }
+
+        public bool DeleteFuncion(int id)
+        {
+           return DAO.DeleteFuncion(id);
+        }
     }
 }

@@ -198,7 +198,15 @@ namespace CineWheyForms.Presentaciones
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-
+            int codigo = Convert.ToInt32(txtId.Text);
+            if(DA.DeleteFuncion(codigo))
+            {
+                DialogResult result = MessageBox.Show("¿Seguro desea eliminar la función?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                 MessageBoxDefaultButton.Button2);
+                if (result == DialogResult.Yes)
+                    MessageBox.Show("La funcion fue eliminada con exito!", "CONTROL", MessageBoxButtons.OK);
+                CargarLista();
+            }
         }
     }
 }
