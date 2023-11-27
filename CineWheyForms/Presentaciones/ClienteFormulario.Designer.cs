@@ -28,470 +28,482 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.dtpFechaNacim = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.cboCIudad = new System.Windows.Forms.ComboBox();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.BtnCancelar = new System.Windows.Forms.Button();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
-            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.funcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevaReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.historialReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.peliculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarPeliculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarPeliculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verTodasLasFuncionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            txtNombre = new TextBox();
+            txtApellido = new TextBox();
+            dtpFechaNacim = new DateTimePicker();
+            label6 = new Label();
+            txtCorreo = new TextBox();
+            txtTelefono = new TextBox();
+            label7 = new Label();
+            label8 = new Label();
+            txtDireccion = new TextBox();
+            cboCIudad = new ComboBox();
+            btnNuevo = new Button();
+            btnCargar = new Button();
+            btnSalir = new Button();
+            BtnCancelar = new Button();
+            dgvCliente = new DataGridView();
+            ColNombre = new DataGridViewTextBoxColumn();
+            ColApellido = new DataGridViewTextBoxColumn();
+            ColCorreo = new DataGridViewTextBoxColumn();
+            ColNacimiento = new DataGridViewTextBoxColumn();
+            btnActualizar = new Button();
+            label9 = new Label();
+            menuStrip1 = new MenuStrip();
+            funcionesToolStripMenuItem = new ToolStripMenuItem();
+            nuevaReservaToolStripMenuItem = new ToolStripMenuItem();
+            eliminarReservaToolStripMenuItem = new ToolStripMenuItem();
+            historialReservasToolStripMenuItem = new ToolStripMenuItem();
+            peliculaToolStripMenuItem = new ToolStripMenuItem();
+            agregarPeliculaToolStripMenuItem = new ToolStripMenuItem();
+            eliminarPeliculaToolStripMenuItem = new ToolStripMenuItem();
+            clienteToolStripMenuItem = new ToolStripMenuItem();
+            agregarClienteToolStripMenuItem = new ToolStripMenuItem();
+            modificarClienteToolStripMenuItem = new ToolStripMenuItem();
+            funcionesToolStripMenuItem1 = new ToolStripMenuItem();
+            agregarFuncionToolStripMenuItem = new ToolStripMenuItem();
+            eliminarFuncionToolStripMenuItem = new ToolStripMenuItem();
+            verTodasLasFuncionesToolStripMenuItem = new ToolStripMenuItem();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvCliente).BeginInit();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(137, 175);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "NOMBRE: ";
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(96, 105);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 15);
+            label2.TabIndex = 1;
+            label2.Text = "NOMBRE: ";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(161, 338);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "E-Mail:";
+            label3.AutoSize = true;
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(113, 203);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(44, 15);
+            label3.TabIndex = 2;
+            label3.Text = "E-Mail:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(132, 225);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "APELLIDO:";
+            label4.AutoSize = true;
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(92, 135);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(63, 15);
+            label4.TabIndex = 3;
+            label4.Text = "APELLIDO:";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(127, 281);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 25);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "TELÉFONO:";
+            label5.AutoSize = true;
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(89, 169);
+            label5.Margin = new Padding(2, 0, 2, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(68, 15);
+            label5.TabIndex = 4;
+            label5.Text = "TELÉFONO:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(239, 175);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(339, 31);
-            this.txtNombre.TabIndex = 5;
-            this.txtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            txtNombre.BackColor = Color.White;
+            txtNombre.ForeColor = Color.Black;
+            txtNombre.Location = new Point(167, 105);
+            txtNombre.Margin = new Padding(2);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(238, 23);
+            txtNombre.TabIndex = 0;
+            txtNombre.TextChanged += textBox1_TextChanged;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(239, 222);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(339, 31);
-            this.txtApellido.TabIndex = 6;
+            txtApellido.BackColor = Color.White;
+            txtApellido.ForeColor = Color.Black;
+            txtApellido.Location = new Point(167, 133);
+            txtApellido.Margin = new Padding(2);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(238, 23);
+            txtApellido.TabIndex = 1;
+            txtApellido.TextChanged += txtApellido_TextChanged;
             // 
             // dtpFechaNacim
             // 
-            this.dtpFechaNacim.Location = new System.Drawing.Point(239, 398);
-            this.dtpFechaNacim.Name = "dtpFechaNacim";
-            this.dtpFechaNacim.Size = new System.Drawing.Size(349, 31);
-            this.dtpFechaNacim.TabIndex = 7;
+            dtpFechaNacim.Location = new Point(167, 239);
+            dtpFechaNacim.Margin = new Padding(2);
+            dtpFechaNacim.Name = "dtpFechaNacim";
+            dtpFechaNacim.Size = new Size(238, 23);
+            dtpFechaNacim.TabIndex = 4;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(20, 400);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(208, 25);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "FECHA DE NACIMIENTO:";
+            label6.AutoSize = true;
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(14, 240);
+            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(139, 15);
+            label6.TabIndex = 8;
+            label6.Text = "FECHA DE NACIMIENTO:";
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(239, 336);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(339, 31);
-            this.txtCorreo.TabIndex = 9;
+            txtCorreo.BackColor = Color.White;
+            txtCorreo.ForeColor = Color.Black;
+            txtCorreo.Location = new Point(167, 202);
+            txtCorreo.Margin = new Padding(2);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(238, 23);
+            txtCorreo.TabIndex = 3;
+            txtCorreo.TextChanged += txtCorreo_TextChanged;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(238, 278);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(340, 31);
-            this.txtTelefono.TabIndex = 10;
+            txtTelefono.BackColor = Color.White;
+            txtTelefono.ForeColor = Color.Black;
+            txtTelefono.Location = new Point(167, 167);
+            txtTelefono.Margin = new Padding(2);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.Size = new Size(239, 23);
+            txtTelefono.TabIndex = 2;
+            txtTelefono.TextChanged += txtTelefono_TextChanged;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(122, 470);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 25);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "DIRECCIÓN:";
+            label7.AutoSize = true;
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(85, 282);
+            label7.Margin = new Padding(2, 0, 2, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(71, 15);
+            label7.TabIndex = 11;
+            label7.Text = "DIRECCIÓN:";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(144, 535);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 25);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "CIUDAD:";
+            label8.AutoSize = true;
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(101, 321);
+            label8.Margin = new Padding(2, 0, 2, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(53, 15);
+            label8.TabIndex = 12;
+            label8.Text = "CIUDAD:";
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(239, 467);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(349, 31);
-            this.txtDireccion.TabIndex = 13;
+            txtDireccion.BackColor = Color.White;
+            txtDireccion.ForeColor = Color.Black;
+            txtDireccion.Location = new Point(167, 280);
+            txtDireccion.Margin = new Padding(2);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(238, 23);
+            txtDireccion.TabIndex = 5;
+            txtDireccion.TextChanged += txtDireccion_TextChanged;
             // 
             // cboCIudad
             // 
-            this.cboCIudad.FormattingEnabled = true;
-            this.cboCIudad.Location = new System.Drawing.Point(239, 532);
-            this.cboCIudad.Name = "cboCIudad";
-            this.cboCIudad.Size = new System.Drawing.Size(349, 33);
-            this.cboCIudad.TabIndex = 14;
+            cboCIudad.BackColor = Color.White;
+            cboCIudad.ForeColor = Color.Black;
+            cboCIudad.FormattingEnabled = true;
+            cboCIudad.Location = new Point(167, 319);
+            cboCIudad.Margin = new Padding(2);
+            cboCIudad.Name = "cboCIudad";
+            cboCIudad.Size = new Size(238, 23);
+            cboCIudad.TabIndex = 6;
+            cboCIudad.SelectedIndexChanged += cboCIudad_SelectedIndexChanged;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(622, 670);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(101, 58);
-            this.btnNuevo.TabIndex = 16;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            btnNuevo.BackColor = Color.FromArgb(64, 0, 0);
+            btnNuevo.ForeColor = Color.White;
+            btnNuevo.Location = new Point(435, 402);
+            btnNuevo.Margin = new Padding(2);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(71, 35);
+            btnNuevo.TabIndex = 7;
+            btnNuevo.Text = "Nuevo";
+            btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnCargar
             // 
-            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCargar.ForeColor = System.Drawing.Color.White;
-            this.btnCargar.Location = new System.Drawing.Point(746, 670);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(101, 58);
-            this.btnCargar.TabIndex = 17;
-            this.btnCargar.Text = "&Guardar";
-            this.btnCargar.UseVisualStyleBackColor = false;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            btnCargar.BackColor = Color.FromArgb(64, 0, 0);
+            btnCargar.ForeColor = Color.White;
+            btnCargar.Location = new Point(522, 402);
+            btnCargar.Margin = new Padding(2);
+            btnCargar.Name = "btnCargar";
+            btnCargar.Size = new Size(71, 35);
+            btnCargar.TabIndex = 8;
+            btnCargar.Text = "&Guardar";
+            btnCargar.UseVisualStyleBackColor = false;
+            btnCargar.Click += btnCargar_Click;
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(1545, 670);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(101, 58);
-            this.btnSalir.TabIndex = 18;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            btnSalir.BackColor = Color.FromArgb(64, 0, 0);
+            btnSalir.ForeColor = Color.White;
+            btnSalir.Location = new Point(1082, 402);
+            btnSalir.Margin = new Padding(2);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(71, 35);
+            btnSalir.TabIndex = 11;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Location = new System.Drawing.Point(1410, 670);
-            this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(101, 58);
-            this.BtnCancelar.TabIndex = 19;
-            this.BtnCancelar.Text = "Cancelar";
-            this.BtnCancelar.UseVisualStyleBackColor = false;
+            BtnCancelar.BackColor = Color.FromArgb(64, 0, 0);
+            BtnCancelar.ForeColor = Color.White;
+            BtnCancelar.Location = new Point(987, 402);
+            BtnCancelar.Margin = new Padding(2);
+            BtnCancelar.Name = "BtnCancelar";
+            BtnCancelar.Size = new Size(71, 35);
+            BtnCancelar.TabIndex = 10;
+            BtnCancelar.Text = "Cancelar";
+            BtnCancelar.UseVisualStyleBackColor = false;
+            BtnCancelar.Click += BtnCancelar_Click;
             // 
             // dgvCliente
             // 
-            this.dgvCliente.AllowUserToAddRows = false;
-            this.dgvCliente.AllowUserToDeleteRows = false;
-            this.dgvCliente.BackgroundColor = System.Drawing.Color.Gray;
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColNombre,
-            this.ColApellido,
-            this.ColCorreo,
-            this.ColNacimiento});
-            this.dgvCliente.Location = new System.Drawing.Point(622, 102);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.RowHeadersWidth = 62;
-            this.dgvCliente.RowTemplate.Height = 33;
-            this.dgvCliente.Size = new System.Drawing.Size(1023, 537);
-            this.dgvCliente.TabIndex = 20;
+            dgvCliente.AllowUserToAddRows = false;
+            dgvCliente.AllowUserToDeleteRows = false;
+            dgvCliente.BackgroundColor = Color.Gray;
+            dgvCliente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCliente.Columns.AddRange(new DataGridViewColumn[] { ColNombre, ColApellido, ColCorreo, ColNacimiento });
+            dgvCliente.Location = new Point(435, 61);
+            dgvCliente.Margin = new Padding(2);
+            dgvCliente.Name = "dgvCliente";
+            dgvCliente.ReadOnly = true;
+            dgvCliente.RowHeadersWidth = 62;
+            dgvCliente.RowTemplate.Height = 33;
+            dgvCliente.Size = new Size(716, 322);
+            dgvCliente.TabIndex = 20;
             // 
             // ColNombre
             // 
-            this.ColNombre.HeaderText = "Nombre";
-            this.ColNombre.MinimumWidth = 8;
-            this.ColNombre.Name = "ColNombre";
-            this.ColNombre.ReadOnly = true;
-            this.ColNombre.Width = 250;
+            ColNombre.HeaderText = "Nombre";
+            ColNombre.MinimumWidth = 8;
+            ColNombre.Name = "ColNombre";
+            ColNombre.ReadOnly = true;
+            ColNombre.Width = 250;
             // 
             // ColApellido
             // 
-            this.ColApellido.HeaderText = "Apellido";
-            this.ColApellido.MinimumWidth = 8;
-            this.ColApellido.Name = "ColApellido";
-            this.ColApellido.ReadOnly = true;
-            this.ColApellido.Width = 250;
+            ColApellido.HeaderText = "Apellido";
+            ColApellido.MinimumWidth = 8;
+            ColApellido.Name = "ColApellido";
+            ColApellido.ReadOnly = true;
+            ColApellido.Width = 250;
             // 
             // ColCorreo
             // 
-            this.ColCorreo.HeaderText = "Email";
-            this.ColCorreo.MinimumWidth = 8;
-            this.ColCorreo.Name = "ColCorreo";
-            this.ColCorreo.ReadOnly = true;
-            this.ColCorreo.Width = 270;
+            ColCorreo.HeaderText = "Email";
+            ColCorreo.MinimumWidth = 8;
+            ColCorreo.Name = "ColCorreo";
+            ColCorreo.ReadOnly = true;
+            ColCorreo.Width = 270;
             // 
             // ColNacimiento
             // 
-            this.ColNacimiento.HeaderText = "Fecha de Nacimiento";
-            this.ColNacimiento.MinimumWidth = 8;
-            this.ColNacimiento.Name = "ColNacimiento";
-            this.ColNacimiento.ReadOnly = true;
-            this.ColNacimiento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColNacimiento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColNacimiento.Width = 200;
+            ColNacimiento.HeaderText = "Fecha de Nacimiento";
+            ColNacimiento.MinimumWidth = 8;
+            ColNacimiento.Name = "ColNacimiento";
+            ColNacimiento.ReadOnly = true;
+            ColNacimiento.Resizable = DataGridViewTriState.True;
+            ColNacimiento.SortMode = DataGridViewColumnSortMode.NotSortable;
+            ColNacimiento.Width = 200;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(876, 670);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(101, 58);
-            this.btnActualizar.TabIndex = 21;
-            this.btnActualizar.Text = "&Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            btnActualizar.BackColor = Color.FromArgb(64, 0, 0);
+            btnActualizar.ForeColor = Color.White;
+            btnActualizar.Location = new Point(613, 402);
+            btnActualizar.Margin = new Padding(2);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(71, 35);
+            btnActualizar.TabIndex = 9;
+            btnActualizar.Text = "&Actualizar";
+            btnActualizar.UseVisualStyleBackColor = false;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(31, 79);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(268, 32);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "CARGAR CLIENTE";
+            label9.AutoSize = true;
+            label9.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(22, 47);
+            label9.Margin = new Padding(2, 0, 2, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(184, 22);
+            label9.TabIndex = 23;
+            label9.Text = "CARGAR CLIENTE";
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.funcionesToolStripMenuItem,
-            this.peliculaToolStripMenuItem,
-            this.clienteToolStripMenuItem,
-            this.funcionesToolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1669, 33);
-            this.menuStrip1.TabIndex = 24;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { funcionesToolStripMenuItem, peliculaToolStripMenuItem, clienteToolStripMenuItem, funcionesToolStripMenuItem1 });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(4, 1, 0, 1);
+            menuStrip1.Size = new Size(1157, 24);
+            menuStrip1.TabIndex = 24;
+            menuStrip1.Text = "menuStrip1";
             // 
             // funcionesToolStripMenuItem
             // 
-            this.funcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevaReservaToolStripMenuItem,
-            this.eliminarReservaToolStripMenuItem,
-            this.historialReservasToolStripMenuItem});
-            this.funcionesToolStripMenuItem.Name = "funcionesToolStripMenuItem";
-            this.funcionesToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
-            this.funcionesToolStripMenuItem.Text = "Reserva";
+            funcionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevaReservaToolStripMenuItem, eliminarReservaToolStripMenuItem, historialReservasToolStripMenuItem });
+            funcionesToolStripMenuItem.Name = "funcionesToolStripMenuItem";
+            funcionesToolStripMenuItem.Size = new Size(59, 22);
+            funcionesToolStripMenuItem.Text = "Reserva";
             // 
             // nuevaReservaToolStripMenuItem
             // 
-            this.nuevaReservaToolStripMenuItem.Name = "nuevaReservaToolStripMenuItem";
-            this.nuevaReservaToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
-            this.nuevaReservaToolStripMenuItem.Text = "Nueva Reserva";
+            nuevaReservaToolStripMenuItem.Name = "nuevaReservaToolStripMenuItem";
+            nuevaReservaToolStripMenuItem.Size = new Size(166, 22);
+            nuevaReservaToolStripMenuItem.Text = "Nueva Reserva";
             // 
             // eliminarReservaToolStripMenuItem
             // 
-            this.eliminarReservaToolStripMenuItem.Name = "eliminarReservaToolStripMenuItem";
-            this.eliminarReservaToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
-            this.eliminarReservaToolStripMenuItem.Text = "Eliminar Reserva";
+            eliminarReservaToolStripMenuItem.Name = "eliminarReservaToolStripMenuItem";
+            eliminarReservaToolStripMenuItem.Size = new Size(166, 22);
+            eliminarReservaToolStripMenuItem.Text = "Eliminar Reserva";
             // 
             // historialReservasToolStripMenuItem
             // 
-            this.historialReservasToolStripMenuItem.Name = "historialReservasToolStripMenuItem";
-            this.historialReservasToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
-            this.historialReservasToolStripMenuItem.Text = "Historial Reservas";
+            historialReservasToolStripMenuItem.Name = "historialReservasToolStripMenuItem";
+            historialReservasToolStripMenuItem.Size = new Size(166, 22);
+            historialReservasToolStripMenuItem.Text = "Historial Reservas";
             // 
             // peliculaToolStripMenuItem
             // 
-            this.peliculaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarPeliculaToolStripMenuItem,
-            this.eliminarPeliculaToolStripMenuItem});
-            this.peliculaToolStripMenuItem.Name = "peliculaToolStripMenuItem";
-            this.peliculaToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
-            this.peliculaToolStripMenuItem.Text = "Pelicula";
+            peliculaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { agregarPeliculaToolStripMenuItem, eliminarPeliculaToolStripMenuItem });
+            peliculaToolStripMenuItem.Name = "peliculaToolStripMenuItem";
+            peliculaToolStripMenuItem.Size = new Size(60, 22);
+            peliculaToolStripMenuItem.Text = "Pelicula";
             // 
             // agregarPeliculaToolStripMenuItem
             // 
-            this.agregarPeliculaToolStripMenuItem.Name = "agregarPeliculaToolStripMenuItem";
-            this.agregarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
-            this.agregarPeliculaToolStripMenuItem.Text = "Agregar Pelicula";
-            this.agregarPeliculaToolStripMenuItem.Click += new System.EventHandler(this.agregarPeliculaToolStripMenuItem_Click);
+            agregarPeliculaToolStripMenuItem.Name = "agregarPeliculaToolStripMenuItem";
+            agregarPeliculaToolStripMenuItem.Size = new Size(161, 22);
+            agregarPeliculaToolStripMenuItem.Text = "Agregar Pelicula";
+            agregarPeliculaToolStripMenuItem.Click += agregarPeliculaToolStripMenuItem_Click;
             // 
             // eliminarPeliculaToolStripMenuItem
             // 
-            this.eliminarPeliculaToolStripMenuItem.Name = "eliminarPeliculaToolStripMenuItem";
-            this.eliminarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(240, 34);
-            this.eliminarPeliculaToolStripMenuItem.Text = "Eliminar Pelicula";
+            eliminarPeliculaToolStripMenuItem.Name = "eliminarPeliculaToolStripMenuItem";
+            eliminarPeliculaToolStripMenuItem.Size = new Size(161, 22);
+            eliminarPeliculaToolStripMenuItem.Text = "Eliminar Pelicula";
             // 
             // clienteToolStripMenuItem
             // 
-            this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarClienteToolStripMenuItem,
-            this.modificarClienteToolStripMenuItem});
-            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
-            this.clienteToolStripMenuItem.Text = "Cliente";
+            clienteToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { agregarClienteToolStripMenuItem, modificarClienteToolStripMenuItem });
+            clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            clienteToolStripMenuItem.Size = new Size(56, 22);
+            clienteToolStripMenuItem.Text = "Cliente";
             // 
             // agregarClienteToolStripMenuItem
             // 
-            this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
-            this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
+            agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
+            agregarClienteToolStripMenuItem.Size = new Size(165, 22);
+            agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
             // 
             // modificarClienteToolStripMenuItem
             // 
-            this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
-            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
-            this.modificarClienteToolStripMenuItem.Text = "Modificar Cliente";
+            modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
+            modificarClienteToolStripMenuItem.Size = new Size(165, 22);
+            modificarClienteToolStripMenuItem.Text = "Modificar Cliente";
             // 
             // funcionesToolStripMenuItem1
             // 
-            this.funcionesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarFuncionToolStripMenuItem,
-            this.eliminarFuncionToolStripMenuItem,
-            this.verTodasLasFuncionesToolStripMenuItem});
-            this.funcionesToolStripMenuItem1.Name = "funcionesToolStripMenuItem1";
-            this.funcionesToolStripMenuItem1.Size = new System.Drawing.Size(107, 29);
-            this.funcionesToolStripMenuItem1.Text = "Funciones";
+            funcionesToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { agregarFuncionToolStripMenuItem, eliminarFuncionToolStripMenuItem, verTodasLasFuncionesToolStripMenuItem });
+            funcionesToolStripMenuItem1.Name = "funcionesToolStripMenuItem1";
+            funcionesToolStripMenuItem1.Size = new Size(73, 22);
+            funcionesToolStripMenuItem1.Text = "Funciones";
             // 
             // agregarFuncionToolStripMenuItem
             // 
-            this.agregarFuncionToolStripMenuItem.Name = "agregarFuncionToolStripMenuItem";
-            this.agregarFuncionToolStripMenuItem.Size = new System.Drawing.Size(299, 34);
-            this.agregarFuncionToolStripMenuItem.Text = "Agregar Funcion";
+            agregarFuncionToolStripMenuItem.Name = "agregarFuncionToolStripMenuItem";
+            agregarFuncionToolStripMenuItem.Size = new Size(196, 22);
+            agregarFuncionToolStripMenuItem.Text = "Agregar Funcion";
             // 
             // eliminarFuncionToolStripMenuItem
             // 
-            this.eliminarFuncionToolStripMenuItem.Name = "eliminarFuncionToolStripMenuItem";
-            this.eliminarFuncionToolStripMenuItem.Size = new System.Drawing.Size(299, 34);
-            this.eliminarFuncionToolStripMenuItem.Text = "Eliminar Funcion";
+            eliminarFuncionToolStripMenuItem.Name = "eliminarFuncionToolStripMenuItem";
+            eliminarFuncionToolStripMenuItem.Size = new Size(196, 22);
+            eliminarFuncionToolStripMenuItem.Text = "Eliminar Funcion";
             // 
             // verTodasLasFuncionesToolStripMenuItem
             // 
-            this.verTodasLasFuncionesToolStripMenuItem.Name = "verTodasLasFuncionesToolStripMenuItem";
-            this.verTodasLasFuncionesToolStripMenuItem.Size = new System.Drawing.Size(299, 34);
-            this.verTodasLasFuncionesToolStripMenuItem.Text = "Ver todas las Funciones";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(487, 581);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 58);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Cargar";
-            this.button1.UseVisualStyleBackColor = false;
+            verTodasLasFuncionesToolStripMenuItem.Name = "verTodasLasFuncionesToolStripMenuItem";
+            verTodasLasFuncionesToolStripMenuItem.Size = new Size(196, 22);
+            verTodasLasFuncionesToolStripMenuItem.Text = "Ver todas las Funciones";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(629, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 25);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "TODOS LOS CLIENTES";
+            label1.AutoSize = true;
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(440, 37);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(123, 15);
+            label1.TabIndex = 26;
+            label1.Text = "TODOS LOS CLIENTES";
             // 
             // ClienteFormulario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1669, 765);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.dgvCliente);
-            this.Controls.Add(this.BtnCancelar);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnCargar);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.cboCIudad);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.dtpFechaNacim);
-            this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.ForeColor = System.Drawing.Color.Black;
-            this.Name = "ClienteFormulario";
-            this.Text = "ClienteFormulario";
-            this.Load += new System.EventHandler(this.ClienteFormulario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(64, 64, 64);
+            ClientSize = new Size(1157, 449);
+            Controls.Add(label1);
+            Controls.Add(menuStrip1);
+            Controls.Add(label9);
+            Controls.Add(btnActualizar);
+            Controls.Add(dgvCliente);
+            Controls.Add(BtnCancelar);
+            Controls.Add(btnSalir);
+            Controls.Add(btnCargar);
+            Controls.Add(btnNuevo);
+            Controls.Add(cboCIudad);
+            Controls.Add(txtDireccion);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(txtTelefono);
+            Controls.Add(txtCorreo);
+            Controls.Add(label6);
+            Controls.Add(dtpFechaNacim);
+            Controls.Add(txtApellido);
+            Controls.Add(txtNombre);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            ForeColor = Color.Black;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(2);
+            Name = "ClienteFormulario";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ClienteFormulario";
+            Load += ClienteFormulario_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvCliente).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -531,7 +543,6 @@
         private ToolStripMenuItem agregarFuncionToolStripMenuItem;
         private ToolStripMenuItem eliminarFuncionToolStripMenuItem;
         private ToolStripMenuItem verTodasLasFuncionesToolStripMenuItem;
-        private Button button1;
         private Label label1;
         private DataGridViewTextBoxColumn ColNombre;
         private DataGridViewTextBoxColumn ColApellido;

@@ -18,13 +18,13 @@ namespace CineWheyForms.Presentaciones
         HelperSingleton HP;
         IDataApi DA;
         Reserva reserva = new Reserva();
-        
+
         public ReservaFormulario()
         {
             InitializeComponent();
             HP = new HelperSingleton();
             DA = new DataApi();
-        }       
+        }
 
         private void ReservaFormulario_Load(object sender, EventArgs e)
         {
@@ -46,23 +46,23 @@ namespace CineWheyForms.Presentaciones
             tabla = HP.ConsultarDBCombo($"select * from {nombreTabla} ORDER BY 2");
             combo.DataSource = tabla;
             combo.ValueMember = tabla.Columns[0].ColumnName;
-            combo.DisplayMember = tabla.Columns[0].ColumnName;     
+            combo.DisplayMember = tabla.Columns[0].ColumnName;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnAGREGAR_Click(object sender, EventArgs e)
         {
-            DataRowView item = (DataRowView)cboFuncion.SelectedItem;            
+            DataRowView item = (DataRowView)cboFuncion.SelectedItem;
             int id_funcion = Convert.ToInt32(item.Row.ItemArray[0]);
             int pelicula = Convert.ToInt32(item.Row.ItemArray[1]);
             int sala = Convert.ToInt32(item.Row.ItemArray[2]);
             DateTime fecha = Convert.ToDateTime(item.Row.ItemArray[3]);
             double precio = Convert.ToDouble(item.Row.ItemArray[4]);
             string hora_inicio = Convert.ToString(item.Row.ItemArray[5]);
-           
+
             Funcion funcion = new Funcion(id_funcion, pelicula, sala, precio, fecha, hora_inicio);
-           
-            
+
+
 
             int cliente = Convert.ToInt32(cboCliente.SelectedValue);
             DateTime fecha_reservada = Convert.ToDateTime(dtpFecha.Value);
@@ -70,14 +70,14 @@ namespace CineWheyForms.Presentaciones
             DetalleReserva detalleReserva = new DetalleReserva(funcion, cantidad);
 
             reserva.AddDtlleReserva(detalleReserva);
-            
+
             dataGridView1.Rows.Add(new object[] { cliente, funcion.id_funcion, fecha_reservada, cantidad });
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dataGridView1.CurrentCell.ColumnIndex == 4)
+            if (dataGridView1.CurrentCell.ColumnIndex == 4)
             {
                 reserva.RemoveDtlleReserva(dataGridView1.CurrentCell.RowIndex);
                 dataGridView1.Rows.RemoveAt(dataGridView1.CurrentCell.RowIndex);

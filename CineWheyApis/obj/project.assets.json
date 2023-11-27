@@ -702,19 +702,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maria\\.nuget\\packages\\": {}
+    "C:\\Users\\-batatax-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maria\\source\\repos\\CineWheyCentro\\CineWheyApis\\CineWheyxApis.csproj",
+      "projectUniqueName": "C:\\Users\\-batatax-\\Desktop\\REPO VIERNES\\CINE_WHEY\\CineWheyApis\\CineWheyxApis.csproj",
       "projectName": "CineWheyxApis",
-      "projectPath": "C:\\Users\\maria\\source\\repos\\CineWheyCentro\\CineWheyApis\\CineWheyxApis.csproj",
-      "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maria\\source\\repos\\CineWheyCentro\\CineWheyApis\\obj\\",
+      "projectPath": "C:\\Users\\-batatax-\\Desktop\\REPO VIERNES\\CINE_WHEY\\CineWheyApis\\CineWheyxApis.csproj",
+      "packagesPath": "C:\\Users\\-batatax-\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\-batatax-\\Desktop\\REPO VIERNES\\CINE_WHEY\\CineWheyApis\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\-batatax-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -728,8 +728,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\maria\\source\\repos\\CineWheyCentro\\CinWheyBackend\\CineWheyBackend.csproj": {
-              "projectPath": "C:\\Users\\maria\\source\\repos\\CineWheyCentro\\CinWheyBackend\\CineWheyBackend.csproj"
+            "C:\\Users\\-batatax-\\Desktop\\REPO VIERNES\\CINE_WHEY\\CinWheyBackend\\CineWheyBackend.csproj": {
+              "projectPath": "C:\\Users\\-batatax-\\Desktop\\REPO VIERNES\\CINE_WHEY\\CinWheyBackend\\CineWheyBackend.csproj"
             }
           }
         }
@@ -772,7 +772,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

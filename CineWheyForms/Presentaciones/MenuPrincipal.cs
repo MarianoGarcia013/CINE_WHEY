@@ -48,7 +48,7 @@ namespace CineWheyForms.Presentaciones
 
         private void historialReservasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void consultarPorFechasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace CineWheyForms.Presentaciones
         private void consultarPorGeneroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ReservasPorGenero genero = new ReservasPorGenero();
-            genero.Show();  
+            genero.Show();
         }
     }
 }

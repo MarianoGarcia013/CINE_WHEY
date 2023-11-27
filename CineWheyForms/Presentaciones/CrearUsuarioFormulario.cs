@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace CineWheyForms.Presentaciones
 {
-    
+
     public partial class CrearUsuarioFormulario : Form
     {
         DataApi DA;
         Usuario U;
-        
+
         public CrearUsuarioFormulario()
         {
             InitializeComponent();
@@ -25,12 +25,12 @@ namespace CineWheyForms.Presentaciones
             U = new Usuario();
             txtContras.UseSystemPasswordChar = true;
             txtRepeContra.UseSystemPasswordChar = true;
-           
+
         }
 
         private void CrearUsuarioFormulario_Load(object sender, EventArgs e)
         {
-
+            txtNombre.Focus();
         }
         public bool ValidarDatos()
         {
@@ -69,7 +69,7 @@ namespace CineWheyForms.Presentaciones
                 txtContras.Focus();
                 valido = false;
             }
-            if(contraseña != contraseña2)
+            if (contraseña != contraseña2)
             {
                 MessageBox.Show("Las contraseñas no coinciden", "Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtContras.Focus();
@@ -81,16 +81,16 @@ namespace CineWheyForms.Presentaciones
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            if(ValidarDatos())
+            if (ValidarDatos())
             {
                 U.nombre_usuario = txtNombre.Text;
                 U.contrasñea_usuario = Convert.ToInt32(txtContras.Text);
 
                 if (DA.PostUsuario(U))
                 {
-                    MessageBox.Show($"Bienvenido {txtNombre.Text}, su usuario fue creado con exito", "Control", MessageBoxButtons.OK);
+                    MessageBox.Show($"Bienvenido {txtNombre.Text} !!, su usuario fue creado con exito", "Control", MessageBoxButtons.OK);
                 }
-            }    
+            }
 
         }
 
@@ -102,10 +102,30 @@ namespace CineWheyForms.Presentaciones
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Quiere salir de la carga de usuario?", "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Salir de la carga de Usuario?", "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro desea Cancelar?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+              MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+
+                limpiar();
+            txtNombre.Focus();
+
+        }
+
+        private void limpiar()
+        {
+            txtNombre.Text = string.Empty;
+            txtUsuario.Text = string.Empty;
+            txtContras.Text = string.Empty;
+            txtRepeContra.Text = string.Empty;
+
         }
     }
 }

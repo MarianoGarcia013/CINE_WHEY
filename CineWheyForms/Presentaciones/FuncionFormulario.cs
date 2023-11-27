@@ -31,8 +31,8 @@ namespace CineWheyForms.Presentaciones
         private void FuncionFormulario_Load(object sender, EventArgs e)
         {
             Habilitar(false);
-            cargarCombo( cboPelicula,"Pelicula");
-            cargarCombo(cboSala,"Salas");
+            cargarCombo(cboPelicula, "Pelicula");
+            cargarCombo(cboSala, "Salas");
             CargarLista();
         }
 
@@ -58,7 +58,7 @@ namespace CineWheyForms.Presentaciones
                 func.pelicula = Convert.ToInt32(fila[1]);
                 func.sala = Convert.ToInt32(fila[2]);
                 func.fecha = Convert.ToDateTime(fila[3]);
-                func.precio = Convert.ToDouble(fila[4]);                
+                func.precio = Convert.ToDouble(fila[4]);
                 func.hora_inicio = fila[5].ToString();
                 func.descripcion = fila[6].ToString();
 
@@ -124,7 +124,7 @@ namespace CineWheyForms.Presentaciones
             dtpFecha.Value = DateTime.Now;
             txtHoraInicio.Text = string.Empty;
         }
-       
+
 
         private void btnNueva_Click(object sender, EventArgs e)
         {
@@ -166,7 +166,7 @@ namespace CineWheyForms.Presentaciones
 
         private void btnAgregarF_Click_1(object sender, EventArgs e)
         {
-            if(nuevo)
+            if (nuevo)
             {
                 if (ValidarFuncion())
                 {
@@ -176,9 +176,9 @@ namespace CineWheyForms.Presentaciones
                     funcion.precio = Convert.ToDouble(txtPrecio.Text);
                     funcion.hora_inicio = txtHoraInicio.Text;
                 }
-                    if (DA.InsertarFunciones(funcion))
-                        MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
-                    CargarLista();                
+                if (DA.InsertarFunciones(funcion))
+                    MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
+                CargarLista();
             }
             else
             {
@@ -190,7 +190,7 @@ namespace CineWheyForms.Presentaciones
                 funcion.hora_inicio = txtHoraInicio.Text;
                 funcion.descripcion = txtDescripcion.Text;
 
-                if(DA.UpdateFuncion(funcion))
+                if (DA.UpdateFuncion(funcion))
                     MessageBox.Show("La funcion fue modificada con exito!", "CONTROL", MessageBoxButtons.OK);
                 CargarLista();
             }

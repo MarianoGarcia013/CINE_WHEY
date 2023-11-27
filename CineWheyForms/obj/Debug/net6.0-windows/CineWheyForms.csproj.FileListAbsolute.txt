@@ -32,3 +32,38 @@ C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-window
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ReservasFechasForm.resources
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ReservasPorGenero.resources
 C:\Users\maria\source\repos\CineWheyCentro\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.CrearUsuarioFormulario.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\CineWheyForms.exe
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\CineWheyForms.deps.json
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\CineWheyForms.runtimeconfig.json
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\CineWheyForms.dll
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\CineWheyForms.pdb
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\CineWheyBackend.dll
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\bin\Debug\net6.0-windows\CineWheyBackend.pdb
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.csproj.AssemblyReference.cache
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ClienteFormulario.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.CrearUsuarioFormulario.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.FuncionFormulario.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.LoginFormulario.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.MenuPrincipal.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.PeliculaFormulario.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ReservaFormulario.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ReservasFechasForm.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Presentaciones.ReservasPorGenero.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.Properties.Resources.resources
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.csproj.GenerateResource.cache
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.AssemblyInfoInputs.cache
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.AssemblyInfo.cs
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.csproj.CoreCompileInputs.cache
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.csproj.CopyComplete
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.dll
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\refint\CineWheyForms.dll
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.pdb
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\CineWheyForms.genruntimeconfig.cache
+C:\Users\-batatax-\Desktop\REPO VIERNES\CINE_WHEY\CineWheyForms\obj\Debug\net6.0-windows\ref\CineWheyForms.dll
