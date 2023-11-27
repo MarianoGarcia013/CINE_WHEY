@@ -35,8 +35,8 @@ namespace CineWheyForms.Presentaciones
             Habilitar(false);
             cargarCombo(cboIdioma, "idiomas");
             cargarCombo(cboGenero, "generos");
-            btnNueva.Focus();          
-            
+
+
         }
 
         private void Habilitar(bool v)
@@ -46,8 +46,8 @@ namespace CineWheyForms.Presentaciones
             txtDuracion.Enabled = v;
             dtpFechaEstreno.Enabled = v;
             cboGenero.Enabled = v;
-            cboIdioma.Enabled = v;            
-            btnNueva.Enabled = !v;   
+            cboIdioma.Enabled = v;
+            btnNueva.Enabled = !v;
             btnAgregar.Enabled = v;
             btnCancelar.Enabled = v;
 
@@ -73,9 +73,13 @@ namespace CineWheyForms.Presentaciones
                 pelicula.id_pelicula = Convert.ToInt32(fila[0]);
                 pelicula.titulo = fila[1].ToString();
                 pelicula.fecha_estreno = Convert.ToDateTime(fila[2].ToString());
-                pelicula.director = fila[3].ToString();  
+                pelicula.director = fila[3].ToString();
                 pelicula.genero = Convert.ToInt32(fila[4].ToString());
+<<<<<<< HEAD
                 pelicula.idioma = Convert.ToInt32(fila[5].ToString());                  
+=======
+                pelicula.idioma = Convert.ToInt32(fila[5].ToString());
+>>>>>>> b9938ca (Vistas e imagenes)
                 pelicula.duracion = Convert.ToInt32(fila[7].ToString());
 
                 PeliculaList.Add(pelicula);
@@ -84,6 +88,7 @@ namespace CineWheyForms.Presentaciones
         }
         private void cargarCampos(int i)
         {
+<<<<<<< HEAD
             
                 txtCodigo.Text = PeliculaList[i].id_pelicula.ToString();
                 txtTitulo.Text = PeliculaList[i].titulo.ToString();
@@ -95,6 +100,20 @@ namespace CineWheyForms.Presentaciones
                 //rbtSi.Checked = PeliculaList[i].apta_todo_publico == true; // ??
                // rbtNo.Checked = PeliculaList[i].apta_todo_publico == true; // ??                      
           
+=======
+
+            txtCodigo.Text = PeliculaList[i].id_pelicula.ToString();
+            txtTitulo.Text = PeliculaList[i].titulo.ToString();
+            txtDirector.Text = PeliculaList[i].director.ToString();
+            txtDuracion.Text = PeliculaList[i].duracion.ToString();
+            dtpFechaEstreno.Text = PeliculaList[i].fecha_estreno.ToString();
+            cboGenero.SelectedValue = PeliculaList[i].genero;
+            cboIdioma.SelectedValue = PeliculaList[i].idioma;
+            txtDuracion.Text = PeliculaList[i].duracion.ToString();
+            //rbtSi.Checked = PeliculaList[i].apta_todo_publico == true; // ??
+            // rbtNo.Checked = PeliculaList[i].apta_todo_publico == true; // ??                      
+
+>>>>>>> b9938ca (Vistas e imagenes)
 
         }
 
@@ -128,9 +147,9 @@ namespace CineWheyForms.Presentaciones
             }
 
             return Ok;
-        }                
-        
-     
+        }
+
+
         private void limpiar()
         {
             txtTitulo.Text = string.Empty;
@@ -142,7 +161,7 @@ namespace CineWheyForms.Presentaciones
             rbtSi.Checked = false;
             rbtNo.Checked = false;
         }
-    
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Seguro desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
@@ -162,12 +181,12 @@ namespace CineWheyForms.Presentaciones
         {
             cargarCampos(lstBoxPelicula.SelectedIndex);
         }
-    
+
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             if (nuevo)
             {
-                if(ValidarPelicula())
+                if (ValidarPelicula())
                 {
                     pelicula.titulo = txtTitulo.Text;
                     pelicula.duracion = Convert.ToInt32(txtDuracion.Text);
@@ -179,12 +198,12 @@ namespace CineWheyForms.Presentaciones
                         pelicula.apta_todo_publico = true;
                     else
                         pelicula.apta_todo_publico = false;
-                }               
+                }
 
-                if (DA.InsertarPelicula(pelicula))                
+                if (DA.InsertarPelicula(pelicula))
                     MessageBox.Show("La carga fue realizada con exito", "Control", MessageBoxButtons.OK);
                 cargarLista();
-                
+
             }
             else
             {
@@ -203,13 +222,13 @@ namespace CineWheyForms.Presentaciones
                 {
                     MessageBox.Show("La Pelicula fue modificada con exito!", "CONTROL", MessageBoxButtons.OK);
                     cargarLista();
-                }                                                     
+                }
                 else
                 {
                     MessageBox.Show("La Pelicula no pudo ser modificada", "CONTROL", MessageBoxButtons.OK);
-                }                   
+                }
 
-            }            
+            }
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
@@ -217,8 +236,9 @@ namespace CineWheyForms.Presentaciones
             DialogResult result = MessageBox.Show("Desea cancelar?", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                       MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
-                
-            limpiar();
+
+                limpiar();
+            Habilitar(false);
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -231,7 +251,7 @@ namespace CineWheyForms.Presentaciones
             Habilitar(true);
             nuevo = true;
             txtTitulo.Focus();
-            limpiar();            
+            limpiar();
         }
     }
 }

@@ -28,218 +28,228 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColPelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDirector = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
-            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtCanidadReservas = new System.Windows.Forms.TextBox();
-            this.btnNuevaBusqueda = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            ColPelicula = new DataGridViewTextBoxColumn();
+            ColDirector = new DataGridViewTextBoxColumn();
+            ColGenero = new DataGridViewTextBoxColumn();
+            ColReserva = new DataGridViewTextBoxColumn();
+            ColCliente = new DataGridViewTextBoxColumn();
+            btnBuscar = new Button();
+            dtpHasta = new DateTimePicker();
+            dtpDesde = new DateTimePicker();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            txtCanidadReservas = new TextBox();
+            btnNuevaBusqueda = new Button();
+            btnSalir = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColPelicula,
-            this.ColDirector,
-            this.ColGenero,
-            this.ColReserva,
-            this.ColCliente});
-            this.dataGridView1.Location = new System.Drawing.Point(142, 250);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(861, 336);
-            this.dataGridView1.TabIndex = 0;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColPelicula, ColDirector, ColGenero, ColReserva, ColCliente });
+            dataGridView1.Location = new Point(44, 152);
+            dataGridView1.Margin = new Padding(2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(863, 215);
+            dataGridView1.TabIndex = 0;
             // 
             // ColPelicula
             // 
-            this.ColPelicula.HeaderText = "Pelicula";
-            this.ColPelicula.MinimumWidth = 8;
-            this.ColPelicula.Name = "ColPelicula";
-            this.ColPelicula.ReadOnly = true;
-            this.ColPelicula.Width = 200;
+            ColPelicula.HeaderText = "Pelicula";
+            ColPelicula.MinimumWidth = 8;
+            ColPelicula.Name = "ColPelicula";
+            ColPelicula.ReadOnly = true;
+            ColPelicula.Width = 200;
             // 
             // ColDirector
             // 
-            this.ColDirector.HeaderText = "Director";
-            this.ColDirector.MinimumWidth = 8;
-            this.ColDirector.Name = "ColDirector";
-            this.ColDirector.ReadOnly = true;
-            this.ColDirector.Width = 150;
+            ColDirector.HeaderText = "Director";
+            ColDirector.MinimumWidth = 8;
+            ColDirector.Name = "ColDirector";
+            ColDirector.ReadOnly = true;
+            ColDirector.Width = 150;
             // 
             // ColGenero
             // 
-            this.ColGenero.HeaderText = "Genero";
-            this.ColGenero.MinimumWidth = 8;
-            this.ColGenero.Name = "ColGenero";
-            this.ColGenero.ReadOnly = true;
-            this.ColGenero.Width = 150;
+            ColGenero.HeaderText = "Genero";
+            ColGenero.MinimumWidth = 8;
+            ColGenero.Name = "ColGenero";
+            ColGenero.ReadOnly = true;
+            ColGenero.Width = 150;
             // 
             // ColReserva
             // 
-            this.ColReserva.HeaderText = "Reserva";
-            this.ColReserva.MinimumWidth = 8;
-            this.ColReserva.Name = "ColReserva";
-            this.ColReserva.ReadOnly = true;
-            this.ColReserva.Width = 150;
+            ColReserva.HeaderText = "Reserva";
+            ColReserva.MinimumWidth = 8;
+            ColReserva.Name = "ColReserva";
+            ColReserva.ReadOnly = true;
+            ColReserva.Width = 150;
             // 
             // ColCliente
             // 
-            this.ColCliente.HeaderText = "Cliente";
-            this.ColCliente.MinimumWidth = 8;
-            this.ColCliente.Name = "ColCliente";
-            this.ColCliente.ReadOnly = true;
-            this.ColCliente.Width = 150;
+            ColCliente.HeaderText = "Cliente";
+            ColCliente.MinimumWidth = 8;
+            ColCliente.Name = "ColCliente";
+            ColCliente.ReadOnly = true;
+            ColCliente.Width = 150;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(721, 186);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(260, 48);
-            this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            btnBuscar.Anchor = AnchorStyles.None;
+            btnBuscar.BackColor = Color.FromArgb(64, 0, 0);
+            btnBuscar.ForeColor = Color.White;
+            btnBuscar.Location = new Point(725, 85);
+            btnBuscar.Margin = new Padding(2);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(182, 55);
+            btnBuscar.TabIndex = 2;
+            btnBuscar.Text = "&Buscar";
+            btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpHasta.Location = new System.Drawing.Point(306, 202);
-            this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(385, 31);
-            this.dtpHasta.TabIndex = 4;
+            dtpHasta.Anchor = AnchorStyles.None;
+            dtpHasta.Location = new Point(450, 115);
+            dtpHasta.Margin = new Padding(2);
+            dtpHasta.Name = "dtpHasta";
+            dtpHasta.Size = new Size(271, 23);
+            dtpHasta.TabIndex = 1;
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpDesde.Location = new System.Drawing.Point(306, 150);
-            this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(385, 31);
-            this.dtpDesde.TabIndex = 5;
+            dtpDesde.Anchor = AnchorStyles.None;
+            dtpDesde.Location = new Point(450, 88);
+            dtpDesde.Margin = new Padding(2);
+            dtpDesde.Name = "dtpDesde";
+            dtpDesde.Size = new Size(271, 23);
+            dtpDesde.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(173, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 25);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "FECHA DESDE:";
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(362, 91);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(84, 15);
+            label1.TabIndex = 6;
+            label1.Text = "FECHA DESDE:";
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(173, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 25);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "FECHA HASTA:";
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(359, 118);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(87, 15);
+            label2.TabIndex = 7;
+            label2.Text = "FECHA HASTA:";
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(142, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(366, 32);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "HISTORIAL DE RESERVAS";
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(44, 41);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(251, 22);
+            label3.TabIndex = 8;
+            label3.Text = "HISTORIAL DE RESERVAS";
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(444, 604);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(390, 32);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "RESERVAS ENCONTRADAS:";
+            label4.Anchor = AnchorStyles.None;
+            label4.AutoSize = true;
+            label4.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(554, 386);
+            label4.Margin = new Padding(2, 0, 2, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(221, 19);
+            label4.TabIndex = 9;
+            label4.Text = "RESERVAS ENCONTRADAS:";
             // 
             // txtCanidadReservas
             // 
-            this.txtCanidadReservas.Location = new System.Drawing.Point(829, 604);
-            this.txtCanidadReservas.Name = "txtCanidadReservas";
-            this.txtCanidadReservas.Size = new System.Drawing.Size(174, 31);
-            this.txtCanidadReservas.TabIndex = 10;
+            txtCanidadReservas.BackColor = Color.White;
+            txtCanidadReservas.ForeColor = Color.Black;
+            txtCanidadReservas.Location = new Point(786, 384);
+            txtCanidadReservas.Margin = new Padding(2);
+            txtCanidadReservas.Name = "txtCanidadReservas";
+            txtCanidadReservas.Size = new Size(123, 23);
+            txtCanidadReservas.TabIndex = 10;
             // 
             // btnNuevaBusqueda
             // 
-            this.btnNuevaBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNuevaBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnNuevaBusqueda.ForeColor = System.Drawing.Color.White;
-            this.btnNuevaBusqueda.Location = new System.Drawing.Point(142, 700);
-            this.btnNuevaBusqueda.Name = "btnNuevaBusqueda";
-            this.btnNuevaBusqueda.Size = new System.Drawing.Size(197, 48);
-            this.btnNuevaBusqueda.TabIndex = 11;
-            this.btnNuevaBusqueda.Text = "Nueva Busqueda";
-            this.btnNuevaBusqueda.UseVisualStyleBackColor = false;
-            this.btnNuevaBusqueda.Click += new System.EventHandler(this.btnNuevaBusqueda_Click);
+            btnNuevaBusqueda.Anchor = AnchorStyles.None;
+            btnNuevaBusqueda.BackColor = Color.FromArgb(64, 0, 0);
+            btnNuevaBusqueda.ForeColor = Color.White;
+            btnNuevaBusqueda.Location = new Point(44, 417);
+            btnNuevaBusqueda.Margin = new Padding(2);
+            btnNuevaBusqueda.Name = "btnNuevaBusqueda";
+            btnNuevaBusqueda.Size = new Size(138, 46);
+            btnNuevaBusqueda.TabIndex = 3;
+            btnNuevaBusqueda.Text = "&Nueva Búsqueda";
+            btnNuevaBusqueda.UseVisualStyleBackColor = false;
+            btnNuevaBusqueda.Click += btnNuevaBusqueda_Click;
             // 
             // btnSalir
             // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(886, 700);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(117, 48);
-            this.btnSalir.TabIndex = 12;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            btnSalir.Anchor = AnchorStyles.None;
+            btnSalir.BackColor = Color.FromArgb(64, 0, 0);
+            btnSalir.ForeColor = Color.White;
+            btnSalir.Location = new Point(788, 422);
+            btnSalir.Margin = new Padding(2);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(121, 41);
+            btnSalir.TabIndex = 4;
+            btnSalir.Text = "&Salir";
+            btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // ReservasFechasForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1159, 795);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnNuevaBusqueda);
-            this.Controls.Add(this.txtCanidadReservas);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtpDesde);
-            this.Controls.Add(this.dtpHasta);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.dataGridView1);
-            this.ForeColor = System.Drawing.Color.Black;
-            this.Name = "ReservasFechasForm";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.ReservasFechasForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(64, 64, 64);
+            ClientSize = new Size(937, 498);
+            Controls.Add(btnSalir);
+            Controls.Add(btnNuevaBusqueda);
+            Controls.Add(txtCanidadReservas);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(dtpDesde);
+            Controls.Add(dtpHasta);
+            Controls.Add(btnBuscar);
+            Controls.Add(dataGridView1);
+            ForeColor = Color.Black;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(2);
+            Name = "ReservasFechasForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ReservasPorFechas";
+            Load += ReservasFechasForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

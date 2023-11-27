@@ -18,7 +18,7 @@ namespace CineWheyBackend.Data
 
         public HelperSingleton()
         {
-           cnn = new SqlConnection(@"Data Source=DESKTOP-SFDA7AL\MSSQLSERVER2;Initial Catalog=db_cine_whey;Integrated Security=True");
+           cnn = new SqlConnection(@"Data Source=DESKTOP-93BGHGN\SQLEXPRESS;Initial Catalog=db_cine_whey3;Integrated Security=True");
         }
 
         public static HelperSingleton getInstance()

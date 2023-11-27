@@ -17,7 +17,7 @@ namespace CineWheyForms.Presentaciones
         public ReservasFechasForm()
         {
             InitializeComponent();
-            HP= new HelperSingleton();
+            HP = new HelperSingleton();
         }
 
         private void ReservasFechasForm_Load(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace CineWheyForms.Presentaciones
 
             DataTable tabla = HP.Consultar("SP_ReservasPorFecha", lst);
             dataGridView1.Rows.Clear();
-            foreach(DataRow fila in tabla.Rows)
+            foreach (DataRow fila in tabla.Rows)
             {
                 dataGridView1.Rows.Add(new object[]
                 {
@@ -51,13 +51,13 @@ namespace CineWheyForms.Presentaciones
         private int CantidadDeReservas(DataGridView Datagrid)
         {
             int cantidad = 0;
-            foreach(DataGridViewRow fila in dataGridView1.Rows)                
+            foreach (DataGridViewRow fila in dataGridView1.Rows)
             {
                 cantidad++;
             }
             return cantidad;
-        }      
-       
+        }
+
         private void btnNuevaBusqueda_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();

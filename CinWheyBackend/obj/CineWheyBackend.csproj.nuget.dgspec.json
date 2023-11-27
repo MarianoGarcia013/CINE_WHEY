@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maria\\source\\repos\\CineWheyCentro\\CinWheyBackend\\CineWheyBackend.csproj": {}
+    "C:\\Users\\-batatax-\\Desktop\\REPO VIERNES\\CINE_WHEY\\CinWheyBackend\\CineWheyBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maria\\source\\repos\\CineWheyCentro\\CinWheyBackend\\CineWheyBackend.csproj": {
+    "C:\\Users\\-batatax-\\Desktop\\REPO VIERNES\\CINE_WHEY\\CinWheyBackend\\CineWheyBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maria\\source\\repos\\CineWheyCentro\\CinWheyBackend\\CineWheyBackend.csproj",
+        "projectUniqueName": "C:\\Users\\-batatax-\\Desktop\\REPO VIERNES\\CINE_WHEY\\CinWheyBackend\\CineWheyBackend.csproj",
         "projectName": "CineWheyBackend",
-        "projectPath": "C:\\Users\\maria\\source\\repos\\CineWheyCentro\\CinWheyBackend\\CineWheyBackend.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maria\\source\\repos\\CineWheyCentro\\CinWheyBackend\\obj\\",
+        "projectPath": "C:\\Users\\-batatax-\\Desktop\\REPO VIERNES\\CINE_WHEY\\CinWheyBackend\\CineWheyBackend.csproj",
+        "packagesPath": "C:\\Users\\-batatax-\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\-batatax-\\Desktop\\REPO VIERNES\\CINE_WHEY\\CinWheyBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\-batatax-\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

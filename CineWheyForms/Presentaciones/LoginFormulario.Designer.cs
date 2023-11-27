@@ -28,139 +28,153 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkContra = new System.Windows.Forms.CheckBox();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            txtUsuario = new TextBox();
+            txtContraseña = new TextBox();
+            btnIngresar = new Button();
+            btnSalir = new Button();
+            label3 = new Label();
+            checkContra = new CheckBox();
+            btnNuevo = new Button();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(219, 217);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario:";
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Location = new Point(153, 135);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Usuario:";
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(192, 274);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Contraseña:";
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.Location = new Point(134, 169);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(70, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsuario.Location = new System.Drawing.Point(331, 216);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(234, 31);
-            this.txtUsuario.TabIndex = 2;
+            txtUsuario.Anchor = AnchorStyles.None;
+            txtUsuario.BackColor = Color.White;
+            txtUsuario.ForeColor = Color.Black;
+            txtUsuario.Location = new Point(232, 130);
+            txtUsuario.Margin = new Padding(2);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(165, 23);
+            txtUsuario.TabIndex = 2;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtContraseña.Location = new System.Drawing.Point(331, 274);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(234, 31);
-            this.txtContraseña.TabIndex = 3;
+            txtContraseña.Anchor = AnchorStyles.None;
+            txtContraseña.BackColor = Color.White;
+            txtContraseña.ForeColor = Color.Black;
+            txtContraseña.Location = new Point(232, 164);
+            txtContraseña.Margin = new Padding(2);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.Size = new Size(165, 23);
+            txtContraseña.TabIndex = 3;
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(376, 393);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(130, 43);
-            this.btnIngresar.TabIndex = 4;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            btnIngresar.Anchor = AnchorStyles.None;
+            btnIngresar.BackColor = Color.FromArgb(64, 64, 64);
+            btnIngresar.ForeColor = Color.White;
+            btnIngresar.Location = new Point(266, 236);
+            btnIngresar.Margin = new Padding(2);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(91, 26);
+            btnIngresar.TabIndex = 4;
+            btnIngresar.Text = "Ingresar";
+            btnIngresar.UseVisualStyleBackColor = false;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // btnSalir
             // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSalir.Location = new System.Drawing.Point(679, 553);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(130, 43);
-            this.btnSalir.TabIndex = 5;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            btnSalir.Anchor = AnchorStyles.None;
+            btnSalir.BackColor = Color.FromArgb(64, 64, 64);
+            btnSalir.Location = new Point(474, 332);
+            btnSalir.Margin = new Padding(2);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(91, 26);
+            btnSalir.TabIndex = 5;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(411, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Login:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(288, 74);
+            label3.Margin = new Padding(2, 0, 2, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(41, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Login:";
+            label3.Click += label3_Click;
             // 
             // checkContra
             // 
-            this.checkContra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkContra.AutoSize = true;
-            this.checkContra.Location = new System.Drawing.Point(349, 339);
-            this.checkContra.Name = "checkContra";
-            this.checkContra.Size = new System.Drawing.Size(194, 29);
-            this.checkContra.TabIndex = 7;
-            this.checkContra.Text = "Mostrar Contraseña";
-            this.checkContra.UseVisualStyleBackColor = true;
-            this.checkContra.CheckedChanged += new System.EventHandler(this.checkContra_CheckedChanged);
+            checkContra.Anchor = AnchorStyles.None;
+            checkContra.AutoSize = true;
+            checkContra.Location = new Point(244, 203);
+            checkContra.Margin = new Padding(2);
+            checkContra.Name = "checkContra";
+            checkContra.Size = new Size(130, 19);
+            checkContra.TabIndex = 7;
+            checkContra.Text = "Mostrar Contraseña";
+            checkContra.UseVisualStyleBackColor = true;
+            checkContra.CheckedChanged += checkContra_CheckedChanged;
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(80, 553);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(130, 43);
-            this.btnNuevo.TabIndex = 8;
-            this.btnNuevo.Text = "&Crear Usuario";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            btnNuevo.Anchor = AnchorStyles.None;
+            btnNuevo.BackColor = Color.FromArgb(64, 64, 64);
+            btnNuevo.ForeColor = Color.White;
+            btnNuevo.Location = new Point(65, 332);
+            btnNuevo.Margin = new Padding(2);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(91, 26);
+            btnNuevo.TabIndex = 8;
+            btnNuevo.Text = "&Crear Usuario";
+            btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // LoginFormulario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(896, 648);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.checkContra);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.txtUsuario);
-            this.ForeColor = System.Drawing.Color.White;
-            this.Name = "LoginFormulario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginFormulario";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.LoginFormulario_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(64, 0, 0);
+            ClientSize = new Size(627, 389);
+            Controls.Add(label3);
+            Controls.Add(btnNuevo);
+            Controls.Add(label1);
+            Controls.Add(btnIngresar);
+            Controls.Add(checkContra);
+            Controls.Add(txtContraseña);
+            Controls.Add(label2);
+            Controls.Add(btnSalir);
+            Controls.Add(txtUsuario);
+            ForeColor = Color.White;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(2);
+            Name = "LoginFormulario";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "LoginFormulario";
+            WindowState = FormWindowState.Maximized;
+            Load += LoginFormulario_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

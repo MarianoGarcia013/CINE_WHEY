@@ -22,7 +22,7 @@ namespace CineWheyForms.Presentaciones
         {
             InitializeComponent();
 
-            checkContra.CheckedChanged+= checkContra_CheckedChanged;
+            checkContra.CheckedChanged += checkContra_CheckedChanged;
             txtContraseña.UseSystemPasswordChar = true;
 
         }
@@ -58,7 +58,7 @@ namespace CineWheyForms.Presentaciones
             }
 
             return valido;
-        }      
+        }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
@@ -67,7 +67,7 @@ namespace CineWheyForms.Presentaciones
                 string usuario = txtUsuario.Text;
                 string contraseña = txtContraseña.Text;
 
-                if(HelperSingleton.getInstance().ValidarCredenciales(usuario, contraseña))
+                if (HelperSingleton.getInstance().ValidarCredenciales(usuario, contraseña))
                 {
                     MessageBox.Show("Inicio de sesión exitoso.");
                     MenuPrincipal menu = new MenuPrincipal();
@@ -105,7 +105,7 @@ namespace CineWheyForms.Presentaciones
                 this.Close();
             }
         }
-       
+
 
         private void checkContra_CheckedChanged(object sender, EventArgs e)
         {

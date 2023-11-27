@@ -17,11 +17,11 @@ namespace CineWheyForms.Presentaciones
     {
         HelperSingleton HP;
         IDataApi DA;
-        
+
         public ReservasPorGenero()
         {
             InitializeComponent();
-            HP= new HelperSingleton();
+            HP = new HelperSingleton();
         }
 
         private void ReservasPorGenero_Load(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace CineWheyForms.Presentaciones
             cargarCombo(cboGenero, "Generos");
             //decimal Total = CalcularSumaColumna(dataGridView1, "ColTotalRecaudado");
             //txtTotal.Text = Total.ToString();
-            
+
         }
         public void cargarCombo(ComboBox combo, string nombreTabla)
         {
@@ -43,7 +43,7 @@ namespace CineWheyForms.Presentaciones
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             List<Parametros> lst = new List<Parametros>();
-            lst.Add(new Parametros("@genero", cboGenero.SelectedIndex +1));            
+            lst.Add(new Parametros("@genero", cboGenero.SelectedIndex + 1));
 
             DataTable tabla = HP.Consultar("SP_ReservasPorGenero", lst);
             dataGridView1.Rows.Clear();
@@ -55,37 +55,37 @@ namespace CineWheyForms.Presentaciones
                     fila[1].ToString(),
                     fila[2].ToString(),
                     fila[3].ToString(),
-                    Convert.ToInt32(fila[4].ToString()),                    
+                    Convert.ToInt32(fila[4].ToString()),
                 });
             }
             decimal Total = CalcularSumaColumna(dataGridView1, "ColTotalRecaudado");
             txtTotal.Text = Total.ToString();
         }
 
-        private int CalcularSumaColumna(DataGridView datagrid, string column) 
+        private int CalcularSumaColumna(DataGridView datagrid, string column)
         {
             int suma = 0;
 
             foreach (DataGridViewRow fila in dataGridView1.Rows)
             {
-                
-                   
-                    if (fila.Cells["ColTotalRecaudado"].Value != null && fila.Cells["ColTotalRecaudado"].Value != DBNull.Value)
+
+
+                if (fila.Cells["ColTotalRecaudado"].Value != null && fila.Cells["ColTotalRecaudado"].Value != DBNull.Value)
+                {
+
+                    if (int.TryParse(fila.Cells["ColTotalRecaudado"].Value.ToString(), out int valorCelda))
                     {
-                        
-                        if (int.TryParse(fila.Cells["ColTotalRecaudado"].Value.ToString(), out int valorCelda))
-                        {
-                            suma += valorCelda;
-                        }
-                    }                
+                        suma += valorCelda;
+                    }
+                }
             }
             return suma;
         }
-        
+
         private void btnNuevaBusqueda_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();           
-            
+            dataGridView1.Rows.Clear();
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -95,6 +95,6 @@ namespace CineWheyForms.Presentaciones
             if (result == DialogResult.Yes)
                 this.Close();
         }
-       
+
     }
 }

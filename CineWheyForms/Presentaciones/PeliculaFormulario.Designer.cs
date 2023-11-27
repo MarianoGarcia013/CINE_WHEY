@@ -28,522 +28,389 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.funcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevaReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.historialReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.peliculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarPeliculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarPeliculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.peliculasDiponiblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevaFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarFuncionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.lstBoxPelicula = new System.Windows.Forms.ListBox();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
-            this.dtpFechaEstreno = new System.Windows.Forms.DateTimePicker();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.cboIdioma = new System.Windows.Forms.ComboBox();
-            this.cboGenero = new System.Windows.Forms.ComboBox();
-            this.rbtNo = new System.Windows.Forms.RadioButton();
-            this.rbtSi = new System.Windows.Forms.RadioButton();
-            this.txtDuracion = new System.Windows.Forms.TextBox();
-            this.txtDirector = new System.Windows.Forms.TextBox();
-            this.txtTitulo = new System.Windows.Forms.TextBox();
-            this.lblAptoTodoPublico = new System.Windows.Forms.Label();
-            this.lblIdioma = new System.Windows.Forms.Label();
-            this.lblGenero = new System.Windows.Forms.Label();
-            this.lblDirector = new System.Windows.Forms.Label();
-            this.lblFechaEstreno = new System.Windows.Forms.Label();
-            this.lblDuracion = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnNueva = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            peliculaToolStripMenuItem = new ToolStripMenuItem();
+            agregarPeliculaToolStripMenuItem = new ToolStripMenuItem();
+            peliculasDiponiblesToolStripMenuItem = new ToolStripMenuItem();
+            btnAgregar = new Button();
+            lstBoxPelicula = new ListBox();
+            btnActualizar = new Button();
+            btnSalir = new Button();
+            btnBorrar = new Button();
+            dtpFechaEstreno = new DateTimePicker();
+            btnCancelar = new Button();
+            cboIdioma = new ComboBox();
+            cboGenero = new ComboBox();
+            rbtNo = new RadioButton();
+            rbtSi = new RadioButton();
+            txtDuracion = new TextBox();
+            txtDirector = new TextBox();
+            txtTitulo = new TextBox();
+            lblAptoTodoPublico = new Label();
+            lblIdioma = new Label();
+            lblGenero = new Label();
+            lblDirector = new Label();
+            lblFechaEstreno = new Label();
+            lblDuracion = new Label();
+            lblTitulo = new Label();
+            label6 = new Label();
+            btnNueva = new Button();
+            label1 = new Label();
+            txtCodigo = new TextBox();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.funcionesToolStripMenuItem,
-            this.peliculaToolStripMenuItem,
-            this.clienteToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1377, 33);
-            this.menuStrip1.TabIndex = 70;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // funcionesToolStripMenuItem
-            // 
-            this.funcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevaReservaToolStripMenuItem,
-            this.eliminarReservaToolStripMenuItem,
-            this.historialReservasToolStripMenuItem});
-            this.funcionesToolStripMenuItem.Name = "funcionesToolStripMenuItem";
-            this.funcionesToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
-            this.funcionesToolStripMenuItem.Text = "Reserva";
-            // 
-            // nuevaReservaToolStripMenuItem
-            // 
-            this.nuevaReservaToolStripMenuItem.Name = "nuevaReservaToolStripMenuItem";
-            this.nuevaReservaToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
-            this.nuevaReservaToolStripMenuItem.Text = "Nueva Reserva";
-            // 
-            // eliminarReservaToolStripMenuItem
-            // 
-            this.eliminarReservaToolStripMenuItem.Name = "eliminarReservaToolStripMenuItem";
-            this.eliminarReservaToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
-            this.eliminarReservaToolStripMenuItem.Text = "Eliminar Reserva";
-            // 
-            // historialReservasToolStripMenuItem
-            // 
-            this.historialReservasToolStripMenuItem.Name = "historialReservasToolStripMenuItem";
-            this.historialReservasToolStripMenuItem.Size = new System.Drawing.Size(252, 34);
-            this.historialReservasToolStripMenuItem.Text = "Historial Reservas";
+            menuStrip1.BackColor = Color.FromArgb(64, 64, 64);
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { peliculaToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(4, 1, 0, 1);
+            menuStrip1.Size = new Size(962, 24);
+            menuStrip1.TabIndex = 70;
+            menuStrip1.Text = "menuStrip1";
             // 
             // peliculaToolStripMenuItem
             // 
-            this.peliculaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarPeliculaToolStripMenuItem,
-            this.eliminarPeliculaToolStripMenuItem,
-            this.peliculasDiponiblesToolStripMenuItem,
-            this.funcionesToolStripMenuItem1});
-            this.peliculaToolStripMenuItem.Name = "peliculaToolStripMenuItem";
-            this.peliculaToolStripMenuItem.Size = new System.Drawing.Size(85, 29);
-            this.peliculaToolStripMenuItem.Text = "Pelicula";
+            peliculaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { agregarPeliculaToolStripMenuItem, peliculasDiponiblesToolStripMenuItem });
+            peliculaToolStripMenuItem.Name = "peliculaToolStripMenuItem";
+            peliculaToolStripMenuItem.Size = new Size(60, 22);
+            peliculaToolStripMenuItem.Text = "Pelicula";
             // 
             // agregarPeliculaToolStripMenuItem
             // 
-            this.agregarPeliculaToolStripMenuItem.Name = "agregarPeliculaToolStripMenuItem";
-            this.agregarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(269, 34);
-            this.agregarPeliculaToolStripMenuItem.Text = "Agregar Pelicula";
-            // 
-            // eliminarPeliculaToolStripMenuItem
-            // 
-            this.eliminarPeliculaToolStripMenuItem.Name = "eliminarPeliculaToolStripMenuItem";
-            this.eliminarPeliculaToolStripMenuItem.Size = new System.Drawing.Size(269, 34);
-            this.eliminarPeliculaToolStripMenuItem.Text = "Eliminar Pelicula";
+            agregarPeliculaToolStripMenuItem.Name = "agregarPeliculaToolStripMenuItem";
+            agregarPeliculaToolStripMenuItem.Size = new Size(179, 22);
+            agregarPeliculaToolStripMenuItem.Text = "Agregar Pelicula";
             // 
             // peliculasDiponiblesToolStripMenuItem
             // 
-            this.peliculasDiponiblesToolStripMenuItem.Name = "peliculasDiponiblesToolStripMenuItem";
-            this.peliculasDiponiblesToolStripMenuItem.Size = new System.Drawing.Size(269, 34);
-            this.peliculasDiponiblesToolStripMenuItem.Text = "Peliculas Diponibles";
-            // 
-            // funcionesToolStripMenuItem1
-            // 
-            this.funcionesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevaFuncionToolStripMenuItem,
-            this.modificarFuncionToolStripMenuItem,
-            this.eliminarFuncionToolStripMenuItem});
-            this.funcionesToolStripMenuItem1.Name = "funcionesToolStripMenuItem1";
-            this.funcionesToolStripMenuItem1.Size = new System.Drawing.Size(269, 34);
-            this.funcionesToolStripMenuItem1.Text = "Funciones";
-            // 
-            // nuevaFuncionToolStripMenuItem
-            // 
-            this.nuevaFuncionToolStripMenuItem.Name = "nuevaFuncionToolStripMenuItem";
-            this.nuevaFuncionToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
-            this.nuevaFuncionToolStripMenuItem.Text = "Nueva Funcion";
-            // 
-            // modificarFuncionToolStripMenuItem
-            // 
-            this.modificarFuncionToolStripMenuItem.Name = "modificarFuncionToolStripMenuItem";
-            this.modificarFuncionToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
-            this.modificarFuncionToolStripMenuItem.Text = "Modificar Funcion";
-            // 
-            // eliminarFuncionToolStripMenuItem
-            // 
-            this.eliminarFuncionToolStripMenuItem.Name = "eliminarFuncionToolStripMenuItem";
-            this.eliminarFuncionToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
-            this.eliminarFuncionToolStripMenuItem.Text = "Eliminar Funcion";
-            // 
-            // clienteToolStripMenuItem
-            // 
-            this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarClienteToolStripMenuItem,
-            this.modificarClienteToolStripMenuItem});
-            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
-            this.clienteToolStripMenuItem.Text = "Cliente";
-            // 
-            // agregarClienteToolStripMenuItem
-            // 
-            this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
-            this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
-            this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
-            // 
-            // modificarClienteToolStripMenuItem
-            // 
-            this.modificarClienteToolStripMenuItem.Name = "modificarClienteToolStripMenuItem";
-            this.modificarClienteToolStripMenuItem.Size = new System.Drawing.Size(247, 34);
-            this.modificarClienteToolStripMenuItem.Text = "Modificar Cliente";
+            peliculasDiponiblesToolStripMenuItem.Name = "peliculasDiponiblesToolStripMenuItem";
+            peliculasDiponiblesToolStripMenuItem.Size = new Size(179, 22);
+            peliculasDiponiblesToolStripMenuItem.Text = "Peliculas Diponibles";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnAgregar.Location = new System.Drawing.Point(253, 606);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(107, 46);
-            this.btnAgregar.TabIndex = 116;
-            this.btnAgregar.Text = "&Guardar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
+            btnAgregar.Anchor = AnchorStyles.None;
+            btnAgregar.BackColor = Color.FromArgb(64, 0, 0);
+            btnAgregar.Location = new Point(529, 364);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(75, 38);
+            btnAgregar.TabIndex = 10;
+            btnAgregar.Text = "&Guardar";
+            btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += btnAgregar_Click_1;
             // 
             // lstBoxPelicula
             // 
-            this.lstBoxPelicula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lstBoxPelicula.FormattingEnabled = true;
-            this.lstBoxPelicula.ItemHeight = 25;
-            this.lstBoxPelicula.Location = new System.Drawing.Point(778, 148);
-            this.lstBoxPelicula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.lstBoxPelicula.Name = "lstBoxPelicula";
-            this.lstBoxPelicula.Size = new System.Drawing.Size(549, 504);
-            this.lstBoxPelicula.TabIndex = 115;
-            this.lstBoxPelicula.SelectedIndexChanged += new System.EventHandler(this.lstBoxPelicula_SelectedIndexChanged);
+            lstBoxPelicula.Anchor = AnchorStyles.None;
+            lstBoxPelicula.FormattingEnabled = true;
+            lstBoxPelicula.ItemHeight = 15;
+            lstBoxPelicula.Location = new Point(451, 66);
+            lstBoxPelicula.Name = "lstBoxPelicula";
+            lstBoxPelicula.Size = new Size(498, 289);
+            lstBoxPelicula.TabIndex = 15;
+            lstBoxPelicula.SelectedIndexChanged += lstBoxPelicula_SelectedIndexChanged;
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnActualizar.Location = new System.Drawing.Point(373, 606);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(107, 46);
-            this.btnActualizar.TabIndex = 114;
-            this.btnActualizar.Text = "&Actualizar";
-            this.btnActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            btnActualizar.Anchor = AnchorStyles.None;
+            btnActualizar.BackColor = Color.FromArgb(64, 0, 0);
+            btnActualizar.Location = new Point(624, 364);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(75, 38);
+            btnActualizar.TabIndex = 11;
+            btnActualizar.Text = "&Actualizar";
+            btnActualizar.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnActualizar.UseVisualStyleBackColor = false;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // btnSalir
             // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnSalir.Location = new System.Drawing.Point(619, 666);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(107, 46);
-            this.btnSalir.TabIndex = 113;
-            this.btnSalir.Text = "&Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            btnSalir.Anchor = AnchorStyles.None;
+            btnSalir.BackColor = Color.FromArgb(64, 0, 0);
+            btnSalir.Location = new Point(875, 364);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 38);
+            btnSalir.TabIndex = 14;
+            btnSalir.Text = "&Salir";
+            btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnBorrar.Location = new System.Drawing.Point(490, 606);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(107, 46);
-            this.btnBorrar.TabIndex = 112;
-            this.btnBorrar.Text = "&Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = false;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            btnBorrar.Anchor = AnchorStyles.None;
+            btnBorrar.BackColor = Color.FromArgb(64, 0, 0);
+            btnBorrar.Location = new Point(702, 364);
+            btnBorrar.Name = "btnBorrar";
+            btnBorrar.Size = new Size(75, 38);
+            btnBorrar.TabIndex = 12;
+            btnBorrar.Text = "&Borrar";
+            btnBorrar.UseVisualStyleBackColor = false;
+            btnBorrar.Click += btnBorrar_Click;
             // 
             // dtpFechaEstreno
             // 
-            this.dtpFechaEstreno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpFechaEstreno.Location = new System.Drawing.Point(253, 332);
-            this.dtpFechaEstreno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtpFechaEstreno.Name = "dtpFechaEstreno";
-            this.dtpFechaEstreno.Size = new System.Drawing.Size(330, 31);
-            this.dtpFechaEstreno.TabIndex = 98;
+            dtpFechaEstreno.Anchor = AnchorStyles.None;
+            dtpFechaEstreno.Location = new Point(191, 225);
+            dtpFechaEstreno.Name = "dtpFechaEstreno";
+            dtpFechaEstreno.Size = new Size(232, 23);
+            dtpFechaEstreno.TabIndex = 4;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnCancelar.Location = new System.Drawing.Point(495, 666);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(107, 46);
-            this.btnCancelar.TabIndex = 104;
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
+            btnCancelar.Anchor = AnchorStyles.None;
+            btnCancelar.BackColor = Color.FromArgb(64, 0, 0);
+            btnCancelar.Location = new Point(796, 364);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 38);
+            btnCancelar.TabIndex = 13;
+            btnCancelar.Text = "&Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click_1;
             // 
             // cboIdioma
             // 
-            this.cboIdioma.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboIdioma.BackColor = System.Drawing.Color.White;
-            this.cboIdioma.FormattingEnabled = true;
-            this.cboIdioma.Location = new System.Drawing.Point(252, 450);
-            this.cboIdioma.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cboIdioma.Name = "cboIdioma";
-            this.cboIdioma.Size = new System.Drawing.Size(194, 33);
-            this.cboIdioma.TabIndex = 100;
+            cboIdioma.Anchor = AnchorStyles.None;
+            cboIdioma.BackColor = Color.White;
+            cboIdioma.FormattingEnabled = true;
+            cboIdioma.Location = new Point(193, 293);
+            cboIdioma.Name = "cboIdioma";
+            cboIdioma.Size = new Size(137, 23);
+            cboIdioma.TabIndex = 6;
             // 
             // cboGenero
             // 
-            this.cboGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboGenero.BackColor = System.Drawing.Color.White;
-            this.cboGenero.FormattingEnabled = true;
-            this.cboGenero.Location = new System.Drawing.Point(252, 389);
-            this.cboGenero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cboGenero.Name = "cboGenero";
-            this.cboGenero.Size = new System.Drawing.Size(215, 33);
-            this.cboGenero.TabIndex = 99;
+            cboGenero.Anchor = AnchorStyles.None;
+            cboGenero.BackColor = Color.White;
+            cboGenero.FormattingEnabled = true;
+            cboGenero.Location = new Point(191, 260);
+            cboGenero.Name = "cboGenero";
+            cboGenero.Size = new Size(152, 23);
+            cboGenero.TabIndex = 5;
             // 
             // rbtNo
             // 
-            this.rbtNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rbtNo.AutoSize = true;
-            this.rbtNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rbtNo.Location = new System.Drawing.Point(357, 516);
-            this.rbtNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rbtNo.Name = "rbtNo";
-            this.rbtNo.Size = new System.Drawing.Size(64, 29);
-            this.rbtNo.TabIndex = 102;
-            this.rbtNo.TabStop = true;
-            this.rbtNo.Text = "NO";
-            this.rbtNo.UseVisualStyleBackColor = false;
+            rbtNo.Anchor = AnchorStyles.None;
+            rbtNo.AutoSize = true;
+            rbtNo.BackColor = Color.FromArgb(64, 0, 0);
+            rbtNo.Location = new Point(265, 331);
+            rbtNo.Name = "rbtNo";
+            rbtNo.Size = new Size(43, 19);
+            rbtNo.TabIndex = 8;
+            rbtNo.TabStop = true;
+            rbtNo.Text = "NO";
+            rbtNo.UseVisualStyleBackColor = false;
             // 
             // rbtSi
             // 
-            this.rbtSi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rbtSi.AutoSize = true;
-            this.rbtSi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rbtSi.Location = new System.Drawing.Point(278, 516);
-            this.rbtSi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rbtSi.Name = "rbtSi";
-            this.rbtSi.Size = new System.Drawing.Size(52, 29);
-            this.rbtSi.TabIndex = 101;
-            this.rbtSi.TabStop = true;
-            this.rbtSi.Text = "SI";
-            this.rbtSi.UseVisualStyleBackColor = false;
+            rbtSi.Anchor = AnchorStyles.None;
+            rbtSi.AutoSize = true;
+            rbtSi.BackColor = Color.FromArgb(64, 0, 0);
+            rbtSi.Location = new Point(210, 331);
+            rbtSi.Name = "rbtSi";
+            rbtSi.Size = new Size(34, 19);
+            rbtSi.TabIndex = 7;
+            rbtSi.TabStop = true;
+            rbtSi.Text = "SI";
+            rbtSi.UseVisualStyleBackColor = false;
             // 
             // txtDuracion
             // 
-            this.txtDuracion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDuracion.BackColor = System.Drawing.Color.White;
-            this.txtDuracion.Location = new System.Drawing.Point(253, 277);
-            this.txtDuracion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(141, 31);
-            this.txtDuracion.TabIndex = 97;
+            txtDuracion.Anchor = AnchorStyles.None;
+            txtDuracion.BackColor = Color.White;
+            txtDuracion.ForeColor = Color.Black;
+            txtDuracion.Location = new Point(192, 190);
+            txtDuracion.Name = "txtDuracion";
+            txtDuracion.Size = new Size(100, 23);
+            txtDuracion.TabIndex = 3;
             // 
             // txtDirector
             // 
-            this.txtDirector.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDirector.BackColor = System.Drawing.Color.White;
-            this.txtDirector.Location = new System.Drawing.Point(253, 220);
-            this.txtDirector.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtDirector.Name = "txtDirector";
-            this.txtDirector.Size = new System.Drawing.Size(473, 31);
-            this.txtDirector.TabIndex = 96;
+            txtDirector.Anchor = AnchorStyles.None;
+            txtDirector.BackColor = Color.White;
+            txtDirector.ForeColor = Color.Black;
+            txtDirector.Location = new Point(192, 159);
+            txtDirector.Name = "txtDirector";
+            txtDirector.Size = new Size(232, 23);
+            txtDirector.TabIndex = 2;
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTitulo.BackColor = System.Drawing.Color.White;
-            this.txtTitulo.ForeColor = System.Drawing.Color.Black;
-            this.txtTitulo.Location = new System.Drawing.Point(253, 172);
-            this.txtTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(473, 31);
-            this.txtTitulo.TabIndex = 95;
+            txtTitulo.Anchor = AnchorStyles.None;
+            txtTitulo.BackColor = Color.White;
+            txtTitulo.ForeColor = Color.Black;
+            txtTitulo.Location = new Point(192, 130);
+            txtTitulo.Name = "txtTitulo";
+            txtTitulo.Size = new Size(232, 23);
+            txtTitulo.TabIndex = 1;
             // 
             // lblAptoTodoPublico
             // 
-            this.lblAptoTodoPublico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblAptoTodoPublico.AutoSize = true;
-            this.lblAptoTodoPublico.Location = new System.Drawing.Point(188, 518);
-            this.lblAptoTodoPublico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAptoTodoPublico.Name = "lblAptoTodoPublico";
-            this.lblAptoTodoPublico.Size = new System.Drawing.Size(46, 25);
-            this.lblAptoTodoPublico.TabIndex = 111;
-            this.lblAptoTodoPublico.Text = "ATP:";
+            lblAptoTodoPublico.Anchor = AnchorStyles.None;
+            lblAptoTodoPublico.AutoSize = true;
+            lblAptoTodoPublico.Location = new Point(147, 332);
+            lblAptoTodoPublico.Name = "lblAptoTodoPublico";
+            lblAptoTodoPublico.Size = new Size(31, 15);
+            lblAptoTodoPublico.TabIndex = 111;
+            lblAptoTodoPublico.Text = "ATP:";
             // 
             // lblIdioma
             // 
-            this.lblIdioma.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblIdioma.AutoSize = true;
-            this.lblIdioma.Location = new System.Drawing.Point(155, 455);
-            this.lblIdioma.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIdioma.Name = "lblIdioma";
-            this.lblIdioma.Size = new System.Drawing.Size(81, 25);
-            this.lblIdioma.TabIndex = 110;
-            this.lblIdioma.Text = "IDIOMA:";
+            lblIdioma.Anchor = AnchorStyles.None;
+            lblIdioma.AutoSize = true;
+            lblIdioma.Location = new Point(125, 296);
+            lblIdioma.Name = "lblIdioma";
+            lblIdioma.Size = new Size(52, 15);
+            lblIdioma.TabIndex = 110;
+            lblIdioma.Text = "IDIOMA:";
             // 
             // lblGenero
             // 
-            this.lblGenero.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblGenero.AutoSize = true;
-            this.lblGenero.Location = new System.Drawing.Point(153, 394);
-            this.lblGenero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(84, 25);
-            this.lblGenero.TabIndex = 109;
-            this.lblGenero.Text = "GÉNERO:";
+            lblGenero.Anchor = AnchorStyles.None;
+            lblGenero.AutoSize = true;
+            lblGenero.Location = new Point(123, 263);
+            lblGenero.Name = "lblGenero";
+            lblGenero.Size = new Size(55, 15);
+            lblGenero.TabIndex = 109;
+            lblGenero.Text = "GÉNERO:";
             // 
             // lblDirector
             // 
-            this.lblDirector.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDirector.AutoSize = true;
-            this.lblDirector.Location = new System.Drawing.Point(141, 223);
-            this.lblDirector.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDirector.Name = "lblDirector";
-            this.lblDirector.Size = new System.Drawing.Size(98, 25);
-            this.lblDirector.TabIndex = 108;
-            this.lblDirector.Text = "DIRECTOR:";
+            lblDirector.Anchor = AnchorStyles.None;
+            lblDirector.AutoSize = true;
+            lblDirector.Location = new Point(115, 163);
+            lblDirector.Name = "lblDirector";
+            lblDirector.Size = new Size(64, 15);
+            lblDirector.TabIndex = 108;
+            lblDirector.Text = "DIRECTOR:";
             // 
             // lblFechaEstreno
             // 
-            this.lblFechaEstreno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFechaEstreno.AutoSize = true;
-            this.lblFechaEstreno.Location = new System.Drawing.Point(62, 335);
-            this.lblFechaEstreno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFechaEstreno.Name = "lblFechaEstreno";
-            this.lblFechaEstreno.Size = new System.Drawing.Size(177, 25);
-            this.lblFechaEstreno.TabIndex = 107;
-            this.lblFechaEstreno.Text = "FECHA DE ESTRENO:";
+            lblFechaEstreno.Anchor = AnchorStyles.None;
+            lblFechaEstreno.AutoSize = true;
+            lblFechaEstreno.Location = new Point(61, 228);
+            lblFechaEstreno.Name = "lblFechaEstreno";
+            lblFechaEstreno.Size = new Size(117, 15);
+            lblFechaEstreno.TabIndex = 107;
+            lblFechaEstreno.Text = "FECHA DE ESTRENO:";
             // 
             // lblDuracion
             // 
-            this.lblDuracion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDuracion.AutoSize = true;
-            this.lblDuracion.Location = new System.Drawing.Point(132, 280);
-            this.lblDuracion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDuracion.Name = "lblDuracion";
-            this.lblDuracion.Size = new System.Drawing.Size(107, 25);
-            this.lblDuracion.TabIndex = 106;
-            this.lblDuracion.Text = "DURACIÓN:";
+            lblDuracion.Anchor = AnchorStyles.None;
+            lblDuracion.AutoSize = true;
+            lblDuracion.Location = new Point(109, 194);
+            lblDuracion.Name = "lblDuracion";
+            lblDuracion.Size = new Size(70, 15);
+            lblDuracion.TabIndex = 106;
+            lblDuracion.Text = "DURACIÓN:";
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(167, 175);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(72, 25);
-            this.lblTitulo.TabIndex = 105;
-            this.lblTitulo.Text = "TÍTULO:";
+            lblTitulo.Anchor = AnchorStyles.None;
+            lblTitulo.AutoSize = true;
+            lblTitulo.Location = new Point(129, 133);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(50, 15);
+            lblTitulo.TabIndex = 105;
+            lblTitulo.Text = "TÍTULO:";
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(56, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(304, 32);
-            this.label6.TabIndex = 94;
-            this.label6.Text = "CARGAR PELICULAS";
+            label6.Anchor = AnchorStyles.None;
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(61, 50);
+            label6.Margin = new Padding(2, 0, 2, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(205, 22);
+            label6.TabIndex = 94;
+            label6.Text = "CARGAR PELICULAS";
             // 
             // btnNueva
             // 
-            this.btnNueva.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNueva.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnNueva.Location = new System.Drawing.Point(132, 606);
-            this.btnNueva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNueva.Name = "btnNueva";
-            this.btnNueva.Size = new System.Drawing.Size(107, 46);
-            this.btnNueva.TabIndex = 117;
-            this.btnNueva.Text = "&Nueva";
-            this.btnNueva.UseVisualStyleBackColor = false;
-            this.btnNueva.Click += new System.EventHandler(this.btnNueva_Click_1);
+            btnNueva.Anchor = AnchorStyles.None;
+            btnNueva.BackColor = Color.FromArgb(64, 0, 0);
+            btnNueva.Location = new Point(449, 364);
+            btnNueva.Name = "btnNueva";
+            btnNueva.Size = new Size(75, 38);
+            btnNueva.TabIndex = 9;
+            btnNueva.Text = "&Nueva";
+            btnNueva.UseVisualStyleBackColor = false;
+            btnNueva.Click += btnNueva_Click_1;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(155, 127);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 25);
-            this.label1.TabIndex = 118;
-            this.label1.Text = "CODIGO:";
+            label1.Anchor = AnchorStyles.None;
+            label1.AutoSize = true;
+            label1.Location = new Point(124, 104);
+            label1.Name = "label1";
+            label1.Size = new Size(55, 15);
+            label1.TabIndex = 118;
+            label1.Text = "CÓDIGO:";
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCodigo.BackColor = System.Drawing.Color.White;
-            this.txtCodigo.Location = new System.Drawing.Point(253, 124);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(107, 31);
-            this.txtCodigo.TabIndex = 119;
+            txtCodigo.Anchor = AnchorStyles.None;
+            txtCodigo.BackColor = Color.White;
+            txtCodigo.Location = new Point(192, 101);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(100, 23);
+            txtCodigo.TabIndex = 0;
             // 
             // PeliculaFormulario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1377, 743);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnNueva);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.lstBoxPelicula);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.dtpFechaEstreno);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.cboIdioma);
-            this.Controls.Add(this.cboGenero);
-            this.Controls.Add(this.rbtNo);
-            this.Controls.Add(this.rbtSi);
-            this.Controls.Add(this.txtDuracion);
-            this.Controls.Add(this.txtDirector);
-            this.Controls.Add(this.txtTitulo);
-            this.Controls.Add(this.lblAptoTodoPublico);
-            this.Controls.Add(this.lblIdioma);
-            this.Controls.Add(this.lblGenero);
-            this.Controls.Add(this.lblDirector);
-            this.Controls.Add(this.lblFechaEstreno);
-            this.Controls.Add(this.lblDuracion);
-            this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.menuStrip1);
-            this.ForeColor = System.Drawing.Color.White;
-            this.Name = "PeliculaFormulario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PeliculaFormulario";
-            this.Load += new System.EventHandler(this.PeliculaFormulario_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(64, 64, 64);
+            ClientSize = new Size(962, 446);
+            Controls.Add(txtCodigo);
+            Controls.Add(label1);
+            Controls.Add(btnNueva);
+            Controls.Add(btnAgregar);
+            Controls.Add(lstBoxPelicula);
+            Controls.Add(btnActualizar);
+            Controls.Add(btnSalir);
+            Controls.Add(btnBorrar);
+            Controls.Add(dtpFechaEstreno);
+            Controls.Add(btnCancelar);
+            Controls.Add(cboIdioma);
+            Controls.Add(cboGenero);
+            Controls.Add(rbtNo);
+            Controls.Add(rbtSi);
+            Controls.Add(txtDuracion);
+            Controls.Add(txtDirector);
+            Controls.Add(txtTitulo);
+            Controls.Add(lblAptoTodoPublico);
+            Controls.Add(lblIdioma);
+            Controls.Add(lblGenero);
+            Controls.Add(lblDirector);
+            Controls.Add(lblFechaEstreno);
+            Controls.Add(lblDuracion);
+            Controls.Add(lblTitulo);
+            Controls.Add(label6);
+            Controls.Add(menuStrip1);
+            ForeColor = Color.White;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(2);
+            Name = "PeliculaFormulario";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "PeliculaFormulario";
+            Load += PeliculaFormulario_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem funcionesToolStripMenuItem;
-        private ToolStripMenuItem nuevaReservaToolStripMenuItem;
-        private ToolStripMenuItem eliminarReservaToolStripMenuItem;
-        private ToolStripMenuItem historialReservasToolStripMenuItem;
         private ToolStripMenuItem peliculaToolStripMenuItem;
         private ToolStripMenuItem agregarPeliculaToolStripMenuItem;
-        private ToolStripMenuItem eliminarPeliculaToolStripMenuItem;
         private ToolStripMenuItem peliculasDiponiblesToolStripMenuItem;
-        private ToolStripMenuItem funcionesToolStripMenuItem1;
-        private ToolStripMenuItem nuevaFuncionToolStripMenuItem;
-        private ToolStripMenuItem modificarFuncionToolStripMenuItem;
-        private ToolStripMenuItem eliminarFuncionToolStripMenuItem;
-        private ToolStripMenuItem clienteToolStripMenuItem;
-        private ToolStripMenuItem agregarClienteToolStripMenuItem;
-        private ToolStripMenuItem modificarClienteToolStripMenuItem;
         private Button btnAgregar;
         private ListBox lstBoxPelicula;
         private Button btnActualizar;
